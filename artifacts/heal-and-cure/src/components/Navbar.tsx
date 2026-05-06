@@ -35,14 +35,22 @@ export default function Navbar() {
             : "bg-transparent"
         }`}
       >
-        <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-          {/* Logo */}
+        <div className="container mx-auto px-4 h-[72px] flex items-center justify-between">
+          {/* Logo + Name */}
           <Link href="/" className="flex items-center gap-3" data-testid="link-home-logo">
             <img
               src={logoImg}
-              alt="Heal & Cure Logo"
-              className="h-12 w-auto object-contain"
+              alt="Heal & Cure Health Clinic"
+              className="h-14 w-auto object-contain"
             />
+            <div className="flex flex-col leading-tight">
+              <span className="font-serif font-semibold text-xl text-[var(--green-deep)] leading-none tracking-wide">
+                Heal &amp; Cure
+              </span>
+              <span className="font-sans text-[10px] text-[var(--text-muted)] uppercase tracking-[0.18em]">
+                Health Clinic
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Nav */}
@@ -55,8 +63,6 @@ export default function Navbar() {
                 className={`text-sm font-medium transition-colors relative group ${
                   location === link.href
                     ? "text-[var(--gold)]"
-                    : isScrolled
-                    ? "text-[var(--text-dark)] hover:text-[var(--green-deep)]"
                     : "text-[var(--text-dark)] hover:text-[var(--green-deep)]"
                 }`}
               >
@@ -98,24 +104,24 @@ export default function Navbar() {
             transition={{ duration: 0.2 }}
             className="fixed inset-0 z-[60] bg-white flex flex-col"
           >
-            {/* Top bar */}
-            <div className="flex items-center justify-between px-6 py-5 border-b border-[var(--border)]">
-              <img src={logoImg} alt="Heal & Cure" className="h-10 w-auto object-contain"/>
-              <button
-                onClick={() => setMobileMenuOpen(false)}
-                className="p-2 text-[var(--text-dark)]"
-                data-testid="button-mobile-menu-close"
-              >
-                <X className="w-7 h-7" />
+            <div className="flex items-center justify-between px-6 py-4 border-b border-[var(--border)]">
+              <div className="flex items-center gap-3">
+                <img src={logoImg} alt="Heal & Cure" className="h-12 w-auto object-contain" />
+                <div className="flex flex-col leading-tight">
+                  <span className="font-serif font-semibold text-lg text-[var(--green-deep)]">Heal &amp; Cure</span>
+                  <span className="font-sans text-[9px] text-[var(--text-muted)] uppercase tracking-widest">Health Clinic</span>
+                </div>
+              </div>
+              <button onClick={() => setMobileMenuOpen(false)} data-testid="button-mobile-menu-close">
+                <X className="w-7 h-7 text-[var(--text-dark)]" />
               </button>
             </div>
 
-            {/* Links */}
             <motion.nav
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="flex flex-col items-start justify-center flex-1 gap-1 px-8 py-10"
+              className="flex flex-col flex-1 px-8 py-8 gap-1"
             >
               {navLinks.map((link, i) => (
                 <motion.div
@@ -123,7 +129,6 @@ export default function Navbar() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.1 + i * 0.06 }}
-                  className="w-full"
                 >
                   <Link
                     href={link.href}
@@ -136,12 +141,7 @@ export default function Navbar() {
                   </Link>
                 </motion.div>
               ))}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                className="w-full mt-8"
-              >
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="mt-8">
                 <Link
                   href="/book"
                   onClick={() => setMobileMenuOpen(false)}
@@ -152,7 +152,6 @@ export default function Navbar() {
               </motion.div>
             </motion.nav>
 
-            {/* Bottom contact strip */}
             <div className="px-8 py-6 border-t border-[var(--border)] bg-[var(--bg-cream)]">
               <p className="font-sans text-xs text-[var(--text-muted)] uppercase tracking-widest mb-1">Call us</p>
               <a href="tel:+917980219737" className="font-serif text-xl text-[var(--green-deep)]">+91 79802 19737</a>

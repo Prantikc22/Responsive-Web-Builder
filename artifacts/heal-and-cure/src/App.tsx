@@ -7,6 +7,7 @@ import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Services from "@/pages/Services";
 import HealthTips from "@/pages/HealthTips";
+import ArticlePage from "@/pages/ArticlePage";
 import BookAppointment from "@/pages/BookAppointment";
 import Contact from "@/pages/Contact";
 import Navbar from "@/components/Navbar";
@@ -25,6 +26,7 @@ function Router() {
           <Route path="/about" component={About} />
           <Route path="/services" component={Services} />
           <Route path="/health-tips" component={HealthTips} />
+          <Route path="/health-tips/:slug" component={ArticlePage} />
           <Route path="/book" component={BookAppointment} />
           <Route path="/contact" component={Contact} />
           <Route component={NotFound} />
