@@ -1,45 +1,59 @@
-# [Project name]
+# Heal & Cure Health Clinic
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A premium, production-ready multi-page React website for Heal & Cure Health Clinic — a boutique homoeopathy + nutrition clinic in Kolkata.
 
 ## Run & Operate
 
-- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
+- `pnpm --filter @workspace/heal-and-cure run dev` — run the frontend (port assigned via PORT env)
 - `pnpm run typecheck` — full typecheck across all packages
 - `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
+- No backend required — fully static site
 
 ## Stack
 
 - pnpm workspaces, Node.js 24, TypeScript 5.9
-- API: Express 5
-- DB: PostgreSQL + Drizzle ORM
-- Validation: Zod (`zod/v4`), `drizzle-zod`
-- API codegen: Orval (from OpenAPI spec)
-- Build: esbuild (CJS bundle)
+- React + Vite (react-vite artifact)
+- Tailwind CSS v4, Framer Motion
+- wouter for routing
+- Lucide React + react-icons for icons
+- Google Fonts: Cormorant Garamond (headings) + DM Sans (body)
+- Calendly popup embed (widget.js in index.html)
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/heal-and-cure/` — main website artifact
+- `artifacts/heal-and-cure/src/pages/` — Home, About, Services, HealthTips, BookAppointment, Contact
+- `artifacts/heal-and-cure/src/components/` — Navbar, Footer, FloatingWhatsApp
+- `artifacts/heal-and-cure/src/index.css` — CSS variables (green/teal/gold palette), Google Fonts
+- `attached_assets/` — logo + doctor photos (accessed via @assets alias)
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- Static-only: no backend, no database, no API — pure frontend React site
+- Presentation-first build: design subagent owned full frontend
+- @assets Vite alias points to attached_assets/ — import doctor photos and logo directly
+- Calendly URLs are placeholder strings (SOUVIK_CALENDLY_URL / PAMPITA_CALENDLY_URL) — client fills in
+- wouter base uses import.meta.env.BASE_URL for proxy-compatible routing
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+6-page premium clinic website: Home (13 sections), About, Services, Health Tips, Book Appointment, Contact. Features include animated hero, trust bar with counters, govt credibility banner, doctor profiles with real photos, services grid, 8-testimonial carousel, health tips blog preview, dual booking cards with Calendly, floating WhatsApp button, Google Maps embed in footer.
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- Calendly URLs to be filled in later (SOUVIK_CALENDLY_URL, PAMPITA_CALENDLY_URL)
+- No doctor placeholder photos — real images provided in attached_assets/
+- Premium agency-quality design — Cormorant Garamond serif + DM Sans body
+- Fully responsive at 390px (iPhone 14)
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- Google Fonts @import must be the very FIRST line in index.css (before @import "tailwindcss")
+- Logo has a dark/transparent background — works on dark green surfaces (navbar, footer)
+- Calendly scripts loaded async in index.html head — use window.Calendly?.initPopupWidget()
+- Doctor images imported with @assets alias, not from public/
 
 ## Pointers
 
-- See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details
+- See the `react-vite` skill for React + Vite conventions
+- See the `pnpm-workspace` skill for workspace structure

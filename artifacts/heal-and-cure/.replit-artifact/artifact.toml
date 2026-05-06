@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Heal & Cure Health Clinic"
+version = "1.0.0"
+id = "artifacts/heal-and-cure"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21928
+
+[services.development]
+run = "pnpm --filter @workspace/heal-and-cure run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/heal-and-cure", "run", "build" ]
+publicDir = "artifacts/heal-and-cure/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21928"
+BASE_PATH = "/"

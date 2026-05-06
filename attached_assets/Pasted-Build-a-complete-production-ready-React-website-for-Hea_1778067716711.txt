@@ -1,0 +1,356 @@
+Build a complete, production-ready React website for 
+"Heal & Cure Health Clinic". This must look and feel like a 
+premium ₹5 lakh agency-built site. Every detail matters.
+
+TECH STACK:
+- React + Tailwind CSS
+- Framer Motion for all animations
+- Calendly popup embed (script in index.html)
+- No backend — static site
+- Google Maps embed (iframe)
+- WhatsApp via wa.me link
+
+FONTS (import from Google Fonts):
+- Cormorant Garamond (headings — serif, elegant)
+- DM Sans (body — clean, readable)
+
+CSS VARIABLES (define in index.css):
+--green-deep: #1B4332
+--green-mid: #2D6A4F  
+--teal: #0D4F4F
+--gold: #C9A84C
+--gold-light: #E8C97A
+--bg-warm: #FAFAF7
+--bg-cream: #F5F0E8
+--text-dark: #1A1A1A
+--text-muted: #6B7280
+
+CLINIC INFO:
+Name: Heal & Cure Health Clinic
+Address: Panpara Lane, Uttarpara, Kolkata 712232
+Phone: +91 79802 19737
+WhatsApp: wa.me/917980219737
+Facebook: https://www.facebook.com/thehchc.drsouvik
+Google Reviews: https://share.google/LEq7WsRQdaZfluGZF
+
+DOCTORS:
+Dr. Souvik Dutta
+- BHMS, MD(Hom.), MBA (Healthcare)
+- Senior Research Fellow — Dr. Anjali Chatterji Regional Research 
+  Institute for Homoeopathy, Kolkata (CCRH, Ministry of Ayush, 
+  Govt. of India)
+- Ex House Physician: Surgery & ENT, Mahesh Bhattacharyya 
+  Homoeopathic Medical College
+- Formerly: M.R. Bangur Hospital, Kolkata
+- 10+ years clinical experience
+- Calendly: [SOUVIK_CALENDLY_URL]
+
+Pampita Banerjee
+- MSc Food & Nutrition | Therapeutic Dietitian | Diabetic Educator
+- Phone Consultation Available
+- Calendly: [PAMPITA_CALENDLY_URL]
+
+============================
+COMPONENTS TO BUILD:
+============================
+
+1. NAVBAR
+- Fixed top, blur backdrop on scroll (backdrop-filter: blur(12px))
+- Logo image left (placeholder labeled "LOGO")
+- Nav links: Home About Services Health Tips Contact
+- Right: "Book Appointment" button — green filled, white text, 
+  rounded-full, hover scale animation
+- Mobile: hamburger → full-screen slide-down menu
+- On scroll: adds white background + subtle drop shadow
+
+2. HERO SECTION
+- NO doctor photos in hero
+- Background: warm off-white with subtle botanical SVG pattern overlay
+  (leaves/herbs, very low opacity ~8%), and a soft radial gradient 
+  from cream to white
+- Left side (60%):
+  - Small label above headline: "BOUTIQUE MEDICAL CLINIC" in tracked 
+    uppercase gold DM Sans
+  - H1 in Cormorant Garamond 64px: 
+    "Premium Holistic Care for Kolkata Families"
+  - Subheadline in DM Sans:
+    "Combining Homeopathy with expert Nutrition science — 
+    personalized, research-backed healing in the heart of Kolkata"
+  - Two buttons:
+    "Book Appointment" → scroll to booking section
+    "Chat on WhatsApp" → wa.me link, WhatsApp icon
+- Right side (40%): 
+  A warm illustrated card or abstract shape (NOT doctor photos)
+  Could be a stacked visual of: stethoscope icon, leaf, and a 
+  subtle circular frame — styled in teal/gold
+- ANIMATIONS (Framer Motion):
+  - Label fades in first (0ms delay)
+  - H1 words animate in with staggered reveal (100ms each word)
+  - Subheadline fades up (400ms delay)
+  - Buttons scale in (600ms delay)
+  - Right visual slides in from right (300ms delay)
+
+3. TRUST BAR
+Full width, bg-cream, padding generous
+4 items in a row (2x2 on mobile):
+Each item:
+- Icon (custom SVG or Lucide icon)
+- Large bold counter number (animate on scroll using 
+  Framer Motion useInView + counting animation)
+- Label in DM Sans
+Items:
+  🏆 10+ | Years of Experience
+  🏛️ Govt. of India | Affiliated Clinic
+  👥 500+ | Patients Treated
+  🌿 Homeopathy | + Nutrition
+Special: "Govt. of India Affiliated" item has a subtle gold 
+border/highlight to make it stand out from others
+
+4. GOVT. TRUST CALLOUT BANNER
+Full-width section, bg: var(--green-deep), text: white
+Layout: left side text, right side badge/seal visual
+Text:
+  Small label: "RESEARCH & CREDIBILITY"
+  Headline: "Backed by Government of India Research"
+  Body: "Dr. Souvik Dutta serves as Senior Research Fellow at the 
+  Dr. Anjali Chatterji Regional Research Institute for Homoeopathy, 
+  Kolkata — operating under CCRH, Ministry of Ayush, 
+  Government of India."
+Right: A styled circular badge with "CCRH | Govt. of India | 
+Ministry of Ayush" text arranged in a seal format, gold color
+ANIMATION: Fade up on scroll enter
+
+5. MEET OUR EXPERTS
+Section title: "Meet Our Experts" in Cormorant Garamond
+Subtitle: "Dual expertise, one destination"
+Two cards side by side (stack on mobile):
+
+Card structure:
+- Top: Image placeholder (tall portrait, 3:4 ratio, 
+  rounded-t-2xl, labeled "DR. SOUVIK PHOTO" / "PAMPITA PHOTO")
+- Bottom: White card body with padding
+  - Name in Cormorant Garamond 24px
+  - Credentials in gold small text
+  - Specialization label
+  - 2-line bio
+  - Credential badges (pill shaped): 
+    Souvik: ["BHMS", "MD(Hom.)", "CCRH Fellow"]
+    Pampita: ["MSc Nutrition", "Diabetic Educator", "📞 Phone Consult"]
+  - "Book with Dr. Souvik" / "Book with Pampita" → Calendly popup
+ANIMATION: Cards slide up with stagger on scroll enter
+HOVER: Card lifts (translateY -8px) + shadow deepens
+
+6. SERVICES SECTION
+Title: "Our Core Services"
+Subtitle: "Comprehensive holistic treatments tailored for your needs"
+Two group labels above respective cards:
+  "🌿 Homeopathy" (Souvik's) | "🥗 Nutrition & Dietetics" (Pampita's)
+6 cards in 3x2 grid (2x3 on mobile):
+  - Homeopathic Consultation
+  - Chronic Disease Care
+  - Pediatric Homeopathy
+  - Clinical Nutrition & Diet Planning
+  - Diabetes Management & Education
+  - Lifestyle Disease Management
+Each card:
+  - Lucide icon (colored teal)
+  - Title in Cormorant Garamond
+  - 2-3 line description
+  - Hover: gold left border appears, icon transitions to gold
+ANIMATION: Cards stagger fade-up on scroll
+
+7. WHY HEAL & CURE
+3 blocks in asymmetric layout (not a boring equal grid)
+  Block 1 (large, left): "One Clinic, Two Experts"
+  Block 2 (top right): "Research-Backed Medicine"  
+  Block 3 (bottom right): "Truly Personalized Care"
+Each has icon, title, body text
+Background alternating cream/white for depth
+
+8. TESTIMONIALS
+Title: "Patient Experiences"
+Subtitle: "Stories from patients who found their path to wellness"
+Smooth auto-playing carousel (3s interval, pause on hover)
+Manual prev/next arrows
+Each testimonial:
+  - Large opening quote mark in gold (Cormorant Garamond, 120px)
+  - 5 gold stars (★★★★★ — make them LARGE and visible)
+  - Testimonial text in italic Cormorant
+  - Patient name + location
+3 placeholder testimonials (note in code to replace with real ones)
+Below carousel: Button "Read All Reviews on Google →" 
+→ https://share.google/LEq7WsRQdaZfluGZF
+ANIMATION: Fade crossfade between testimonials
+
+9. HEALTH TIPS PREVIEW
+Title: "Health Tips"  
+Link top right: "Read All Tips →"
+3 cards in a row:
+Each card:
+  - Header area: solid color block (teal or green) with category 
+    label ("NUTRITION" / "HOMEOPATHY" / "LIFESTYLE") — NO clipart images
+  - Category pill badge
+  - Title in Cormorant Garamond (serif, strong)
+  - 1-line excerpt in DM Sans
+  - "Read More →" link in gold
+Placeholder posts:
+  "Can Homeopathy Help Manage Diabetes?"
+  "5 Diet Mistakes Diabetics Make Daily"
+  "What Is Constitutional Homeopathic Treatment?"
+HOVER: Card lifts, header area brightens slightly
+
+10. APPOINTMENT SECTION
+Title: "Book Your Appointment"
+Subtitle: "Choose your specialist and select a date that works for you"
+Two cards side by side:
+
+Left card — Dr. Souvik Dutta:
+  - Photo placeholder
+  - Name + credentials
+  - "Homeopathy Consultation"
+  - "Book with Dr. Souvik" button → 
+    Calendly.initPopupWidget({url: 'SOUVIK_CALENDLY_URL'})
+
+Right card — Pampita Banerjee:
+  - Photo placeholder
+  - Name + credentials
+  - "Dietitian Consultation"
+  - Gold pill badge: "📞 Phone Consultation Available"
+  - "Book with Pampita" button → 
+    Calendly.initPopupWidget({url: 'PAMPITA_CALENDLY_URL'})
+
+Below both cards:
+"Prefer WhatsApp?" → wa.me/917980219737 with WhatsApp icon
+
+11. CTA BANNER
+Full-width, bg: var(--green-deep)
+Subtle leaf/botanical pattern overlay at 6% opacity
+Headline: "Ready to Begin Your Healing Journey?"
+Subtext: "Book a consultation with our specialists today"
+Two buttons: "Book Now" (gold filled, dark text) + 
+"Contact Us" (white outline)
+ANIMATION: Subtle parallax on background pattern
+
+12. FOOTER
+bg: #0F1F18 (very dark green), text: white
+4 columns:
+  Col 1: Logo + tagline + social icon (Facebook)
+  Col 2: Clinic Services (list links)
+  Col 3: Quick Links + Privacy Policy placeholder
+  Col 4: Clinic Address
+    Panpara Lane, Uttarpara
+    Kolkata, West Bengal 712232
+    📞 +91 79802 19737
+    ✉ drsouvikdutta@gmail.com
+    ✉ pampita.banerjee11@gmail.com
+Bottom bar: 
+"© 2025 Heal & Cure Health Clinic · Serving patients across Kolkata 
+and West Bengal"
+Google Maps embed above footer columns (full width, 300px height)
+
+13. FLOATING WHATSAPP BUTTON
+Fixed bottom-right (bottom: 24px, right: 24px)
+bg: #25D366, rounded-full, padding 14px
+WhatsApp SVG icon, white
+href: wa.me/917980219737
+target: _blank
+ANIMATION: 
+  - Enters with scale bounce on page load (delay 2s)
+  - Gentle pulse ring animation every 4s to draw attention
+  - Hover: scale 1.1
+
+============================
+ANIMATIONS SUMMARY:
+============================
+Use Framer Motion throughout:
+
+Page Load:
+- Navbar slides down from top
+- Hero content staggers in left-to-right, top-to-bottom
+
+Scroll Animations (useInView, triggerOnce: true):
+- All sections: fade up + slight Y translate (40px → 0)
+- Cards: staggered (0.1s between each)
+- Trust bar counters: count up from 0 when in view
+- Section titles: slide in from left
+
+Hover States:
+- Doctor/service cards: translateY(-8px) + shadow
+- Buttons: scale(1.03) + brightness
+- Nav links: gold underline slides in from left
+
+Continuous:
+- WhatsApp button: pulse ring every 4s
+- Hero background: very subtle parallax on mouse move (optional)
+- Testimonial: auto-advance with smooth crossfade
+
+============================
+ASSET PLACEHOLDERS:
+============================
+Use clearly labeled placeholder divs with bg-gray-200:
+- CLINIC_LOGO: 160x48px in navbar
+- DR_SOUVIK_PHOTO: 320x427px (3:4) in doctor card
+- PAMPITA_PHOTO: 320x427px (3:4) in doctor card
+- All labeled with "Replace with actual image" comment in code
+
+============================
+CALENDLY SETUP:
+============================
+In index.html <head>:
+<link href="https://assets.calendly.com/assets/external/widget.css" 
+      rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" 
+        type="text/javascript" async></script>
+
+Button onClick:
+window.Calendly.initPopupWidget({url: 'CALENDLY_URL_HERE'})
+return false;
+
+============================
+PAGES BEYOND HOME:
+============================
+
+ABOUT PAGE:
+- Clinic story section (placeholder text)
+- Full doctor profiles with all credentials
+- Clinic mission/values
+
+SERVICES PAGE:
+- Alternating full-width sections per service
+- Each: icon, title, who it helps, what to expect, CTA button
+
+HEALTH TIPS PAGE:
+- Grid of blog cards (editorial style, no clipart)
+- Category filter buttons at top
+- 3 placeholder posts
+
+BOOK APPOINTMENT PAGE:
+- Same two-doctor card layout as home section
+- Expanded with more context about what to expect
+
+CONTACT PAGE:
+- Split: left = all contact details + clinic hours
+- Right = Google Maps embed
+- Clinic hours placeholder (ask client)
+- WhatsApp CTA
+
+============================
+FINAL QUALITY CHECKLIST:
+============================
+- Mobile responsive at 390px (iPhone 14 size)
+- No Inter or Roboto fonts — only Cormorant + DM Sans
+- No purple gradients, no generic AI design patterns
+- Credentials are PROMINENT, not buried
+- WhatsApp button visible on every page
+- Google Reviews link accessible
+- "Kolkata" appears in hero, meta description, footer
+- All CTAs have hover animations
+- Smooth scroll between sections
+- Page transitions feel premium
+
+This should look like it was built by a top Mumbai/Bangalore 
+design agency. Spare no detail.
+
+Make sure the website is stunning. Add as many testimonials as possibles. I will add the logos and doc photo as attached. I will give the calendly urls later.
+
+Make sure the website is fully responsive when opened in mobile.
