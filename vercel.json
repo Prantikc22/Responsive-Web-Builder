@@ -1,0 +1,11 @@
+{
+  "buildCommand": "pnpm --filter @workspace/heal-and-cure run build",
+  "outputDirectory": "artifacts/heal-and-cure/dist/public",
+  "framework": null,
+  "env": {
+    "BASE_PATH": "/"
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
