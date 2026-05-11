@@ -159,11 +159,36 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply font-sans antialiased bg-background text-foreground;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+    @apply font-serif font-bold;
+  }
+}
+
+@layer utilities {
+  .btn-fill {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .btn-fill::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.16);
+    transform: translateX(-101%);
+    transition: transform 0.38s ease;
+    border-radius: inherit;
+    z-index: -1;
+  }
+  .btn-fill:hover::after {
+    transform: translateX(0);
   }
 }

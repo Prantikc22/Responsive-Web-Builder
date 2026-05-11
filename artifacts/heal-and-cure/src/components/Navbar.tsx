@@ -77,7 +77,7 @@ export default function Navbar() {
             <Link
               href="/book"
               data-testid="link-nav-book"
-              className="bg-[var(--green-deep)] text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-[var(--green-mid)] transition-all hover:scale-105 shadow-sm"
+              className="btn-fill bg-[var(--green-deep)] text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-[var(--green-mid)] transition-all hover:scale-105 shadow-sm"
             >
               Book Appointment
             </Link>

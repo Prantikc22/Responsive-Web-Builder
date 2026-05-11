@@ -98,7 +98,7 @@ export default function Home() {
               className="h-0.5 bg-[var(--gold)] mb-5"/>
 
             <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.35 }}
-              className="font-sans text-base text-[var(--text-muted)] leading-relaxed mb-8 max-w-md">
+              className="font-sans text-base text-[#374151] leading-relaxed mb-8 max-w-md">
               Integrated care that combines the science of nutrition with the healing power of homeopathy for lasting wellness.
             </motion.p>
 
@@ -107,12 +107,12 @@ export default function Home() {
               className="flex flex-wrap gap-3 mb-8">
               <button data-testid="button-hero-book"
                 onClick={() => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })}
-                className="flex items-center gap-2 bg-[var(--green-deep)] text-white px-7 py-3.5 rounded-full font-medium hover:bg-[var(--green-mid)] transition-all text-sm shadow-md">
+                className="btn-fill flex items-center gap-2 bg-[var(--green-deep)] text-white px-7 py-3.5 rounded-full font-medium hover:bg-[var(--green-mid)] transition-all text-sm shadow-md">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                 Book Appointment
               </button>
               <a data-testid="link-hero-whatsapp" href="https://wa.me/918961661721" target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-white border border-[var(--border)] text-[var(--green-deep)] px-7 py-3.5 rounded-full font-medium hover:bg-[var(--bg-cream)] transition-all text-sm shadow-sm">
+                className="btn-fill flex items-center gap-2 bg-white border border-[var(--border)] text-[var(--green-deep)] px-7 py-3.5 rounded-full font-medium hover:bg-[var(--bg-cream)] transition-all text-sm shadow-sm">
                 <MessageCircle className="w-4 h-4"/>
                 Chat With Clinic
               </a>
@@ -139,23 +139,23 @@ export default function Home() {
 
       {/* ══ GOOGLE RATING STRIP ═══════════════════════════════ */}
       <section className="bg-white border-b border-[var(--border)]">
-        <div className="container mx-auto px-4 py-3 max-w-6xl">
-          <div className="flex items-center justify-center gap-3 flex-wrap">
-            <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
+        <div className="container mx-auto px-4 py-5 max-w-6xl">
+          <div className="flex items-center justify-center gap-4 flex-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
               <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
               <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
               <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
             </svg>
-            <div className="flex gap-0.5">
-              {[...Array(5)].map((_, i) => <svg key={i} width="13" height="13" viewBox="0 0 20 20" fill="#F9AB00"><path d="M10 1l2.39 6.26H19l-5.31 3.86 2.02 6.26L10 13.27l-5.71 4.11 2.02-6.26L1 7.26h6.61z"/></svg>)}
+            <div className="flex gap-1">
+              {[...Array(5)].map((_, i) => <svg key={i} width="17" height="17" viewBox="0 0 20 20" fill="#F9AB00"><path d="M10 1l2.39 6.26H19l-5.31 3.86 2.02 6.26L10 13.27l-5.71 4.11 2.02-6.26L1 7.26h6.61z"/></svg>)}
             </div>
-            <span className="font-sans text-xs font-semibold text-[var(--text-dark)]">5.0</span>
-            <span className="w-px h-3 bg-[var(--border)]"/>
-            <span className="font-sans text-xs text-[var(--text-muted)]">Rated 5 stars by our patients on Google</span>
-            <span className="w-px h-3 bg-[var(--border)] hidden sm:block"/>
+            <span className="font-sans text-sm font-bold text-[var(--text-dark)]">5.0</span>
+            <span className="w-px h-4 bg-[var(--border)]"/>
+            <span className="font-sans text-sm text-[#374151]">Rated 5 stars by our patients on Google</span>
+            <span className="w-px h-4 bg-[var(--border)] hidden sm:block"/>
             <a href="https://share.google/LEq7WsRQdaZfluGZF" target="_blank" rel="noopener noreferrer"
-              className="font-sans text-xs text-[var(--green-deep)] hover:text-[var(--gold)] font-medium transition-colors hidden sm:inline">
+              className="font-sans text-sm text-[var(--green-deep)] hover:text-[var(--gold)] font-semibold transition-colors hidden sm:inline">
               Read Reviews →
             </a>
           </div>
@@ -239,8 +239,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-8 flex flex-col flex-1">
-                <h3 className="font-serif text-3xl text-[var(--green-deep)] mb-1">Dr. Souvik Dutta</h3>
-                <p className="text-[var(--gold)] font-sans text-sm font-medium mb-4">BHMS, MD(Hom.), MBA (Healthcare)</p>
+                <h3 className="font-serif text-3xl text-[var(--green-deep)] mb-0.5">Dr. Souvik Dutta</h3>
+                <p className="font-serif text-base text-[var(--green-deep)]/75 font-normal italic mb-1">Homoeopathic &amp; Holistic Physician</p>
+                <p className="text-[var(--gold)] font-sans text-xs font-medium mb-4 tracking-wide">BHMS, MD(Hom.), MBA (Healthcare)</p>
                 <p className="font-sans text-[var(--text-muted)] text-sm mb-5 leading-relaxed flex-1">
                   Senior Research Fellow at CCRH, Ministry of Ayush. 10+ years of clinical experience with expertise in chronic, lifestyle, and paediatric conditions.
                 </p>
@@ -250,11 +251,16 @@ export default function Home() {
                   ))}
                 </div>
                 <div className="flex flex-col gap-2">
-                  <a href="tel:+917980219737" className="flex items-center justify-center gap-2 text-sm text-[var(--green-deep)] font-medium font-sans hover:underline">
-                    <Phone className="w-4 h-4"/> +91 7980219737
-                  </a>
+                  <div className="flex flex-col items-center gap-0.5">
+                    <a href="tel:+917980219737" className="flex items-center gap-2 text-sm text-[var(--green-deep)] font-medium font-sans hover:underline">
+                      <Phone className="w-4 h-4"/> +91 7980219737
+                    </a>
+                    <a href="tel:+918961661721" className="flex items-center gap-1.5 text-xs text-[var(--text-muted)] font-sans hover:underline">
+                      <Phone className="w-3 h-3"/> +91 8961661721 <span className="text-[10px] text-[var(--gold)]">(For emergency only)</span>
+                    </a>
+                  </div>
                   <Link href="/book" data-testid="button-book-souvik"
-                    className="w-full bg-[var(--green-deep)] text-white py-3.5 rounded-full font-medium hover:bg-[var(--green-mid)] transition-all hover:scale-[1.02] text-center block">
+                    className="btn-fill w-full bg-[var(--green-deep)] text-white py-3.5 rounded-full font-medium hover:bg-[var(--green-mid)] transition-all hover:scale-[1.02] text-center block">
                     Book with Dr. Souvik
                   </Link>
                 </div>
@@ -279,8 +285,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-8 flex flex-col flex-1">
-                <h3 className="font-serif text-3xl text-[var(--green-deep)] mb-1">Pampita Banerjee</h3>
-                <p className="text-[var(--gold)] font-sans text-sm font-medium mb-4">MSc Food &amp; Nutrition | Therapeutic Dietitian</p>
+                <h3 className="font-serif text-3xl text-[var(--teal)] mb-0.5">Pampita Banerjee</h3>
+                <p className="font-serif text-base text-[var(--teal)]/75 font-normal italic mb-1">Clinical Nutritionist &amp; Diabetic Educator</p>
+                <p className="text-[var(--gold)] font-sans text-xs font-medium mb-4 tracking-wide">MSc Food &amp; Nutrition | Therapeutic Dietitian</p>
                 <p className="font-sans text-[var(--text-muted)] text-sm mb-5 leading-relaxed flex-1">
                   Expert therapeutic dietitian and certified Diabetic Educator specialising in clinical nutrition for diabetes, PCOD, kidney disease, and metabolic conditions.
                 </p>
@@ -294,7 +301,7 @@ export default function Home() {
                     <Phone className="w-4 h-4"/> +91 8961661721
                   </a>
                   <Link href="/book" data-testid="button-book-pampita"
-                    className="w-full bg-[var(--teal)] text-white py-3.5 rounded-full font-medium hover:opacity-85 transition-all hover:scale-[1.02] text-center block">
+                    className="btn-fill w-full bg-[var(--teal)] text-white py-3.5 rounded-full font-medium hover:opacity-85 transition-all hover:scale-[1.02] text-center block">
                     Book with Pampita
                   </Link>
                 </div>
@@ -372,12 +379,12 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {philosophyPillars.map((p, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.12 }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-7 text-center hover:bg-white/15 transition-all group">
-                <div className="w-12 h-12 rounded-xl bg-[var(--gold)]/20 border border-[var(--gold)]/30 flex items-center justify-center mx-auto mb-4 group-hover:bg-[var(--gold)]/30 transition-colors">
+                className="bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl p-7 text-center hover:bg-white/25 transition-all group">
+                <div className="w-12 h-12 rounded-xl bg-[var(--gold)]/25 border border-[var(--gold)]/40 flex items-center justify-center mx-auto mb-4 group-hover:bg-[var(--gold)]/35 transition-colors">
                   <p.icon className="w-5 h-5 text-[var(--gold)]"/>
                 </div>
                 <h4 className="font-serif text-xl text-white mb-2">{p.title}</h4>
-                <p className="font-sans text-sm text-white/70 leading-relaxed">{p.body}</p>
+                <p className="font-sans text-sm text-white/88 leading-relaxed">{p.body}</p>
               </motion.div>
             ))}
           </div>
@@ -487,11 +494,11 @@ export default function Home() {
           <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <Link href="/book" data-testid="button-cta-book"
-              className="bg-[var(--gold)] text-[var(--text-dark)] px-10 py-4 rounded-full font-medium hover:bg-[var(--gold-light)] transition-all hover:scale-105 shadow-lg">
+              className="btn-fill bg-[var(--gold)] text-[var(--text-dark)] px-10 py-4 rounded-full font-medium hover:bg-[var(--gold-light)] transition-all hover:scale-105 shadow-lg">
               Book Appointment
             </Link>
             <a href="https://wa.me/918961661721" target="_blank" rel="noopener noreferrer" data-testid="link-cta-whatsapp"
-              className="flex items-center justify-center gap-2 bg-transparent border-2 border-white/60 text-white px-10 py-4 rounded-full font-medium hover:bg-white/10 transition-colors">
+              className="btn-fill flex items-center justify-center gap-2 bg-transparent border-2 border-white/60 text-white px-10 py-4 rounded-full font-medium hover:bg-white/10 transition-colors">
               <MessageCircle className="w-4 h-4"/>
               Chat With Clinic
             </a>
