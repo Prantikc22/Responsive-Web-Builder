@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import drSouvikImg from "@assets/Doc_Men_1778067737072.jpeg";
 import pampitaImg from "@assets/Doc_Women_1778067734674.jpeg";
+import researchBgImg from "@assets/image_1778517790450.png";
 
 function Counter({ value, duration = 2 }: { value: number; duration?: number }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -199,20 +200,13 @@ export default function Home() {
               </div>
             </div>
 
-            {/* CCRH emblem — restrained size */}
-            <div className="flex justify-center md:justify-end shrink-0">
-              <div className="relative w-44 h-44">
-                <div className="absolute inset-0 rounded-full border border-[var(--gold)]/25 animate-[spin_30s_linear_infinite]" style={{ borderStyle: "dashed" }}/>
-                <div className="absolute inset-3 rounded-full border border-[var(--gold)]/35"/>
-                <div className="absolute inset-6 rounded-full bg-white/[0.04]"/>
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center gap-1 p-5">
-                  <Shield className="w-6 h-6 text-[var(--gold)]/80 mb-1.5"/>
-                  <span className="font-serif text-[var(--gold)] font-bold text-2xl leading-none tracking-tight">CCRH</span>
-                  <div className="w-8 h-px bg-[var(--gold)]/40 my-2"/>
-                  <span className="font-sans text-white/60 text-[9px] tracking-[0.16em] uppercase leading-tight">Ministry of AYUSH</span>
-                  <span className="font-sans text-white/45 text-[8px] tracking-[0.13em] uppercase leading-tight mt-0.5">Govt. of India</span>
-                </div>
-              </div>
+            {/* Research image — blended right side */}
+            <div className="hidden md:block shrink-0 relative w-80 h-64 rounded-2xl overflow-hidden">
+              <img src={researchBgImg} alt="Homoeopathy clinical research" className="absolute inset-0 w-full h-full object-cover object-center opacity-60"/>
+              {/* Fade left into section bg */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[var(--green-deep)] via-[var(--green-deep)]/30 to-transparent"/>
+              {/* Fade top and bottom edges */}
+              <div className="absolute inset-0 bg-gradient-to-b from-[var(--green-deep)]/40 via-transparent to-[var(--green-deep)]/40"/>
             </div>
           </div>
         </div>
@@ -291,7 +285,7 @@ export default function Home() {
               </div>
               <div className="p-8 flex flex-col flex-1">
                 <h3 className="font-serif text-3xl text-[var(--teal)] mb-0.5">Pampita Banerjee</h3>
-                <p className="font-serif text-base text-[var(--teal)]/75 font-normal italic mb-1">Clinical Nutritionist &amp; Diabetic Educator</p>
+                <p className="font-serif text-base text-[var(--teal)]/75 font-normal italic mb-1">Clinical Nutritionist &amp; Diabetician</p>
                 <p className="text-[var(--gold)] font-sans text-xs font-medium mb-4 tracking-wide">MSc Food &amp; Nutrition | Therapeutic Dietitian</p>
                 <p className="font-sans text-[var(--text-muted)] text-sm mb-5 leading-relaxed flex-1">
                   Expert therapeutic dietitian and certified Diabetic Educator specialising in clinical nutrition for diabetes, PCOD, kidney disease, and metabolic conditions.
