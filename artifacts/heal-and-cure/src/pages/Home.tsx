@@ -165,48 +165,53 @@ export default function Home() {
       {/* ══ RESEARCH EXCELLENCE BANNER ═══════════════════════ */}
       <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
         className="bg-[var(--green-deep)] text-white py-20 overflow-hidden relative">
-        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "radial-gradient(white 1px, transparent 1px)", backgroundSize: "32px 32px" }}/>
-        <div className="container mx-auto px-4 relative z-10 max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {/* Left text */}
-            <div className="flex flex-col gap-5 order-2 md:order-1">
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(white 1px, transparent 1px)", backgroundSize: "36px 36px" }}/>
+        <div className="container mx-auto px-4 relative z-10 max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-14 items-center">
+            {/* Text — wider */}
+            <div className="flex flex-col gap-6">
               <div className="flex items-center gap-2">
-                <div className="h-px w-8 bg-[var(--gold)]/60"/>
-                <span className="text-[var(--gold)] font-sans font-semibold tracking-[0.22em] text-[10px] uppercase">Homoeopathy Research</span>
+                <div className="h-px w-6 bg-[var(--gold)]/70"/>
+                <span className="text-[var(--gold)] font-sans font-semibold tracking-[0.2em] text-[10px] uppercase">Research & Clinical Credentials</span>
               </div>
-              <h2 className="font-serif text-3xl md:text-[2.4rem] font-semibold leading-[1.25]">
-                Grounded in Government-Recognised Homoeopathic Research
+              <h2 className="font-serif text-3xl md:text-[2.2rem] leading-[1.28] max-w-xl">
+                Clinical Experience Backed by Government Research
               </h2>
-              <p className="font-sans text-white/75 text-sm md:text-base leading-relaxed max-w-lg">
-                Dr. Souvik Dutta serves as <strong className="text-white font-semibold">Senior Research Fellow</strong> at the Dr. Anjali Chatterji Regional Research Institute for Homoeopathy, Kolkata — under CCRH, Ministry of Ayush, Government of India. Previously Ex House Physician (Surgery &amp; ENT) at Mahesh Bhattacharyya Homoeopathic Medical College and attached to M.R. Bangur Hospital, Kolkata.
-              </p>
-              <div className="flex flex-wrap gap-3 mt-1">
-                {["CCRH Fellow", "Ministry of Ayush", "10+ Years Clinical", "MD(Hom.)"].map((tag) => (
-                  <span key={tag} className="font-sans text-[11px] text-[var(--gold)] border border-[var(--gold)]/30 px-3 py-1 rounded-full tracking-wide">{tag}</span>
+              <div className="space-y-3 max-w-2xl">
+                <p className="font-sans text-white/82 text-base leading-relaxed">
+                  Dr. Souvik Dutta currently serves as a <strong className="text-white font-semibold">Senior Research Fellow</strong> under CCRH, Ministry of AYUSH, Government of India. His experience across clinical research and hospital practice helps bring evidence-informed, patient-focused care to Heal &amp; Cure.
+                </p>
+                <p className="font-sans text-white/58 text-sm leading-relaxed italic">
+                  This experience supports a thoughtful and research-informed approach to holistic healthcare.
+                </p>
+              </div>
+              {/* 2 trust indicators only */}
+              <div className="flex flex-wrap gap-4 mt-1">
+                {[
+                  { icon: Shield, label: "Govt. Research Affiliation" },
+                  { icon: Award, label: "10+ Years Clinical Experience" },
+                ].map((t) => (
+                  <div key={t.label} className="flex items-center gap-2">
+                    <t.icon className="w-4 h-4 text-[var(--gold)]/80 shrink-0"/>
+                    <span className="font-sans text-[12px] text-white/65 tracking-wide">{t.label}</span>
+                  </div>
                 ))}
               </div>
             </div>
 
-            {/* Right — CCRH badge (bigger) */}
-            <div className="flex justify-center order-1 md:order-2">
-              <div className="relative w-64 h-64 md:w-72 md:h-72">
-                {/* Outer spinning ring */}
-                <div className="absolute inset-0 rounded-full border-2 border-[var(--gold)]/30 animate-[spin_25s_linear_infinite]" style={{ borderStyle: "dashed" }}/>
-                {/* Mid ring */}
-                <div className="absolute inset-4 rounded-full border border-[var(--gold)]/50"/>
-                {/* Inner fill */}
-                <div className="absolute inset-8 rounded-full bg-white/5 border border-[var(--gold)]/20"/>
-                {/* Content */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center gap-1 p-6">
-                  <Shield className="w-9 h-9 text-[var(--gold)] mb-2"/>
-                  <span className="font-serif text-[var(--gold)] font-bold text-4xl leading-none tracking-tight">CCRH</span>
-                  <div className="w-12 h-px bg-[var(--gold)]/50 my-2.5"/>
-                  <span className="font-sans text-white/80 text-[11px] tracking-[0.18em] uppercase leading-tight">Ministry of Ayush</span>
-                  <span className="font-sans text-white/60 text-[10px] tracking-[0.15em] uppercase leading-tight mt-1">Government of India</span>
+            {/* CCRH emblem — restrained size */}
+            <div className="flex justify-center md:justify-end shrink-0">
+              <div className="relative w-44 h-44">
+                <div className="absolute inset-0 rounded-full border border-[var(--gold)]/25 animate-[spin_30s_linear_infinite]" style={{ borderStyle: "dashed" }}/>
+                <div className="absolute inset-3 rounded-full border border-[var(--gold)]/35"/>
+                <div className="absolute inset-6 rounded-full bg-white/[0.04]"/>
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center gap-1 p-5">
+                  <Shield className="w-6 h-6 text-[var(--gold)]/80 mb-1.5"/>
+                  <span className="font-serif text-[var(--gold)] font-bold text-2xl leading-none tracking-tight">CCRH</span>
+                  <div className="w-8 h-px bg-[var(--gold)]/40 my-2"/>
+                  <span className="font-sans text-white/60 text-[9px] tracking-[0.16em] uppercase leading-tight">Ministry of AYUSH</span>
+                  <span className="font-sans text-white/45 text-[8px] tracking-[0.13em] uppercase leading-tight mt-0.5">Govt. of India</span>
                 </div>
-                {/* Accent dot */}
-                <div className="absolute top-5 right-10 w-2 h-2 rounded-full bg-[var(--gold)]/50"/>
-                <div className="absolute bottom-6 left-9 w-1.5 h-1.5 rounded-full bg-[var(--gold)]/35"/>
               </div>
             </div>
           </div>

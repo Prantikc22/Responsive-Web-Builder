@@ -1,0 +1,80 @@
+Update ONLY the green “CCRH / Research” section of the Heal & Cure website.
+
+IMPORTANT:
+Do NOT redesign the entire page.
+Only refine and improve this specific section.
+
+GOAL:
+The section should feel:
+
+* trustworthy
+* research-backed
+* medically credible
+* patient-focused
+* clean and premium
+
+It should NOT feel:
+
+* overly academic
+* institutional
+* government-heavy
+* certificate-like
+
+CURRENT PROBLEMS TO FIX:
+
+1. The large circular CCRH emblem dominates too much visually.
+2. The paragraph is too long and dense.
+3. The section currently feels more about the institution than patient trust.
+4. Too many small tags/pills create visual clutter.
+
+DESIGN IMPROVEMENTS:
+
+1. Reduce the CCRH circular emblem size by around 30–40%.
+
+2. Make the text content area slightly wider for improved readability.
+
+3. Improve spacing and typography hierarchy.
+
+4. Reduce visual noise:
+
+* remove unnecessary mini pills/tags
+* keep maximum 2 subtle trust indicators only
+
+5. Add softer visual balance between text and emblem.
+
+6. Keep the elegant dark green section background, but slightly improve readability contrast for gold text.
+
+CONTENT CHANGES:
+
+Replace the current heading with:
+
+“Clinical Experience Backed by Government Research”
+
+Replace the paragraph with:
+
+“Dr. Souvik Dutta currently serves as a Senior Research Fellow under CCRH, Ministry of AYUSH, Government of India. His experience across clinical research and hospital practice helps bring evidence-informed, patient-focused care to Heal & Cure.”
+
+OPTIONAL supporting line below paragraph:
+“This experience supports a thoughtful and research-informed approach to holistic healthcare.”
+
+TRUST INDICATORS:
+Keep only 2 minimal indicators such as:
+
+* Govt Research Affiliation
+* 10+ Years Clinical Experience
+
+STYLE DIRECTION:
+The section should emotionally communicate:
+
+* patient trust
+* credibility
+* thoughtful healthcare
+* evidence-informed holistic care
+
+NOT:
+
+* academic institution
+* government portal
+* research paper website
+
+Keep the design elegant, restrained, balanced, and modern healthcare-focused.
