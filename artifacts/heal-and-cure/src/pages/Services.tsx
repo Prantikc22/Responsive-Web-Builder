@@ -1,51 +1,61 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 import {
   Stethoscope, Heart, Wind, Brain, Smile, Ear, Leaf,
   Apple, Activity, Scale, Zap, ScrollText, ArrowRight
 } from "lucide-react";
 
+type Category = "all" | "nutrition" | "homoeopathy";
+
 const nutritionServices = [
-  { icon: Apple, title: "Therapeutic Diet Counseling", desc: "Personalised dietary plans designed around your medical profile, lifestyle, and goals — sustainable, science-backed, and culturally relevant." },
-  { icon: Activity, title: "Diabetes Nutrition Management", desc: "Specialized care for Type 1, Type 2, gestational diabetes, and pre-diabetes through targeted meal planning and carb-management strategies." },
-  { icon: Scale, title: "Weight Management", desc: "Structured, evidence-based programmes that address the root causes of weight imbalance — without crash dieting or extreme restriction." },
-  { icon: Zap, title: "PCOS & Thyroid Nutrition", desc: "Hormone-supportive nutrition therapy for PCOS, hypothyroidism, and other endocrine conditions, guided by therapeutic dietetics." },
-  { icon: Leaf, title: "Digestive Health Nutrition", desc: "Gut-healing dietary protocols for IBS, GERD, bloating, constipation, and other functional digestive disorders." },
-  { icon: ScrollText, title: "Personalized Meal Planning", desc: "Customised weekly meal plans that align with your health goals, taste preferences, and household routine." },
+  { icon: Apple, title: "Therapeutic Diet Counseling", desc: "Personalised dietary plans designed around your medical profile, lifestyle, and goals — sustainable, science-backed, and culturally relevant.", cat: "nutrition" as const },
+  { icon: Activity, title: "Diabetes Nutrition Management", desc: "Specialized care for Type 1, Type 2, gestational diabetes, and pre-diabetes through targeted meal planning and carb-management strategies.", cat: "nutrition" as const },
+  { icon: Scale, title: "Weight Management", desc: "Structured, evidence-based programmes that address the root causes of weight imbalance — without crash dieting or extreme restriction.", cat: "nutrition" as const },
+  { icon: Zap, title: "PCOS & Thyroid Nutrition", desc: "Hormone-supportive nutrition therapy for PCOS, hypothyroidism, and other endocrine conditions, guided by therapeutic dietetics.", cat: "nutrition" as const },
+  { icon: Leaf, title: "Digestive Health Nutrition", desc: "Gut-healing dietary protocols for IBS, GERD, bloating, constipation, and other functional digestive disorders.", cat: "nutrition" as const },
+  { icon: ScrollText, title: "Personalized Meal Planning", desc: "Customised weekly meal plans that align with your health goals, taste preferences, and household routine.", cat: "nutrition" as const },
 ];
 
 const homeopathyServices = [
-  { icon: Heart, title: "Chronic Disease Management", desc: "Long-term holistic treatment for persistent conditions — migraines, arthritis, psoriasis, and other chronic ailments using classical constitutional prescribing." },
-  { icon: Wind, title: "Allergy & Respiratory Care", desc: "Gentle, effective remedies for seasonal allergies, sinusitis, asthma, and recurrent respiratory infections — building lasting immunity from within." },
-  { icon: Stethoscope, title: "Digestive Disorders", desc: "Holistic management of IBS, acidity, gastritis, constipation, and other gastrointestinal conditions with personalised homoeopathic care." },
-  { icon: Brain, title: "Stress & Anxiety Support", desc: "Constitutional remedies addressing the mind-body connection — helping with anxiety, burnout, sleep disorders, and emotional well-being." },
-  { icon: Smile, title: "Skin & Hair Concerns", desc: "From eczema, acne, and psoriasis to hair loss and scalp conditions — deep-acting remedies that treat the cause, not just the symptom." },
-  { icon: Ear, title: "ENT Related Conditions", desc: "Effective homoeopathic care for recurrent ear infections, tonsillitis, sinusitis, nasal polyps, and other ENT disorders." },
-  { icon: Leaf, title: "Holistic Wellness Consultation", desc: "A comprehensive assessment of your physical, mental, and lifestyle health — creating an integrated wellness plan for long-term vitality." },
+  { icon: Heart, title: "Chronic Disease Management", desc: "Long-term holistic treatment for persistent conditions — migraines, arthritis, psoriasis, and other chronic ailments using classical constitutional prescribing.", cat: "homoeopathy" as const },
+  { icon: Wind, title: "Allergy & Respiratory Care", desc: "Gentle, effective remedies for seasonal allergies, sinusitis, asthma, and recurrent respiratory infections — building lasting immunity from within.", cat: "homoeopathy" as const },
+  { icon: Stethoscope, title: "Digestive Disorders", desc: "Holistic management of IBS, acidity, gastritis, constipation, and other gastrointestinal conditions with personalised homoeopathic care.", cat: "homoeopathy" as const },
+  { icon: Brain, title: "Stress & Anxiety Support", desc: "Constitutional remedies addressing the mind-body connection — helping with anxiety, burnout, sleep disorders, and emotional well-being.", cat: "homoeopathy" as const },
+  { icon: Smile, title: "Skin & Hair Concerns", desc: "From eczema, acne, and psoriasis to hair loss and scalp conditions — deep-acting remedies that treat the cause, not just the symptom.", cat: "homoeopathy" as const },
+  { icon: Ear, title: "ENT Related Conditions", desc: "Effective homoeopathic care for recurrent ear infections, tonsillitis, sinusitis, nasal polyps, and other ENT disorders.", cat: "homoeopathy" as const },
+  { icon: Leaf, title: "Holistic Wellness Consultation", desc: "A comprehensive assessment of your physical, mental, and lifestyle health — creating an integrated wellness plan for long-term vitality.", cat: "homoeopathy" as const },
 ];
 
-function ServiceCard({ icon: Icon, title, desc, accent }: { icon: any; title: string; desc: string; accent: "green" | "teal" }) {
-  const colors = {
-    green: {
-      icon: "bg-[var(--green-deep)]/8 text-[var(--green-deep)] group-hover:bg-[var(--green-deep)]/14",
-      border: "hover:border-[var(--green-deep)]/30",
-    },
-    teal: {
-      icon: "bg-[var(--teal)]/8 text-[var(--teal)] group-hover:bg-[var(--teal)]/14",
-      border: "hover:border-[var(--teal)]/30",
-    },
-  }[accent];
+const allServices = [...nutritionServices, ...homeopathyServices];
+
+const filters: { key: Category; label: string; accent: string; activeClass: string }[] = [
+  { key: "all", label: "All Services", accent: "border-[var(--gold)]", activeClass: "bg-[var(--green-deep)] text-white border-[var(--green-deep)]" },
+  { key: "homoeopathy", label: "Homoeopathy", accent: "border-[var(--green-deep)]", activeClass: "bg-[var(--green-deep)] text-white border-[var(--green-deep)]" },
+  { key: "nutrition", label: "Nutrition & Diet", accent: "border-[var(--teal)]", activeClass: "bg-[var(--teal)] text-white border-[var(--teal)]" },
+];
+
+function ServiceCard({ icon: Icon, title, desc, cat }: { icon: any; title: string; desc: string; cat: "nutrition" | "homoeopathy" }) {
+  const isNutrition = cat === "nutrition";
+  const iconClass = isNutrition
+    ? "bg-[var(--teal)]/8 text-[var(--teal)] group-hover:bg-[var(--teal)]/14"
+    : "bg-[var(--green-deep)]/8 text-[var(--green-deep)] group-hover:bg-[var(--green-deep)]/14";
+  const borderClass = isNutrition ? "hover:border-[var(--teal)]/30" : "hover:border-[var(--green-deep)]/30";
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.45 }}
-      className={`group bg-white rounded-2xl border border-[var(--border)] ${colors.border} p-6 hover:shadow-[0_8px_32px_rgba(27,67,50,0.10)] transition-all duration-300 cursor-default`}
+      layout
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.95 }}
+      transition={{ duration: 0.3 }}
+      className={`group bg-white rounded-2xl border border-[var(--border)] ${borderClass} p-6 hover:shadow-[0_8px_32px_rgba(27,67,50,0.10)] transition-all duration-300 cursor-default`}
     >
-      <div className={`w-11 h-11 rounded-xl mb-4 flex items-center justify-center transition-colors duration-300 ${colors.icon}`}>
+      <div className={`w-11 h-11 rounded-xl mb-4 flex items-center justify-center transition-colors duration-300 ${iconClass}`}>
         <Icon className="w-5 h-5"/>
+      </div>
+      <div className={`inline-block text-[9px] font-bold tracking-[0.18em] uppercase px-2.5 py-1 rounded-full mb-3 ${isNutrition ? "bg-[var(--teal)]/8 text-[var(--teal)]" : "bg-[var(--green-deep)]/8 text-[var(--green-deep)]"}`}>
+        {isNutrition ? "Nutrition & Diet" : "Homoeopathy"}
       </div>
       <h3 className="font-serif text-lg text-[var(--text-dark)] mb-2 leading-snug">{title}</h3>
       <p className="font-sans text-sm text-[var(--text-muted)] leading-relaxed">{desc}</p>
@@ -54,6 +64,12 @@ function ServiceCard({ icon: Icon, title, desc, accent }: { icon: any; title: st
 }
 
 export default function Services() {
+  const [active, setActive] = useState<Category>("all");
+
+  const displayed = active === "all" ? allServices
+    : active === "nutrition" ? nutritionServices
+    : homeopathyServices;
+
   return (
     <div className="pt-20">
 
@@ -75,71 +91,75 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Category 1: Nutrition */}
-      <section className="py-24 bg-[var(--bg-warm)]">
+      {/* Filter Tabs */}
+      <section className="py-10 bg-white border-b border-[var(--border)] sticky top-[72px] z-40">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="mb-12">
-            <div className="inline-flex items-center gap-3 mb-4">
-              <div className="w-9 h-9 rounded-xl bg-[var(--teal)] flex items-center justify-center">
-                <Apple className="w-5 h-5 text-white"/>
-              </div>
-              <span className="font-sans text-xs tracking-[0.2em] uppercase text-[var(--gold)] font-semibold">Category 1</span>
-            </div>
-            <h2 className="font-serif text-3xl md:text-4xl text-[var(--text-dark)] mb-3">
-              Nutrition & Lifestyle Care
-            </h2>
-            <p className="font-sans text-[var(--text-muted)] text-base max-w-2xl leading-relaxed">
-              Led by <strong className="text-[var(--text-dark)] font-medium">Pampita Banerjee</strong> (MSc Food & Nutrition, Therapeutic Dietitian, Diabetic Educator) — science-based dietary therapy for chronic and lifestyle conditions.
-            </p>
-            <div className="mt-4 flex items-center gap-3">
-              <a href="tel:+918961661721" className="inline-flex items-center gap-2 text-[var(--teal)] text-sm font-medium font-sans hover:text-[var(--green-deep)] transition-colors">
-                <Activity className="w-4 h-4"/> +91 8961661721
-              </a>
-            </div>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {nutritionServices.map((s, i) => (
-              <ServiceCard key={i} icon={s.icon} title={s.title} desc={s.desc} accent="teal"/>
+          <div className="flex flex-wrap items-center gap-3 justify-center">
+            {filters.map((f) => (
+              <button
+                key={f.key}
+                onClick={() => setActive(f.key)}
+                className={`px-6 py-2.5 rounded-full border font-medium text-sm font-sans transition-all duration-200 ${
+                  active === f.key
+                    ? f.activeClass
+                    : "bg-white text-[var(--text-dark)] border-[var(--border)] hover:border-[var(--green-deep)]/30 hover:text-[var(--green-deep)]"
+                }`}
+              >
+                {f.label}
+                <span className={`ml-2 text-xs rounded-full px-1.5 py-0.5 ${active === f.key ? "bg-white/20" : "bg-[var(--bg-cream)]"}`}>
+                  {f.key === "all" ? allServices.length : f.key === "nutrition" ? nutritionServices.length : homeopathyServices.length}
+                </span>
+              </button>
             ))}
           </div>
+
+          {/* Specialist info strip */}
+          <AnimatePresence mode="wait">
+            {active !== "all" && (
+              <motion.div
+                key={active}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.25 }}
+                className="mt-6 flex flex-wrap items-center justify-center gap-6"
+              >
+                {active === "homoeopathy" ? (
+                  <div className="flex items-center gap-3 text-sm font-sans text-[var(--text-muted)]">
+                    <span className="w-2 h-2 rounded-full bg-[var(--green-deep)] inline-block"/>
+                    Led by <strong className="text-[var(--green-deep)] font-medium mx-1">Dr. Souvik Dutta</strong> · BHMS, MD(Hom.) ·
+                    <a href="tel:+917980219737" className="ml-1 text-[var(--green-deep)] font-medium hover:underline">+91 7980219737</a>
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-3 text-sm font-sans text-[var(--text-muted)]">
+                    <span className="w-2 h-2 rounded-full bg-[var(--teal)] inline-block"/>
+                    Led by <strong className="text-[var(--teal)] font-medium mx-1">Pampita Banerjee</strong> · MSc Nutrition, Diabetic Educator ·
+                    <a href="tel:+918961661721" className="ml-1 text-[var(--teal)] font-medium hover:underline">+91 8961661721</a>
+                  </div>
+                )}
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="bg-[var(--bg-cream)] py-0.5"/>
-
-      {/* Category 2: Homoeopathy */}
-      <section className="py-24 bg-[var(--bg-cream)]">
+      {/* Services Grid */}
+      <section className="py-16 bg-[var(--bg-warm)]">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="mb-12">
-            <div className="inline-flex items-center gap-3 mb-4">
-              <div className="w-9 h-9 rounded-xl bg-[var(--green-deep)] flex items-center justify-center">
-                <Stethoscope className="w-5 h-5 text-white"/>
-              </div>
-              <span className="font-sans text-xs tracking-[0.2em] uppercase text-[var(--gold)] font-semibold">Category 2</span>
-            </div>
-            <h2 className="font-serif text-3xl md:text-4xl text-[var(--text-dark)] mb-3">
-              Homoeopathic & Holistic Care
-            </h2>
-            <p className="font-sans text-[var(--text-muted)] text-base max-w-2xl leading-relaxed">
-              Led by <strong className="text-[var(--text-dark)] font-medium">Dr. Souvik Dutta</strong> (BHMS, MD(Hom.), MBA, Senior Research Fellow CCRH) — classical constitutional prescribing for lasting, deep healing.
-            </p>
-            <div className="mt-4 flex flex-wrap items-center gap-4">
-              <a href="tel:+917980219737" className="inline-flex items-center gap-2 text-[var(--green-deep)] text-sm font-medium font-sans hover:text-[var(--green-mid)] transition-colors">
-                <Stethoscope className="w-4 h-4"/> +91 7980219737
-              </a>
-              <a href="tel:+918961661727" className="inline-flex items-center gap-2 text-[var(--text-muted)] text-sm font-sans hover:text-[var(--green-deep)] transition-colors">
-                <Heart className="w-4 h-4"/> +91 8961661727 <span className="text-[var(--text-muted)]/60 text-xs">(emergency)</span>
-              </a>
-            </div>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {homeopathyServices.map((s, i) => (
-              <ServiceCard key={i} icon={s.icon} title={s.title} desc={s.desc} accent="green"/>
-            ))}
-          </div>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={active}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
+            >
+              {displayed.map((s, i) => (
+                <ServiceCard key={`${s.title}-${i}`} icon={s.icon} title={s.title} desc={s.desc} cat={s.cat}/>
+              ))}
+            </motion.div>
+          </AnimatePresence>
         </div>
       </section>
 

@@ -37,7 +37,21 @@ export default function BookAppointment() {
     if (Object.keys(errs).length) { setErrors(errs); return; }
     setErrors({});
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1400));
+    try {
+      await fetch("/api/appointment", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: form.name,
+          phone: form.phone,
+          email: form.email,
+          doctor: form.doctor,
+          date: form.date,
+          reason: form.concern,
+        }),
+      });
+    } catch {
+    }
     setLoading(false);
     setSubmitted(true);
   };
