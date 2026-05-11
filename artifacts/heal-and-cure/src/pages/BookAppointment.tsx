@@ -202,18 +202,22 @@ export default function BookAppointment() {
                         {doctors.map((d) => (
                           <button type="button" key={d.value}
                             onClick={() => set("doctor", d.value)}
-                            className={`flex flex-col items-center gap-2 p-4 rounded-2xl border-2 transition-all text-center ${
+                            className={`relative flex flex-col items-center gap-2.5 p-4 rounded-2xl border-2 transition-all text-center ${
                               form.doctor === d.value
-                                ? "border-[var(--green-deep)] bg-[var(--green-deep)]/5"
-                                : "border-[var(--border)] hover:border-[var(--green-deep)]/40 hover:bg-[var(--bg-cream)]"
+                                ? "border-[var(--green-deep)] bg-[var(--green-deep)]/10 shadow-[0_0_0_3px_rgba(27,67,50,0.12)]"
+                                : "border-[var(--border)] hover:border-[var(--green-deep)]/50 hover:bg-[var(--bg-cream)]"
                             }`}>
-                            <img src={d.img} className="w-14 h-14 rounded-full object-cover object-top" alt={d.label}/>
+                            <img src={d.img}
+                              className={`w-16 h-16 rounded-full object-cover object-top transition-all ${form.doctor === d.value ? "ring-3 ring-[var(--green-deep)] ring-offset-2" : "ring-2 ring-[var(--border)]"}`}
+                              alt={d.label}/>
                             <div>
-                              <p className="font-serif text-sm leading-tight text-[var(--text-dark)]">{d.label}</p>
+                              <p className={`font-serif text-sm leading-tight transition-colors ${form.doctor === d.value ? "text-[var(--green-deep)]" : "text-[var(--text-dark)]"}`}>{d.label}</p>
                               <p className="font-sans text-[11px] text-[var(--text-muted)] mt-0.5">{d.sub}</p>
                             </div>
                             {form.doctor === d.value && (
-                              <CheckCircle2 className="w-4 h-4 text-[var(--green-deep)] absolute -top-0 -right-0"/>
+                              <span className="absolute top-2 right-2 bg-[var(--green-deep)] rounded-full p-0.5">
+                                <CheckCircle2 className="w-3.5 h-3.5 text-white"/>
+                              </span>
                             )}
                           </button>
                         ))}

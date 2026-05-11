@@ -106,12 +106,11 @@ export default function Home() {
             {/* CTAs */}
             <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }}
               className="flex flex-wrap gap-3 mb-8">
-              <button data-testid="button-hero-book"
-                onClick={() => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })}
+              <Link href="/book" data-testid="button-hero-book"
                 className="btn-fill flex items-center gap-2 bg-[var(--green-deep)] text-white px-7 py-3.5 rounded-full font-medium hover:bg-[var(--green-mid)] transition-all text-sm shadow-md">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                 Book Appointment
-              </button>
+              </Link>
               <a data-testid="link-hero-whatsapp" href="https://wa.me/918961661721" target="_blank" rel="noopener noreferrer"
                 className="btn-fill flex items-center gap-2 bg-white border border-[var(--border)] text-[var(--green-deep)] px-7 py-3.5 rounded-full font-medium hover:bg-[var(--bg-cream)] transition-all text-sm shadow-sm">
                 <MessageCircle className="w-4 h-4"/>
