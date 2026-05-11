@@ -166,47 +166,41 @@ export default function Home() {
       {/* ══ RESEARCH EXCELLENCE BANNER ═══════════════════════ */}
       <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
         className="bg-[var(--green-deep)] text-white py-20 overflow-hidden relative">
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(white 1px, transparent 1px)", backgroundSize: "36px 36px" }}/>
+        {/* Research image — full height, right side, fading left */}
+        <div className="absolute right-0 top-0 h-full w-[48%] hidden md:block pointer-events-none">
+          <img src={researchBgImg} alt="" className="w-full h-full object-cover object-left opacity-45"/>
+          <div className="absolute inset-0 bg-gradient-to-r from-[var(--green-deep)] via-[var(--green-deep)]/55 to-[var(--green-deep)]/10"/>
+          <div className="absolute inset-0 bg-gradient-to-b from-[var(--green-deep)]/30 via-transparent to-[var(--green-deep)]/30"/>
+        </div>
+        {/* Subtle dot texture */}
+        <div className="absolute inset-0 opacity-[0.025]" style={{ backgroundImage: "radial-gradient(white 1px, transparent 1px)", backgroundSize: "36px 36px" }}/>
         <div className="container mx-auto px-4 relative z-10 max-w-5xl">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-14 items-center">
-            {/* Text — wider */}
-            <div className="flex flex-col gap-6">
-              <div className="flex items-center gap-2">
-                <div className="h-px w-6 bg-[var(--gold)]/70"/>
-                <span className="text-[var(--gold)] font-sans font-semibold tracking-[0.2em] text-[10px] uppercase">Research & Clinical Credentials</span>
-              </div>
-              <h2 className="font-serif text-3xl md:text-[2.2rem] leading-[1.28] max-w-xl">
-                Clinical Experience Backed by Government Research
-              </h2>
-              <div className="space-y-3 max-w-2xl">
-                <p className="font-sans text-white/82 text-base leading-relaxed">
-                  Dr. Souvik Dutta currently serves as a <strong className="text-white font-semibold">Senior Research Fellow</strong> under CCRH, Ministry of AYUSH, Government of India. His experience across clinical research and hospital practice helps bring evidence-informed, patient-focused care to Heal &amp; Cure.
-                </p>
-                <p className="font-sans text-white/58 text-sm leading-relaxed italic">
-                  This experience supports a thoughtful and research-informed approach to holistic healthcare.
-                </p>
-              </div>
-              {/* 2 trust indicators only */}
-              <div className="flex flex-wrap gap-4 mt-1">
-                {[
-                  { icon: Shield, label: "Govt. Research Affiliation" },
-                  { icon: Award, label: "10+ Years Clinical Experience" },
-                ].map((t) => (
-                  <div key={t.label} className="flex items-center gap-2">
-                    <t.icon className="w-4 h-4 text-[var(--gold)]/80 shrink-0"/>
-                    <span className="font-sans text-[12px] text-white/65 tracking-wide">{t.label}</span>
-                  </div>
-                ))}
-              </div>
+          <div className="max-w-2xl flex flex-col gap-6">
+            <div className="flex items-center gap-2">
+              <div className="h-px w-6 bg-[var(--gold)]/70"/>
+              <span className="text-[var(--gold)] font-sans font-semibold tracking-[0.2em] text-[10px] uppercase">Research &amp; Clinical Credentials</span>
             </div>
-
-            {/* Research image — blended right side */}
-            <div className="hidden md:block shrink-0 relative w-80 h-64 rounded-2xl overflow-hidden">
-              <img src={researchBgImg} alt="Homoeopathy clinical research" className="absolute inset-0 w-full h-full object-cover object-center opacity-60"/>
-              {/* Fade left into section bg */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[var(--green-deep)] via-[var(--green-deep)]/30 to-transparent"/>
-              {/* Fade top and bottom edges */}
-              <div className="absolute inset-0 bg-gradient-to-b from-[var(--green-deep)]/40 via-transparent to-[var(--green-deep)]/40"/>
+            <h2 className="font-serif text-3xl md:text-[2.2rem] leading-[1.28]">
+              Clinical Experience Backed by Government Research
+            </h2>
+            <div className="space-y-3">
+              <p className="font-sans text-white/82 text-base leading-relaxed">
+                Dr. Souvik Dutta currently serves as a <strong className="text-white font-semibold">Senior Research Fellow</strong> under CCRH, Ministry of AYUSH, Government of India. His experience across clinical research and hospital practice helps bring evidence-informed, patient-focused care to Heal &amp; Cure.
+              </p>
+              <p className="font-sans text-white/55 text-sm leading-relaxed italic">
+                This experience supports a thoughtful and research-informed approach to holistic healthcare.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-5 mt-1">
+              {[
+                { icon: Shield, label: "Govt. Research Affiliation" },
+                { icon: Award, label: "10+ Years Clinical Experience" },
+              ].map((t) => (
+                <div key={t.label} className="flex items-center gap-2">
+                  <t.icon className="w-4 h-4 text-[var(--gold)]/80 shrink-0"/>
+                  <span className="font-sans text-[12px] text-white/65 tracking-wide">{t.label}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -285,7 +279,7 @@ export default function Home() {
               </div>
               <div className="p-8 flex flex-col flex-1">
                 <h3 className="font-serif text-3xl text-[var(--teal)] mb-0.5">Pampita Banerjee</h3>
-                <p className="font-serif text-base text-[var(--teal)]/75 font-normal italic mb-1">Clinical Nutritionist &amp; Diabetician</p>
+                <p className="font-serif text-base text-[var(--teal)]/75 font-normal italic mb-1">Clinical Nutritionist &amp; Dietician</p>
                 <p className="text-[var(--gold)] font-sans text-xs font-medium mb-4 tracking-wide">MSc Food &amp; Nutrition | Therapeutic Dietitian</p>
                 <p className="font-sans text-[var(--text-muted)] text-sm mb-5 leading-relaxed flex-1">
                   Expert therapeutic dietitian and certified Diabetic Educator specialising in clinical nutrition for diabetes, PCOD, kidney disease, and metabolic conditions.
