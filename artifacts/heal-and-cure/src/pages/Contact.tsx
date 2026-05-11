@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, MessageCircle, Facebook } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageCircle, Facebook, AlertCircle } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -7,99 +7,121 @@ export default function Contact() {
       <section className="py-20">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
-            <h1 className="font-serif text-5xl md:text-6xl text-[var(--green-deep)] mb-6">Get in Touch</h1>
-            <p className="font-sans text-lg text-[var(--text-muted)] max-w-2xl mx-auto">
-              We are here to answer your questions and guide you on your path to wellness. Visit us or reach out online.
-            </p>
+            <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+              className="text-[var(--gold)] text-xs tracking-[0.25em] uppercase font-sans font-semibold">
+              Reach Us
+            </motion.span>
+            <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
+              className="font-serif text-5xl md:text-6xl text-[var(--green-deep)] mt-3 mb-5">
+              Get in Touch
+            </motion.h1>
+            <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}
+              className="font-sans text-lg text-[var(--text-muted)] max-w-2xl mx-auto leading-relaxed">
+              We are here to answer your questions and guide you on your path to wellness. Visit us, call us, or reach out online.
+            </motion.p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 bg-white rounded-3xl shadow-lg overflow-hidden border border-[var(--border)]">
-            
-            {/* Left: Contact Details */}
-            <div className="p-8 md:p-12 flex flex-col gap-10">
+          <div className="grid lg:grid-cols-2 gap-10 mb-10">
+
+            {/* Contact Details Card */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }}
+              className="bg-white rounded-3xl shadow-[0_8px_40px_rgba(27,67,50,0.08)] border border-[var(--border)] p-8 md:p-10 flex flex-col gap-8">
+
               <div>
-                <h3 className="font-serif text-3xl text-[var(--text-dark)] mb-6">Contact Information</h3>
-                <div className="space-y-6">
+                <h3 className="font-serif text-2xl text-[var(--text-dark)] mb-6">Contact Information</h3>
+                <div className="space-y-5">
                   <div className="flex items-start gap-4">
-                    <div className="bg-[var(--green-deep)]/10 p-3 rounded-full text-[var(--green-deep)] shrink-0">
-                      <MapPin className="w-6 h-6" />
+                    <div className="bg-[var(--green-deep)]/8 p-3 rounded-xl text-[var(--green-deep)] shrink-0">
+                      <MapPin className="w-5 h-5"/>
                     </div>
                     <div>
-                      <h4 className="font-bold text-[var(--text-dark)] mb-1">Clinic Address</h4>
-                      <p className="text-[var(--text-muted)]">Panpara Lane, Uttarpara<br />Kolkata 712232, West Bengal</p>
+                      <h4 className="font-sans font-semibold text-[var(--text-dark)] text-sm mb-0.5">Clinic Address</h4>
+                      <p className="text-[var(--text-muted)] text-sm leading-relaxed">Panpara Lane, Uttarpara<br/>Kolkata 712232, West Bengal</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="bg-[var(--green-deep)]/10 p-3 rounded-full text-[var(--green-deep)] shrink-0">
-                      <Phone className="w-6 h-6" />
+                    <div className="bg-[var(--green-deep)]/8 p-3 rounded-xl text-[var(--green-deep)] shrink-0">
+                      <Phone className="w-5 h-5"/>
                     </div>
-                    <div>
-                      <h4 className="font-bold text-[var(--text-dark)] mb-1">Phone / WhatsApp</h4>
-                      <p className="text-[var(--text-muted)]">+91 79802 19737</p>
+                    <div className="flex-1">
+                      <h4 className="font-sans font-semibold text-[var(--text-dark)] text-sm mb-2">Phone Numbers</h4>
+                      <div className="space-y-3">
+                        <div className="bg-[var(--bg-cream)] rounded-xl p-3">
+                          <p className="font-sans text-xs text-[var(--gold)] font-semibold uppercase tracking-wider mb-1">Dr. Souvik Dutta</p>
+                          <a href="tel:+917980219737" className="block text-sm text-[var(--green-deep)] font-medium hover:underline">+91 7980219737</a>
+                          <a href="tel:+918961661727" className="flex items-center gap-1.5 text-sm text-[var(--text-muted)] hover:text-[var(--green-deep)] transition-colors mt-1">
+                            <AlertCircle className="w-3.5 h-3.5 text-amber-500"/>
+                            +91 8961661727 <span className="text-xs">(emergency)</span>
+                          </a>
+                        </div>
+                        <div className="bg-[var(--bg-cream)] rounded-xl p-3">
+                          <p className="font-sans text-xs text-[var(--gold)] font-semibold uppercase tracking-wider mb-1">Pampita Banerjee</p>
+                          <a href="tel:+918961661721" className="block text-sm text-[var(--teal)] font-medium hover:underline">+91 8961661721</a>
+                        </div>
+                        <div className="bg-[var(--bg-cream)] rounded-xl p-3">
+                          <p className="font-sans text-xs text-[var(--gold)] font-semibold uppercase tracking-wider mb-1">WhatsApp</p>
+                          <a href="https://wa.me/918961661721" target="_blank" rel="noopener noreferrer"
+                            className="block text-sm text-[var(--green-deep)] font-medium hover:underline">+91 8961661721</a>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="bg-[var(--green-deep)]/10 p-3 rounded-full text-[var(--green-deep)] shrink-0">
-                      <Mail className="w-6 h-6" />
+                    <div className="bg-[var(--green-deep)]/8 p-3 rounded-xl text-[var(--green-deep)] shrink-0">
+                      <Mail className="w-5 h-5"/>
                     </div>
                     <div>
-                      <h4 className="font-bold text-[var(--text-dark)] mb-1">Email</h4>
-                      <p className="text-[var(--text-muted)]">drsouvikdutta@gmail.com<br/>pampita.banerjee11@gmail.com</p>
+                      <h4 className="font-sans font-semibold text-[var(--text-dark)] text-sm mb-1">Email</h4>
+                      <a href="mailto:appointments.healandcure@gmail.com" className="block text-[var(--text-muted)] text-sm hover:text-[var(--green-deep)] transition-colors">appointments.healandcure@gmail.com</a>
+                      <a href="mailto:drsouvikdutta@gmail.com" className="block text-[var(--text-muted)] text-sm hover:text-[var(--green-deep)] transition-colors">drsouvikdutta@gmail.com</a>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div>
-                <h3 className="font-serif text-2xl text-[var(--text-dark)] mb-6">Clinic Hours</h3>
-                <div className="bg-[var(--bg-cream)] p-6 rounded-2xl space-y-3 text-[var(--text-dark)]">
-                  <div className="flex justify-between items-center border-b border-[var(--border)] pb-3">
-                    <span className="font-medium">Monday - Saturday</span>
-                    <span className="text-[var(--text-muted)]">10:00 AM - 7:00 PM</span>
-                  </div>
-                  <div className="flex justify-between items-center pt-1">
-                    <span className="font-medium text-[var(--gold)]">Sunday</span>
-                    <span className="text-[var(--text-muted)]">By Appointment Only</span>
+                <h3 className="font-serif text-xl text-[var(--text-dark)] mb-4">Clinic Hours</h3>
+                <div className="bg-[var(--bg-cream)] rounded-2xl p-5 flex flex-col gap-3">
+                  <div className="flex items-start gap-3">
+                    <Clock className="w-5 h-5 text-[var(--gold)] shrink-0 mt-0.5"/>
+                    <div>
+                      <div className="flex justify-between items-center">
+                        <span className="font-sans font-medium text-[var(--text-dark)] text-sm">Sunday – Saturday</span>
+                        <span className="font-sans text-sm text-[var(--green-deep)] font-semibold ml-6">9:00 AM – 9:00 PM</span>
+                      </div>
+                      <p className="text-xs text-[var(--text-muted)] mt-1.5 font-sans">Open all 7 days. Walk-ins welcome.</p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div className="flex gap-4 pt-4">
-                <a 
-                  href="https://wa.me/917980219737" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex-1 flex justify-center items-center gap-2 bg-[#25D366] text-white py-4 rounded-full font-medium hover:bg-[#20b858] transition-colors"
-                >
-                  <MessageCircle className="w-5 h-5" /> WhatsApp
+              <div className="flex gap-3">
+                <a href="https://wa.me/918961661721" target="_blank" rel="noopener noreferrer"
+                  className="flex-1 flex justify-center items-center gap-2 bg-[var(--green-deep)] text-white py-3.5 rounded-full font-medium text-sm hover:bg-[var(--green-mid)] transition-colors">
+                  <MessageCircle className="w-4 h-4"/> WhatsApp
                 </a>
-                <a 
-                  href="https://www.facebook.com/thehchc.drsouvik" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex-1 flex justify-center items-center gap-2 bg-[#1877F2] text-white py-4 rounded-full font-medium hover:bg-[#166fe5] transition-colors"
-                >
-                  <Facebook className="w-5 h-5" /> Facebook
+                <a href="https://www.facebook.com/thehchc.drsouvik" target="_blank" rel="noopener noreferrer"
+                  className="flex-1 flex justify-center items-center gap-2 bg-[#1877F2] text-white py-3.5 rounded-full font-medium text-sm hover:bg-[#166fe5] transition-colors">
+                  <Facebook className="w-4 h-4"/> Facebook
                 </a>
               </div>
-            </div>
+            </motion.div>
 
-            {/* Right: Map */}
-            <div className="h-[400px] lg:h-auto min-h-[500px] bg-gray-100">
-              <iframe 
-                src="https://maps.google.com/maps?q=Panpara+Lane+Uttarpara+Kolkata+712232&output=embed" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen 
+            {/* Map */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }}
+              className="rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(27,67,50,0.08)] border border-[var(--border)] min-h-[420px]">
+              <iframe
+                src="https://maps.google.com/maps?q=Panpara+Lane+Uttarpara+Kolkata+712232&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0, minHeight: 420 }}
+                allowFullScreen
                 loading="lazy"
-                title="Clinic Location"
-                className="w-full h-full"
+                title="Heal & Cure Health Clinic Location — Panpara Lane, Uttarpara"
               />
-            </div>
-            
+            </motion.div>
           </div>
         </div>
       </section>

@@ -153,8 +153,11 @@ export default function Navbar() {
             </motion.nav>
 
             <div className="px-8 py-6 border-t border-[var(--border)] bg-[var(--bg-cream)]">
-              <p className="font-sans text-xs text-[var(--text-muted)] uppercase tracking-widest mb-1">Call us</p>
-              <a href="tel:+917980219737" className="font-serif text-xl text-[var(--green-deep)]">+91 79802 19737</a>
+              <p className="font-sans text-xs text-[var(--text-muted)] uppercase tracking-widest mb-2">Call Us</p>
+              <div className="flex flex-col gap-1.5">
+                <a href="tel:+917980219737" className="font-serif text-lg text-[var(--green-deep)]">+91 7980219737 <span className="font-sans text-xs text-[var(--text-muted)] font-normal">(Dr. Souvik)</span></a>
+                <a href="tel:+918961661721" className="font-serif text-lg text-[var(--teal)]">+91 8961661721 <span className="font-sans text-xs text-[var(--text-muted)] font-normal">(Pampita / WhatsApp)</span></a>
+              </div>
             </div>
           </motion.div>
         )}

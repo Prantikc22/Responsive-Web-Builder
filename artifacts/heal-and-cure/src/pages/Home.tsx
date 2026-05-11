@@ -4,7 +4,7 @@ import { Link } from "wouter";
 import {
   Award, Users, Leaf, Stethoscope, Heart, Baby, Apple,
   Activity, Zap, MessageCircle, ChevronLeft, ChevronRight,
-  FlaskConical, Target, Sparkles, BookOpen, Shield, Search
+  FlaskConical, Target, Sparkles, BookOpen, Shield, Search, Phone
 } from "lucide-react";
 import drSouvikImg from "@assets/Doc_Men_1778067737072.jpeg";
 import pampitaImg from "@assets/Doc_Women_1778067734674.jpeg";
@@ -81,16 +81,16 @@ export default function Home() {
             <div className="lg:col-span-7 flex flex-col items-start gap-6">
               <motion.span initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
                 className="text-[var(--gold)] font-sans font-semibold tracking-[0.25em] text-xs uppercase border border-[var(--gold)]/30 px-4 py-1.5 rounded-full bg-[var(--gold)]/5">
-                Boutique Medical Clinic · Kolkata
+                Uttarpara, West Bengal · Holistic Health Clinic
               </motion.span>
               <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.15 }}
                 className="font-serif text-5xl md:text-6xl lg:text-[66px] leading-[1.1] text-[var(--text-dark)]">
-                Where Clinical Rigour Meets{" "}
-                <em className="text-[var(--green-deep)]">Holistic Healing</em>
+                Personalized Nutrition &amp;{" "}
+                <em className="text-[var(--green-deep)]">Holistic Healthcare</em>
               </motion.h1>
               <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.35 }}
                 className="font-sans text-lg text-[var(--text-muted)] max-w-xl leading-relaxed">
-                Trusted by patients across Kolkata — combining government-backed Homoeopathy with expert Clinical Nutrition for deep, lasting results.
+                Compassionate, research-informed care for lifestyle disorders, chronic conditions, nutrition, and overall wellness.
               </motion.p>
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.55 }}
                 className="flex flex-wrap gap-4">
@@ -99,10 +99,10 @@ export default function Home() {
                   className="bg-[var(--green-deep)] text-white px-8 py-4 rounded-full font-medium hover:bg-[var(--green-mid)] transition-all hover:scale-105 shadow-lg">
                   Book Appointment
                 </button>
-                <a data-testid="link-hero-whatsapp" href="https://wa.me/917980219737" target="_blank" rel="noopener noreferrer"
+                <a data-testid="link-hero-whatsapp" href="https://wa.me/918961661721" target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-white border border-[var(--border)] text-[var(--green-deep)] px-8 py-4 rounded-full font-medium hover:bg-gray-50 transition-all hover:scale-105 shadow-sm">
-                  <MessageCircle className="w-5 h-5 text-[#25D366]" />
-                  Chat on WhatsApp
+                  <MessageCircle className="w-5 h-5 text-[var(--green-deep)]" />
+                  Chat With Clinic
                 </a>
               </motion.div>
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.8 }}
@@ -261,11 +261,15 @@ export default function Home() {
                     <span key={b} className="text-xs bg-[var(--bg-cream)] text-[var(--green-deep)] border border-[var(--border)] px-3 py-1 rounded-full font-medium">{b}</span>
                   ))}
                 </div>
-                <button data-testid="button-book-souvik"
-                  onClick={() => window.Calendly?.initPopupWidget({ url: "SOUVIK_CALENDLY_URL" })}
-                  className="w-full bg-[var(--green-deep)] text-white py-3.5 rounded-full font-medium hover:bg-[var(--green-mid)] transition-all hover:scale-[1.02]">
-                  Book with Dr. Souvik
-                </button>
+                <div className="flex flex-col gap-2">
+                  <a href="tel:+917980219737" className="flex items-center justify-center gap-2 text-sm text-[var(--green-deep)] font-medium font-sans hover:underline">
+                    <Phone className="w-4 h-4"/> +91 7980219737
+                  </a>
+                  <Link href="/book" data-testid="button-book-souvik"
+                    className="w-full bg-[var(--green-deep)] text-white py-3.5 rounded-full font-medium hover:bg-[var(--green-mid)] transition-all hover:scale-[1.02] text-center block">
+                    Book with Dr. Souvik
+                  </Link>
+                </div>
               </div>
             </motion.div>
 
@@ -297,11 +301,15 @@ export default function Home() {
                     <span key={b} className="text-xs bg-[var(--bg-cream)] text-[var(--teal)] border border-[var(--border)] px-3 py-1 rounded-full font-medium">{b}</span>
                   ))}
                 </div>
-                <button data-testid="button-book-pampita"
-                  onClick={() => window.Calendly?.initPopupWidget({ url: "PAMPITA_CALENDLY_URL" })}
-                  className="w-full bg-[var(--teal)] text-white py-3.5 rounded-full font-medium hover:opacity-85 transition-all hover:scale-[1.02]">
-                  Book with Pampita
-                </button>
+                <div className="flex flex-col gap-2">
+                  <a href="tel:+918961661721" className="flex items-center justify-center gap-2 text-sm text-[var(--teal)] font-medium font-sans hover:underline">
+                    <Phone className="w-4 h-4"/> +91 8961661721
+                  </a>
+                  <Link href="/book" data-testid="button-book-pampita"
+                    className="w-full bg-[var(--teal)] text-white py-3.5 rounded-full font-medium hover:opacity-85 transition-all hover:scale-[1.02] text-center block">
+                    Book with Pampita
+                  </Link>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -464,7 +472,7 @@ export default function Home() {
           <div className="flex items-end justify-between mb-14 flex-wrap gap-4">
             <div>
               <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-[var(--gold)] text-xs tracking-[0.25em] uppercase font-sans font-semibold">From Our Desk</motion.span>
-              <motion.h2 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="font-serif text-4xl md:text-5xl text-[var(--text-dark)] mt-2">Health Journal</motion.h2>
+              <motion.h2 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="font-serif text-4xl md:text-5xl text-[var(--text-dark)] mt-2">Health &amp; Wellness Tips</motion.h2>
             </div>
             <Link href="/health-tips" data-testid="link-all-tips" className="font-sans text-[var(--green-deep)] font-medium hover:text-[var(--gold)] transition-colors text-sm">Read All Tips →</Link>
           </div>
@@ -497,8 +505,8 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { name: "Dr. Souvik Dutta", cred: "BHMS, MD(Hom.), MBA (Healthcare)", type: "Homeopathy Consultation", img: drSouvikImg, url: "SOUVIK_CALENDLY_URL", label: "Book with Dr. Souvik", btnClass: "bg-[var(--green-deep)] hover:bg-[var(--green-mid)]", badge: null },
-              { name: "Pampita Banerjee", cred: "MSc Food & Nutrition | Diabetic Educator", type: "Dietitian Consultation", img: pampitaImg, url: "PAMPITA_CALENDLY_URL", label: "Book with Pampita", btnClass: "bg-[var(--teal)] hover:opacity-85", badge: "Phone Consultation Available" },
+              { name: "Dr. Souvik Dutta", cred: "BHMS, MD(Hom.), MBA (Healthcare)", type: "Homoeopathy Consultation", img: drSouvikImg, label: "Book with Dr. Souvik", btnClass: "bg-[var(--green-deep)] hover:bg-[var(--green-mid)]", badge: null, phone: "+91 7980219737", tel: "+917980219737" },
+              { name: "Pampita Banerjee", cred: "MSc Food & Nutrition | Diabetic Educator", type: "Nutrition & Dietitian Consultation", img: pampitaImg, label: "Book with Pampita", btnClass: "bg-[var(--teal)] hover:opacity-85", badge: "Phone Consultation Available", phone: "+91 8961661721", tel: "+918961661721" },
             ].map((d, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15 }}
                 className="bg-white rounded-3xl p-8 text-center border border-[var(--border)] shadow-sm hover:shadow-lg transition-all">
@@ -508,19 +516,22 @@ export default function Home() {
                 <img src={d.img} alt={d.name} className="w-28 h-28 rounded-full object-cover object-top mx-auto mb-5 border-4 border-white shadow-md ring-2 ring-[var(--border)]"/>
                 <h3 className="font-serif text-2xl text-[var(--green-deep)] mb-1">{d.name}</h3>
                 <p className="text-[var(--gold)] text-xs font-sans mb-5">{d.cred}</p>
-                <div className="bg-[var(--bg-cream)] rounded-xl p-3 mb-6 text-sm text-[var(--text-muted)] font-sans">{d.type}</div>
-                <button data-testid={`button-booking-${i}`} onClick={() => window.Calendly?.initPopupWidget({ url: d.url })}
-                  className={`w-full ${d.btnClass} text-white py-3.5 rounded-full font-medium transition-all hover:scale-[1.02]`}>
+                <div className="bg-[var(--bg-cream)] rounded-xl p-3 mb-3 text-sm text-[var(--text-muted)] font-sans">{d.type}</div>
+                <a href={`tel:${d.tel}`} className="flex items-center justify-center gap-1.5 text-sm text-[var(--text-muted)] font-sans mb-5 hover:text-[var(--green-deep)] transition-colors">
+                  <Phone className="w-3.5 h-3.5"/> {d.phone}
+                </a>
+                <Link href="/book" data-testid={`button-booking-${i}`}
+                  className={`block w-full ${d.btnClass} text-white py-3.5 rounded-full font-medium transition-all hover:scale-[1.02]`}>
                   {d.label}
-                </button>
+                </Link>
               </motion.div>
             ))}
           </div>
           <div className="mt-12 text-center">
             <p className="text-[var(--text-muted)] font-sans mb-3">Prefer WhatsApp?</p>
-            <a data-testid="link-whatsapp-booking" href="https://wa.me/917980219737" target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/30 px-6 py-3 rounded-full font-medium text-lg hover:bg-[#25D366]/15 transition-colors">
-              <MessageCircle className="w-6 h-6"/>+91 79802 19737
+            <a data-testid="link-whatsapp-booking" href="https://wa.me/918961661721" target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-[var(--green-deep)]/8 text-[var(--green-deep)] border border-[var(--green-deep)]/20 px-6 py-3 rounded-full font-medium text-base hover:bg-[var(--green-deep)]/12 transition-colors">
+              <MessageCircle className="w-5 h-5"/>Chat With Clinic · +91 8961661721
             </a>
           </div>
         </div>

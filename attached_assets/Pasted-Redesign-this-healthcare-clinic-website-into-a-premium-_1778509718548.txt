@@ -1,0 +1,194 @@
+Redesign this healthcare clinic website into a premium, modern, highly trustworthy holistic wellness brand website for “Heal & Cure Health Clinic” based in Uttarpara, West Bengal.
+
+IMPORTANT:
+The current design feels too boutique/luxury/editorial. Shift it toward calm professionalism, modern healthcare trust, and premium wellness branding.
+
+The clinic is run by:
+1. Dr. Souvik Dutta
+- B.H.M.S; M.D.(Hom.) MBA (Healthcare)
+- Senior Research Fellow under CCRH, Ministry of AYUSH, Govt. of India
+- 10+ years clinical experience
+- Homoeopathic & holistic physician
+
+2. Pampita Banerjee
+- M.Sc Food and Nutrition
+- Therapeutic Dietitian
+- Diabetic Educator
+
+The website should position the clinic as:
+“An integrated holistic wellness clinic combining nutrition science and holistic healthcare.”
+
+DESIGN CHANGES REQUIRED:
+
+1. REMOVE all “boutique healthcare” feeling.
+Do NOT use words like:
+- boutique
+- luxury healing
+- elite care
+- premium wellness retreat
+
+Tone should feel:
+- medically trustworthy
+- calm
+- research-informed
+- compassionate
+- modern
+- clean
+
+2. FONT IMPROVEMENTS
+Use:
+- Cormorant Garamond for headings
+- Inter for body text
+
+Typography should feel:
+- elegant but professional
+- highly readable
+- modern healthcare aesthetic
+
+3. HERO SECTION
+Replace hero heading with:
+
+“Personalized Nutrition & Holistic Healthcare”
+
+Subheading:
+“Compassionate, research-informed care for lifestyle disorders, chronic conditions, nutrition, and overall wellness.”
+
+Primary CTA:
+- Book Appointment
+
+Secondary CTA:
+- Chat With Clinic
+
+Add trust badges:
+- 10+ Years Experience
+- Govt. Research Affiliation
+- Personalized Treatment
+- Holistic Wellness Care
+
+4. SERVICES SECTION
+Split services into TWO categories.
+
+CATEGORY 1:
+Nutrition & Lifestyle Care
+- Therapeutic Diet Counseling
+- Diabetes Nutrition Management
+- Weight Management
+- PCOS & Thyroid Nutrition
+- Digestive Health Nutrition
+- Personalized Meal Planning
+
+CATEGORY 2:
+Homoeopathic & Holistic Care
+- Chronic Disease Management
+- Allergy & Respiratory Care
+- Digestive Disorders
+- Stress & Anxiety Support
+- Skin & Hair Concerns
+- ENT Related Conditions
+- Holistic Wellness Consultation
+
+Use modern card layouts with subtle hover effects.
+
+5. CHANGE “HEALTH JOURNAL” SECTION
+Rename to:
+“Health & Wellness Tips”
+
+Cards should feel editorial and clean.
+
+6. IMAGES
+Remove generic vector illustrations and template graphics.
+
+For now use elegant placeholders with soft gradients and subtle wellness-inspired abstract backgrounds.
+
+Prepare image containers/placeholders where custom AI-generated images will later be added.
+
+DO NOT use:
+- stock doctor photos
+- cartoon medical illustrations
+- generic SaaS vectors
+
+7. COLOR PALETTE
+Use:
+- warm white
+- soft sage green
+- muted deep green
+- subtle beige
+- very light gold accents
+
+Avoid:
+- strong blue hospital colors
+- flashy gradients
+- oversaturated colors
+
+8. APPOINTMENT SYSTEM
+DO NOT use time-slot booking systems like Cal.com.
+
+Instead create:
+“Appointment Request Form”
+
+Fields:
+- Full Name
+- Phone Number
+- Email Address
+- Preferred Appointment Date
+- Preferred Doctor
+- Health Concern
+
+After submission:
+- Show elegant success message:
+“Thank you. Your appointment request has been received. Our clinic team will contact you shortly to confirm your consultation.”
+
+9. RESEND EMAIL INTEGRATION
+Implement backend-ready Resend integration.
+
+Requirements:
+- Use environment variable:
+process.env.RESEND_API_KEY
+
+- Send email to:
+appointments.healandcure@gmail.com
+
+- Send automatic confirmation email to patient.
+
+- Keep code production-ready and clean.
+
+- Do NOT hardcode API key.
+
+- Add comments showing where API key will later be added.
+
+10. WHATSAPP BUTTON
+Add elegant floating WhatsApp button.
+
+Text:
+“Chat With Clinic”
+
+Style:
+- subtle
+- modern
+- rounded
+- premium
+- NOT bright neon green
+
+11. MOBILE OPTIMIZATION
+Website must look exceptional on mobile devices.
+Prioritize:
+- spacing
+- typography readability
+- button accessibility
+- fast loading
+
+12. OVERALL DESIGN FEELING
+The final website should feel like:
+- modern wellness clinic
+- medically trustworthy
+- calm and premium
+- emotionally reassuring
+- minimal but warm
+
+NOT like:
+- hospital management software
+- generic template
+- luxury spa
+- corporate SaaS product
+
+Use refined spacing, subtle shadows, smooth rounded corners, elegant section transitions, and restrained animations.
