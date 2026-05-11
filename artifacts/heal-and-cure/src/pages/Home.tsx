@@ -76,17 +76,11 @@ export default function Home() {
 
         <div className="container mx-auto px-4 relative z-20 py-20">
           <div className="max-w-xl lg:max-w-[52%]">
-            {/* Location */}
-            <motion.div initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-              className="flex items-center gap-2 mb-5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-[var(--gold)] shrink-0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span className="font-sans text-sm font-medium text-[var(--gold)] tracking-wide">Kolkata, West Bengal</span>
-            </motion.div>
-
             {/* Heading */}
             <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }}
-              className="font-serif text-4xl md:text-5xl lg:text-[52px] font-bold leading-[1.15] text-[var(--text-dark)] mb-4">
-              Personalised Nutrition &amp;<br/>Homeopathic Healthcare
+              className="font-serif text-[38px] md:text-[44px] lg:text-[48px] font-bold leading-[1.2] text-[var(--text-dark)] mb-4">
+              <span className="whitespace-nowrap">Personalised Nutrition &amp;</span>{" "}
+              <span className="whitespace-nowrap">Homeopathic Healthcare</span>
             </motion.h1>
 
             {/* Gold rule */}
@@ -94,13 +88,13 @@ export default function Home() {
               className="h-0.5 bg-[var(--gold)] mb-5"/>
 
             <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.35 }}
-              className="font-sans text-base text-[var(--text-muted)] leading-relaxed mb-7 max-w-md">
+              className="font-sans text-base text-[var(--text-muted)] leading-relaxed mb-8 max-w-md">
               Integrated care that combines the science of nutrition with the healing power of homeopathy for lasting wellness.
             </motion.p>
 
             {/* CTAs */}
             <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex flex-wrap gap-3 mb-9">
+              className="flex flex-wrap gap-3">
               <button data-testid="button-hero-book"
                 onClick={() => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })}
                 className="flex items-center gap-2 bg-[var(--green-deep)] text-white px-7 py-3.5 rounded-full font-medium hover:bg-[var(--green-mid)] transition-all text-sm shadow-md">
@@ -113,50 +107,28 @@ export default function Home() {
                 Chat With Clinic
               </a>
             </motion.div>
-
-            {/* Mini feature cards */}
-            <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.65 }}
-              className="grid grid-cols-2 gap-3">
-              {[
-                { icon: Apple, title: "Nutrition Care", sub: "Personalised diet & lifestyle guidance" },
-                { icon: Stethoscope, title: "Homeopathy", sub: "Safe, natural & holistic healing" },
-                { icon: Heart, title: "Whole-Person Wellness", sub: "Mind, body & lifestyle balance" },
-                { icon: Shield, title: "Evidence Based", sub: "Research-informed & patient-focused" },
-              ].map((f, i) => (
-                <div key={i} className="bg-white/80 border border-[var(--border)] rounded-2xl px-4 py-3.5 flex items-start gap-3 hover:bg-white transition-colors">
-                  <div className="w-8 h-8 rounded-lg bg-[var(--green-deep)]/8 flex items-center justify-center shrink-0 mt-0.5">
-                    <f.icon className="w-4 h-4 text-[var(--green-deep)]"/>
-                  </div>
-                  <div>
-                    <p className="font-sans text-xs font-semibold text-[var(--text-dark)]">{f.title}</p>
-                    <p className="font-sans text-[11px] text-[var(--text-muted)] leading-snug mt-0.5">{f.sub}</p>
-                  </div>
-                </div>
-              ))}
-            </motion.div>
           </div>
         </div>
       </section>
 
       {/* ══ TRUST BAR ═════════════════════════════════════════ */}
-      <section className="bg-white py-10 border-y border-[var(--border)]">
+      <section className="bg-[var(--bg-cream)] py-8 border-y border-[var(--border)]">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 max-w-5xl mx-auto">
             {[
-              { icon: Award, value: "10+", label: "Years Clinical Experience", sub: "Dr. Souvik Dutta" },
-              { icon: FlaskConical, value: "Govt. Research", label: "Ministry of AYUSH Affiliation", sub: "Govt. of India" },
-              { icon: Users, value: "500+", label: "Patients Supported", sub: "Across West Bengal" },
-              { icon: Heart, value: "Integrated", label: "Nutrition + Holistic Healthcare", sub: "Dual specialist care" },
+              { icon: Award, value: "10+", label: "Years Clinical Experience" },
+              { icon: FlaskConical, value: "AYUSH", label: "Ministry Research Affiliation" },
+              { icon: Users, value: "500+", label: "Patients Supported" },
+              { icon: Heart, value: "Integrated", label: "Nutrition + Homeopathy Care" },
             ].map((item, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: i * 0.08 }}
-                className="flex items-start gap-4 p-5 rounded-2xl border border-[var(--border)] bg-[var(--bg-warm)] hover:bg-white hover:shadow-sm transition-all">
-                <div className="w-10 h-10 rounded-xl bg-[var(--green-deep)]/8 flex items-center justify-center shrink-0">
-                  <item.icon className="w-5 h-5 text-[var(--green-deep)]"/>
+              <motion.div key={i} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.07 }}
+                className="flex items-center gap-3 px-4 py-3 rounded-xl border border-[var(--border)] bg-white">
+                <div className="w-9 h-9 rounded-lg bg-[var(--green-deep)]/8 flex items-center justify-center shrink-0">
+                  <item.icon className="w-4 h-4 text-[var(--green-deep)]"/>
                 </div>
                 <div className="min-w-0">
-                  <div className="font-serif text-xl font-bold text-[var(--green-deep)] leading-tight">{item.value}</div>
-                  <div className="font-sans text-xs font-semibold text-[var(--text-dark)] mt-0.5 leading-snug">{item.label}</div>
-                  <div className="font-sans text-[11px] text-[var(--text-muted)] mt-0.5">{item.sub}</div>
+                  <div className="font-serif text-base font-bold text-[var(--green-deep)] leading-tight">{item.value}</div>
+                  <div className="font-sans text-[11px] text-[var(--text-muted)] leading-tight mt-0.5">{item.label}</div>
                 </div>
               </motion.div>
             ))}
@@ -326,37 +298,12 @@ export default function Home() {
       <section className="py-24 bg-white overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center max-w-6xl mx-auto">
-            {/* Left — wellness illustration (no logo) */}
+            {/* Left — clinic image */}
             <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
-              className="lg:col-span-4 flex flex-col items-center justify-center">
-              <div className="relative w-64 h-64 flex items-center justify-center">
-                {/* Outer ring */}
-                <div className="absolute inset-0 rounded-full border border-[var(--gold)]/20"/>
-                <div className="absolute inset-4 rounded-full border border-[var(--green-deep)]/10 bg-gradient-to-br from-[var(--bg-cream)] to-white shadow-lg"/>
-                {/* Inner wellness SVG */}
-                <svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" className="relative z-10">
-                  {/* Lotus / flower petals */}
-                  <ellipse cx="80" cy="55" rx="14" ry="28" fill="#1B4332" opacity="0.12" transform="rotate(0 80 80)"/>
-                  <ellipse cx="80" cy="55" rx="14" ry="28" fill="#2D6A4F" opacity="0.10" transform="rotate(45 80 80)"/>
-                  <ellipse cx="80" cy="55" rx="14" ry="28" fill="#0D4F4F" opacity="0.10" transform="rotate(90 80 80)"/>
-                  <ellipse cx="80" cy="55" rx="14" ry="28" fill="#1B4332" opacity="0.08" transform="rotate(135 80 80)"/>
-                  <ellipse cx="80" cy="55" rx="14" ry="28" fill="#2D6A4F" opacity="0.08" transform="rotate(180 80 80)"/>
-                  <ellipse cx="80" cy="55" rx="14" ry="28" fill="#0D4F4F" opacity="0.07" transform="rotate(225 80 80)"/>
-                  <ellipse cx="80" cy="55" rx="14" ry="28" fill="#1B4332" opacity="0.07" transform="rotate(270 80 80)"/>
-                  <ellipse cx="80" cy="55" rx="14" ry="28" fill="#2D6A4F" opacity="0.06" transform="rotate(315 80 80)"/>
-                  {/* Centre circle */}
-                  <circle cx="80" cy="80" r="20" fill="#1B4332" opacity="0.12"/>
-                  <circle cx="80" cy="80" r="13" fill="#1B4332" opacity="0.18"/>
-                  {/* Heart */}
-                  <path d="M80 88 C80 88 68 79 68 72 C68 67 72 64 76 64 C78 64 80 66 80 66 C80 66 82 64 84 64 C88 64 92 67 92 72 C92 79 80 88 80 88Z" fill="#C9A84C" opacity="0.85"/>
-                  {/* Small leaves at corners */}
-                  <path d="M28 28 Q38 18 48 28 Q38 38 28 28Z" fill="#2D6A4F" opacity="0.2"/>
-                  <path d="M112 128 Q122 118 132 128 Q122 138 112 128Z" fill="#0D4F4F" opacity="0.18"/>
-                  <circle cx="130" cy="35" r="3" fill="#C9A84C" opacity="0.35"/>
-                  <circle cx="30" cy="125" r="2.5" fill="#1B4332" opacity="0.25"/>
-                </svg>
-                {/* Spinning decorative ring */}
-                <div className="absolute w-72 h-72 rounded-full border border-[var(--gold)]/10 animate-[spin_30s_linear_infinite]" style={{ borderStyle: "dashed" }}/>
+              className="lg:col-span-4 flex items-center justify-center">
+              <div className="relative w-full max-w-sm rounded-3xl overflow-hidden shadow-[0_20px_60px_rgba(27,67,50,0.15)]">
+                <img src="/philosophy-image.png" alt="Holistic healing — homeopathy remedies and herbs" className="w-full h-auto object-cover"/>
+                <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-[var(--gold)]/15 pointer-events-none"/>
               </div>
             </motion.div>
 
@@ -365,7 +312,7 @@ export default function Home() {
               <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-[var(--gold)] text-xs tracking-[0.25em] uppercase font-sans font-semibold">Our Approach</motion.span>
               <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
                 className="font-serif text-4xl md:text-5xl text-[var(--text-dark)] mb-2">
-                The Philosophy of <em className="text-[var(--green-deep)]">Gentle Healing</em>
+                The Philosophy of <span className="text-[var(--green-deep)]">Gentle Healing</span>
               </motion.h2>
               <div className="flex flex-col gap-5 mt-2">
                 {philosophyPillars.map((p, i) => (
@@ -431,7 +378,7 @@ export default function Home() {
             <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="font-sans text-lg text-[var(--text-muted)]">Stories from patients who found their path to wellness</motion.p>
           </div>
 
-          <div className="max-w-3xl mx-auto" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
+          <div className="max-w-4xl mx-auto" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
             <div className="relative bg-white rounded-3xl shadow-[0_12px_50px_rgba(27,67,50,0.10)] p-10 md:p-14 overflow-hidden">
               <div className="absolute top-4 left-8 font-serif text-[var(--gold)] opacity-20 select-none" style={{ fontSize: "130px", lineHeight: 1 }}>&ldquo;</div>
               <AnimatePresence mode="wait">
@@ -500,45 +447,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══ BOOKING SECTION ══════════════════════════════════ */}
-      <section id="booking" className="py-24 bg-[var(--bg-cream)]">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="text-center mb-14">
-            <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-[var(--gold)] text-xs tracking-[0.25em] uppercase font-sans font-semibold">Schedule a Visit</motion.span>
-            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="font-serif text-4xl md:text-5xl text-[var(--text-dark)] mt-3 mb-3">Book Your Appointment</motion.h2>
-            <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="font-sans text-lg text-[var(--text-muted)]">Choose your specialist and select a date that works for you</motion.p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              { name: "Dr. Souvik Dutta", cred: "BHMS, MD(Hom.), MBA (Healthcare)", type: "Homoeopathy Consultation", img: drSouvikImg, label: "Book with Dr. Souvik", btnClass: "bg-[var(--green-deep)] hover:bg-[var(--green-mid)]", badge: null, phone: "+91 7980219737", tel: "+917980219737" },
-              { name: "Pampita Banerjee", cred: "MSc Food & Nutrition | Diabetic Educator", type: "Nutrition & Dietitian Consultation", img: pampitaImg, label: "Book with Pampita", btnClass: "bg-[var(--teal)] hover:opacity-85", badge: "Phone Consultation Available", phone: "+91 8961661721", tel: "+918961661721" },
-            ].map((d, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15 }}
-                className="bg-white rounded-3xl p-8 text-center border border-[var(--border)] shadow-sm hover:shadow-lg transition-all">
-                {d.badge
-                  ? <span className="inline-block bg-[var(--gold)]/12 text-[var(--gold)] text-[10px] font-bold tracking-widest uppercase px-3 py-1.5 rounded-full mb-5 border border-[var(--gold)]/25">{d.badge}</span>
-                  : <div className="h-8 mb-5"/>}
-                <img src={d.img} alt={d.name} className="w-28 h-28 rounded-full object-cover object-top mx-auto mb-5 border-4 border-white shadow-md ring-2 ring-[var(--border)]"/>
-                <h3 className="font-serif text-2xl text-[var(--green-deep)] mb-1">{d.name}</h3>
-                <p className="text-[var(--gold)] text-xs font-sans mb-5">{d.cred}</p>
-                <div className="bg-[var(--bg-cream)] rounded-xl p-3 mb-3 text-sm text-[var(--text-muted)] font-sans">{d.type}</div>
-                <a href={`tel:${d.tel}`} className="flex items-center justify-center gap-1.5 text-sm text-[var(--text-muted)] font-sans mb-5 hover:text-[var(--green-deep)] transition-colors">
-                  <Phone className="w-3.5 h-3.5"/> {d.phone}
-                </a>
-                <Link href="/book" data-testid={`button-booking-${i}`}
-                  className={`block w-full ${d.btnClass} text-white py-3.5 rounded-full font-medium transition-all hover:scale-[1.02]`}>
-                  {d.label}
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-          <div className="mt-12 text-center">
-            <p className="text-[var(--text-muted)] font-sans mb-3">Prefer WhatsApp?</p>
-            <a data-testid="link-whatsapp-booking" href="https://wa.me/918961661721" target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-[var(--green-deep)]/8 text-[var(--green-deep)] border border-[var(--green-deep)]/20 px-6 py-3 rounded-full font-medium text-base hover:bg-[var(--green-deep)]/12 transition-colors">
-              <MessageCircle className="w-5 h-5"/>Chat With Clinic · +91 8961661721
-            </a>
-          </div>
+      {/* ══ BOOKING CTA CARD ══════════════════════════════════ */}
+      <section id="booking" className="py-20 bg-[var(--bg-cream)]">
+        <div className="container mx-auto px-4 max-w-2xl">
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
+            className="bg-white rounded-3xl border border-[var(--border)] shadow-[0_8px_40px_rgba(27,67,50,0.10)] p-10 md:p-14 text-center">
+            <span className="text-[var(--gold)] text-xs tracking-[0.25em] uppercase font-sans font-semibold">Schedule a Visit</span>
+            <h2 className="font-serif text-3xl md:text-4xl text-[var(--text-dark)] mt-3 mb-4 leading-snug">
+              Ready to Book a Consultation?
+            </h2>
+            <p className="font-sans text-base text-[var(--text-muted)] leading-relaxed mb-8 max-w-md mx-auto">
+              Our clinic team will help you schedule the right consultation based on your health concerns and preferences.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
+              <Link href="/book" data-testid="button-booking-cta"
+                className="flex items-center justify-center gap-2 bg-[var(--green-deep)] text-white px-8 py-3.5 rounded-full font-medium hover:bg-[var(--green-mid)] transition-all text-sm shadow-md">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Book Appointment
+              </Link>
+              <a data-testid="link-whatsapp-booking" href="https://wa.me/918961661721" target="_blank" rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 bg-white border border-[var(--border)] text-[var(--green-deep)] px-8 py-3.5 rounded-full font-medium hover:bg-[var(--bg-cream)] transition-all text-sm shadow-sm">
+                <MessageCircle className="w-4 h-4"/>
+                Chat With Clinic
+              </a>
+            </div>
+            <p className="font-sans text-xs text-[var(--text-muted)] flex items-center justify-center gap-1.5">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="shrink-0 text-[var(--gold)]"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Appointment requests are confirmed personally by our clinic team.
+            </p>
+          </motion.div>
         </div>
       </section>
 
