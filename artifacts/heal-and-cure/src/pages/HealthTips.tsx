@@ -149,7 +149,7 @@ export default function HealthTips() {
       <section className="bg-[var(--green-deep)] py-16">
         <div className="container mx-auto px-4 text-center max-w-2xl">
           <h2 className="font-serif text-3xl md:text-4xl text-white mb-4">Have a Health Question?</h2>
-          <p className="font-sans text-white/70 mb-8">Book a consultation with our specialists at Heal &amp; Cure Health Clinic, Uttarpara, Kolkata.</p>
+          <p className="font-sans text-white/70 mb-8">Book a consultation with our specialists at Heal &amp; Cure Health Clinic, Kolkata.</p>
           <Link href="/book" className="inline-block bg-[var(--gold)] text-[var(--text-dark)] px-8 py-3.5 rounded-full font-medium hover:bg-[var(--gold-light)] transition-all hover:scale-105">
             Book a Consultation
           </Link>

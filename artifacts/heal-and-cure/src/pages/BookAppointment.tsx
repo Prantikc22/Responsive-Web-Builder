@@ -95,7 +95,7 @@ export default function BookAppointment() {
 
               <div>
                 <h2 className="font-serif text-2xl mb-1">Heal & Cure</h2>
-                <p className="font-sans text-white/60 text-sm">Health Clinic · Uttarpara, West Bengal</p>
+                <p className="font-sans text-white/60 text-sm">Health Clinic · Kolkata, West Bengal</p>
               </div>
 
               {/* Doctors */}

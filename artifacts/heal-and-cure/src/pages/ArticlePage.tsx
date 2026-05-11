@@ -27,7 +27,7 @@ const articles: Record<string, Article> = {
     author: "Dr. Souvik Dutta, BHMS, MD(Hom.)",
     readTime: "7 min read",
     publishDate: "May 2025",
-    intro: "Diabetes mellitus has become one of the most prevalent chronic diseases in India, with West Bengal alone recording millions of affected individuals. While conventional medicine focuses on blood sugar control through medication, an increasing number of patients in Kolkata are turning to classical homoeopathy — not as a replacement, but as a powerful complementary system that addresses the root causes of metabolic dysfunction. At Heal & Cure Health Clinic, Uttarpara, we have worked with hundreds of diabetic patients and observed remarkable improvements in quality of life, energy levels, and long-term glucose stability through individualised homoeopathic treatment.",
+    intro: "Diabetes mellitus has become one of the most prevalent chronic diseases in India, with West Bengal alone recording millions of affected individuals. While conventional medicine focuses on blood sugar control through medication, an increasing number of patients in Kolkata are turning to classical homoeopathy — not as a replacement, but as a powerful complementary system that addresses the root causes of metabolic dysfunction. At Heal & Cure Health Clinic, Kolkata, we have worked with hundreds of diabetic patients and observed remarkable improvements in quality of life, energy levels, and long-term glucose stability through individualised homoeopathic treatment.",
     sections: [
       {
         heading: "How Does Homoeopathy Approach Diabetes Differently?",
@@ -56,7 +56,7 @@ const articles: Record<string, Article> = {
       { q: "Is homoeopathy safe for diabetic patients on insulin?", a: "Yes. Homoeopathic remedies are non-pharmacological and do not interact with insulin or other diabetes medications. They are safe to take alongside your prescribed treatment." },
       { q: "Does Heal & Cure offer online consultations for diabetes?", a: "Yes, phone consultations are available with Pampita Banerjee for nutrition counselling. For homoeopathic treatment, in-person consultation with Dr. Souvik Dutta is recommended for detailed case-taking." },
     ],
-    conclusion: "Homoeopathy offers a deeply individualised, evidence-informed approach to diabetes management that addresses the root constitutional imbalance rather than merely controlling blood sugar numbers. When combined with expert clinical nutrition, it forms a powerful integrated health strategy that can dramatically improve quality of life for diabetic patients in Kolkata and beyond. If you are looking for a holistic, research-backed approach to managing your diabetes, we invite you to book a consultation at Heal & Cure Health Clinic, Uttarpara, Kolkata.",
+    conclusion: "Homoeopathy offers a deeply individualised, evidence-informed approach to diabetes management that addresses the root constitutional imbalance rather than merely controlling blood sugar numbers. When combined with expert clinical nutrition, it forms a powerful integrated health strategy that can dramatically improve quality of life for diabetic patients in Kolkata and beyond. If you are looking for a holistic, research-backed approach to managing your diabetes, we invite you to book a consultation at Heal & Cure Health Clinic, Kolkata.",
     cta: "Book a Diabetes Consultation",
     relatedSlugs: ["diet-mistakes-for-diabetics", "constitutional-homeopathic-treatment"],
   },
@@ -68,7 +68,7 @@ const articles: Record<string, Article> = {
     author: "Pampita Banerjee, MSc Food & Nutrition, Diabetic Educator",
     readTime: "6 min read",
     publishDate: "April 2025",
-    intro: "Managing diabetes through diet is one of the most powerful tools available — and one of the most misunderstood. In my years of practice as a therapeutic dietitian and certified Diabetic Educator at Heal & Cure Health Clinic, Uttarpara, I have seen the same dietary mistakes appear again and again in patients from Kolkata, Hooghly, Howrah, and across West Bengal. These mistakes are often made in good faith — following general advice from the internet, well-meaning relatives, or outdated dietary guidelines. The result is a silent worsening of blood sugar control that goes unnoticed until the next HbA1c test reveals the damage. Here are the five most common and correctable mistakes.",
+    intro: "Managing diabetes through diet is one of the most powerful tools available — and one of the most misunderstood. In my years of practice as a therapeutic dietitian and certified Diabetic Educator at Heal & Cure Health Clinic, Kolkata, I have seen the same dietary mistakes appear again and again in patients from Kolkata, Hooghly, Howrah, and across West Bengal. These mistakes are often made in good faith — following general advice from the internet, well-meaning relatives, or outdated dietary guidelines. The result is a silent worsening of blood sugar control that goes unnoticed until the next HbA1c test reveals the damage. Here are the five most common and correctable mistakes.",
     sections: [
       {
         heading: "Mistake 1: Eliminating Rice Entirely",
@@ -108,7 +108,7 @@ const articles: Record<string, Article> = {
     author: "Dr. Souvik Dutta, BHMS, MD(Hom.)",
     readTime: "8 min read",
     publishDate: "March 2025",
-    intro: "If you have heard the phrase 'constitutional homoeopathic treatment' and wondered what it means, you are not alone. Many patients who come to Heal & Cure Health Clinic, Uttarpara, Kolkata have had previous experiences with homoeopathy — often involving pre-formulated combination remedies bought from a pharmacy or prescribed without detailed case-taking. Constitutional homoeopathy is something fundamentally different. It is the classical form of homoeopathic medicine as conceived by its founder Samuel Hahnemann in the 18th century, and it remains the most effective and scientific approach to homoeopathic prescribing available today.",
+    intro: "If you have heard the phrase 'constitutional homoeopathic treatment' and wondered what it means, you are not alone. Many patients who come to Heal & Cure Health Clinic, Kolkata have had previous experiences with homoeopathy — often involving pre-formulated combination remedies bought from a pharmacy or prescribed without detailed case-taking. Constitutional homoeopathy is something fundamentally different. It is the classical form of homoeopathic medicine as conceived by its founder Samuel Hahnemann in the 18th century, and it remains the most effective and scientific approach to homoeopathic prescribing available today.",
     sections: [
       {
         heading: "The Core Principle: Treat the Person, Not the Disease",
@@ -136,7 +136,7 @@ const articles: Record<string, Article> = {
       { q: "Is constitutional homoeopathy suitable for children?", a: "Absolutely. Children often respond particularly rapidly to constitutional treatment because their vital force is strong and they have fewer layers of chronic suppression. Paediatric constitutional prescribing is one of the most rewarding areas of classical homoeopathy." },
       { q: "How is the constitutional remedy chosen?", a: "The remedy is chosen by matching the complete symptom picture — physical, mental, and general — of the patient to the known pathogenetic effects of a homoeopathic remedy as documented in the Materia Medica. This requires deep clinical knowledge and experience." },
     ],
-    conclusion: "Constitutional homoeopathic treatment is the most sophisticated and effective expression of homoeopathic medicine — a system that treats the whole person rather than isolated symptoms, and that seeks to restore health at the deepest possible level. If you have experienced disappointments with symptomatic homoeopathy or are looking for a truly personalised approach to your chronic condition, we invite you to experience classical constitutional prescribing at Heal & Cure Health Clinic, Uttarpara, Kolkata.",
+    conclusion: "Constitutional homoeopathic treatment is the most sophisticated and effective expression of homoeopathic medicine — a system that treats the whole person rather than isolated symptoms, and that seeks to restore health at the deepest possible level. If you have experienced disappointments with symptomatic homoeopathy or are looking for a truly personalised approach to your chronic condition, we invite you to experience classical constitutional prescribing at Heal & Cure Health Clinic, Kolkata.",
     cta: "Book a Constitutional Consultation",
     relatedSlugs: ["homeopathy-for-diabetes", "why-children-respond-to-homeopathy"],
   },
@@ -148,7 +148,7 @@ const articles: Record<string, Article> = {
     author: "Pampita Banerjee, MSc Food & Nutrition & Dr. Souvik Dutta, BHMS, MD(Hom.)",
     readTime: "7 min read",
     publishDate: "March 2025",
-    intro: "Polycystic Ovarian Syndrome (PCOS) — also called PCOD — is one of the most common hormonal disorders affecting women of reproductive age in India, with estimates suggesting that 1 in 5 women in urban areas is affected. In our clinic at Uttarpara, Kolkata, we see PCOS patients almost daily — young women struggling with irregular periods, painful cycles, acne, hair thinning, weight gain, and the emotional toll that comes with these symptoms. Conventional treatment typically involves oral contraceptive pills and Metformin, which manage symptoms but rarely address the underlying hormonal and metabolic dysregulation. At Heal & Cure, we offer an integrated approach combining classical homoeopathy with therapeutic nutrition — one that has produced significant results in our PCOS patient cohort.",
+    intro: "Polycystic Ovarian Syndrome (PCOS) — also called PCOD — is one of the most common hormonal disorders affecting women of reproductive age in India, with estimates suggesting that 1 in 5 women in urban areas is affected. In our clinic in Kolkata, we see PCOS patients almost daily — young women struggling with irregular periods, painful cycles, acne, hair thinning, weight gain, and the emotional toll that comes with these symptoms. Conventional treatment typically involves oral contraceptive pills and Metformin, which manage symptoms but rarely address the underlying hormonal and metabolic dysregulation. At Heal & Cure, we offer an integrated approach combining classical homoeopathy with therapeutic nutrition — one that has produced significant results in our PCOS patient cohort.",
     sections: [
       {
         heading: "Understanding PCOS: Why a Root-Cause Approach Matters",
@@ -172,7 +172,7 @@ const articles: Record<string, Article> = {
       { q: "Is weight loss necessary to treat PCOS?", a: "Even a 5 to 10 percent reduction in body weight in overweight PCOS patients can significantly improve insulin sensitivity and restore cycle regularity. However, weight management in PCOS requires a specific nutritional approach — caloric restriction alone is often counterproductive." },
       { q: "How long does homoeopathic treatment for PCOS take?", a: "Most patients see initial improvements within 6 to 8 weeks. Significant hormonal changes typically require 4 to 6 months of consistent constitutional treatment alongside dietary modifications." },
     ],
-    conclusion: "PCOS is a complex, multi-system condition that responds best to a comprehensive, individualised approach. At Heal & Cure Health Clinic, Uttarpara, Kolkata, our integrated protocol of classical homoeopathy and therapeutic nutrition has helped many young women reclaim hormonal balance, regular cycles, and renewed confidence. If you are struggling with PCOS in Kolkata or the surrounding areas of Hooghly, Howrah, or Serampore, we invite you to book a consultation and experience the difference of truly personalised care.",
+    conclusion: "PCOS is a complex, multi-system condition that responds best to a comprehensive, individualised approach. At Heal & Cure Health Clinic, Kolkata, our integrated protocol of classical homoeopathy and therapeutic nutrition has helped many young women reclaim hormonal balance, regular cycles, and renewed confidence. If you are struggling with PCOS in Kolkata or the surrounding areas of Hooghly, Howrah, or Serampore, we invite you to book a consultation and experience the difference of truly personalised care.",
     cta: "Book a PCOS Consultation",
     relatedSlugs: ["diet-mistakes-for-diabetics", "constitutional-homeopathic-treatment"],
   },
@@ -184,7 +184,7 @@ const articles: Record<string, Article> = {
     author: "Dr. Souvik Dutta, BHMS, MD(Hom.)",
     readTime: "6 min read",
     publishDate: "February 2025",
-    intro: "Of all the patient groups I treat at Heal & Cure Health Clinic, Uttarpara, Kolkata, children consistently produce the most gratifying responses to homoeopathic treatment. Parents who bring their children with chronic conditions — recurrent ear infections, asthma, eczema, bed-wetting, hyperactivity, or frequent tonsillitis — often express the same experience: after years of antibiotics, steroids, and symptomatic medications that manage but never cure, a single well-selected constitutional remedy produces changes that seem almost miraculous. There is nothing miraculous about it. There is a sound clinical reason why children respond so rapidly and deeply to homoeopathic treatment — and understanding that reason is key to appreciating what classical homoeopathy can achieve in paediatric care.",
+    intro: "Of all the patient groups I treat at Heal & Cure Health Clinic, Kolkata, children consistently produce the most gratifying responses to homoeopathic treatment. Parents who bring their children with chronic conditions — recurrent ear infections, asthma, eczema, bed-wetting, hyperactivity, or frequent tonsillitis — often express the same experience: after years of antibiotics, steroids, and symptomatic medications that manage but never cure, a single well-selected constitutional remedy produces changes that seem almost miraculous. There is nothing miraculous about it. There is a sound clinical reason why children respond so rapidly and deeply to homoeopathic treatment — and understanding that reason is key to appreciating what classical homoeopathy can achieve in paediatric care.",
     sections: [
       {
         heading: "The Vitality Factor: Why Children Heal Faster",
@@ -208,14 +208,14 @@ const articles: Record<string, Article> = {
       { q: "Can homoeopathy replace vaccination?", a: "No. Homoeopathy does not replace vaccination. Vaccines are evidence-based interventions against specific infectious diseases and should be followed as per the national immunisation schedule. Homoeopathy can be used alongside vaccination to support overall immune health." },
       { q: "My child is on antibiotics — can they start homoeopathy?", a: "Yes. Homoeopathic remedies can be started alongside antibiotic treatment. Once the acute infection has cleared, constitutional treatment can be initiated to address the underlying susceptibility and reduce recurrence." },
     ],
-    conclusion: "Children are the most responsive and rewarding patients in homoeopathic practice. The combination of strong vital force, clear constitutional pictures, and fewer layers of therapeutic suppression makes paediatric homoeopathy one of the most effective applications of classical medicine available. If your child suffers from recurrent infections, allergies, skin conditions, or behavioural challenges, and you are looking for a safe, effective, and truly curative approach, we invite you to visit Heal & Cure Health Clinic, Uttarpara, Kolkata, for a detailed paediatric consultation.",
+    conclusion: "Children are the most responsive and rewarding patients in homoeopathic practice. The combination of strong vital force, clear constitutional pictures, and fewer layers of therapeutic suppression makes paediatric homoeopathy one of the most effective applications of classical medicine available. If your child suffers from recurrent infections, allergies, skin conditions, or behavioural challenges, and you are looking for a safe, effective, and truly curative approach, we invite you to visit Heal & Cure Health Clinic, Kolkata, for a detailed paediatric consultation.",
     cta: "Book a Paediatric Consultation",
     relatedSlugs: ["constitutional-homeopathic-treatment", "homeopathy-for-diabetes"],
   },
   "sedentary-lifestyle-kolkata": {
     slug: "sedentary-lifestyle-kolkata",
     title: "Kolkata's Hidden Health Crisis: How Sedentary Work Culture Is Harming Your Body — And What to Do About It",
-    metaDescription: "Kolkata's growing sedentary work culture is silently driving a rise in lifestyle diseases. Learn how long desk hours are harming your health and what you can do — practical advice from Heal & Cure Health Clinic, Uttarpara.",
+    metaDescription: "Kolkata's growing sedentary work culture is silently driving a rise in lifestyle diseases. Learn how long desk hours are harming your health and what you can do — practical advice from Heal & Cure Health Clinic, Kolkata.",
     category: "LIFESTYLE",
     author: "Dr. Souvik Dutta, BHMS, MD(Hom.) & Pampita Banerjee, MSc Nutrition",
     readTime: "6 min read",
@@ -244,7 +244,7 @@ const articles: Record<string, Article> = {
       { q: "I have no time to exercise. What is the minimum I can do?", a: "Break your sitting time every 30 minutes with a 2-minute walk. Add a 15-minute post-dinner walk. This alone, consistently maintained, provides measurable metabolic benefit." },
       { q: "Can dietary changes alone reduce my risk of lifestyle diseases if I can't exercise?", a: "Dietary optimisation significantly reduces metabolic risk even without exercise. Reducing refined carbohydrates, increasing protein and fibre, and improving meal timing can collectively produce meaningful improvements in blood sugar, blood pressure, and weight." },
     ],
-    conclusion: "The sedentary lifestyle that modern professional Kolkata demands is not going away — but its health consequences are not inevitable. Small, consistent changes in how you move, eat, and structure your day can produce significant metabolic benefits. At Heal & Cure Health Clinic, Uttarpara, Kolkata, we help working professionals identify and address the specific lifestyle factors driving their health concerns, with personalised homoeopathic and nutritional strategies that fit within real-world constraints. If you are experiencing the consequences of a sedentary lifestyle — weight gain, fatigue, back pain, or early metabolic disease — we invite you to book a consultation today.",
+    conclusion: "The sedentary lifestyle that modern professional Kolkata demands is not going away — but its health consequences are not inevitable. Small, consistent changes in how you move, eat, and structure your day can produce significant metabolic benefits. At Heal & Cure Health Clinic, Kolkata, we help working professionals identify and address the specific lifestyle factors driving their health concerns, with personalised homoeopathic and nutritional strategies that fit within real-world constraints. If you are experiencing the consequences of a sedentary lifestyle — weight gain, fatigue, back pain, or early metabolic disease — we invite you to book a consultation today.",
     cta: "Book a Lifestyle Health Consultation",
     relatedSlugs: ["diet-mistakes-for-diabetics", "managing-pcos-naturally"],
   },
@@ -329,7 +329,7 @@ export default function ArticlePage() {
           {/* CTA */}
           <div className="mt-10 bg-[var(--green-deep)] rounded-2xl p-8 text-center">
             <p className="font-serif text-2xl text-white mb-2">Ready to take the next step?</p>
-            <p className="font-sans text-white/70 text-sm mb-6">Personalised consultations at Heal & Cure Health Clinic, Uttarpara, Kolkata</p>
+            <p className="font-sans text-white/70 text-sm mb-6">Personalised consultations at Heal & Cure Health Clinic, Kolkata</p>
             <button
               onClick={() => window.Calendly?.initPopupWidget({ url: "SOUVIK_CALENDLY_URL" })}
               className="bg-[var(--gold)] text-[var(--text-dark)] px-8 py-3 rounded-full font-medium hover:bg-[var(--gold-light)] transition-all hover:scale-105"

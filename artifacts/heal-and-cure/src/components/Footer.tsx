@@ -38,7 +38,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Your trusted wellness partner in Uttarpara — combining classical homoeopathy with expert clinical nutrition for lasting, personalised care.
+              Your trusted wellness partner in Kolkata — combining classical homoeopathy with expert clinical nutrition for lasting, personalised care.
             </p>
             <div className="flex items-center gap-4">
               <a
@@ -148,7 +148,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/10 text-center text-sm text-gray-500">
-          <p>© {new Date().getFullYear()} Heal &amp; Cure Health Clinic · Uttarpara, West Bengal</p>
+          <p>© {new Date().getFullYear()} Heal &amp; Cure Health Clinic · Kolkata, West Bengal</p>
         </div>
       </div>
     </footer>

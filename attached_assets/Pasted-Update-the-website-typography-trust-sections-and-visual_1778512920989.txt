@@ -1,0 +1,181 @@
+Update the website typography, trust sections, and visual hierarchy to make the clinic brand feel more believable, medically trustworthy, calm, and professionally designed.
+
+IMPORTANT:
+Do NOT make the website feel like:
+
+* luxury skincare brand
+* boutique wellness spa
+* fashion/editorial website
+
+The website should feel:
+
+* medically trustworthy
+* professional
+* grounded
+* calm
+* modern healthcare focused
+* approachable for families and patients
+
+TYPOGRAPHY CHANGES (VERY IMPORTANT)
+
+1. REMOVE the current serif/italic luxury editorial feeling.
+
+2. Use:
+
+* Libre Baskerville for headings
+* Inter for body text
+
+3. REMOVE ALL italic hero text completely.
+
+4. Hero heading should be:
+   “Personalized Nutrition & Holistic Healthcare”
+
+Both lines should use the SAME style.
+No italics.
+No dramatic contrast.
+
+5. Reduce hero heading size slightly.
+   Current heading feels oversized and fashion-brand-like.
+
+6. Improve heading readability:
+
+* slightly tighter line height
+* stronger weight
+* cleaner spacing
+
+7. Small uppercase labels like:
+   “UTTARPARA, WEST BENGAL”
+   should feel more professional and less luxury-editorial.
+
+Adjust:
+
+* increase font weight slightly
+* reduce excessive letter spacing
+
+8. Body typography should prioritize readability and trust.
+
+Use:
+
+* Inter 400 / 500 / 600 only
+* Avoid thin font weights
+
+TRUST CARDS SECTION FIXES
+
+Currently one card (CCRH card) looks highlighted/selected while others look secondary.
+
+This creates visual imbalance.
+
+FIX:
+
+* Make all trust cards visually equal
+* Same background
+* Same border style
+* Same shadow depth
+* Same spacing
+* Same hover behavior
+
+Use clean and restrained premium styling.
+
+DO NOT make one card appear “active”.
+
+CARD CONTENT CHANGES
+
+Most patients do not understand “CCRH”.
+
+Rewrite the cards to be more patient-friendly and trust-oriented.
+
+Replace current cards with:
+
+1.
+
+10+
+Years Clinical Experience
+
+2.
+
+Govt Research
+Ministry of AYUSH Affiliation
+
+3.
+
+500+
+Patients Supported
+
+4.
+
+Integrated Care
+Nutrition + Holistic Healthcare
+
+Keep the design minimal and elegant.
+
+REMOVE unnecessary abbreviations that average patients will not understand.
+
+NAVBAR IMPROVEMENTS
+
+1. Increase navbar vertical spacing slightly.
+
+2. Logo area currently feels cramped.
+   Either:
+
+* slightly reduce logo size
+  OR
+* increase navbar height
+
+3. Navigation should feel premium but simple.
+
+Do NOT over-style navbar interactions.
+
+VISUAL DIRECTION
+
+The website should emotionally feel like:
+
+* a trusted modern holistic clinic
+* a real healthcare practice
+* calm and professional healthcare
+
+NOT:
+
+* luxury retreat
+* beauty clinic
+* startup SaaS product
+
+Use:
+
+* restrained spacing
+* subtle shadows
+* soft borders
+* balanced layouts
+* clean visual hierarchy
+
+NO flashy animations.
+
+NO dramatic gradients.
+
+NO overly artistic layouts.
+
+RESEARCH / GOVERNMENT WORK SECTION
+
+Instead of a separate “Research Papers” page, create a small elegant section called:
+
+“Research & Clinical Background”
+
+This section should:
+
+* build credibility
+* remain simple and patient-friendly
+* not feel academic or overwhelming
+
+Include:
+
+* Govt. of India research affiliation
+* Ministry of AYUSH connection
+* Senior Research Fellow information
+* Clinical experience summary
+
+If research papers are added later:
+
+* place them as optional downloadable PDFs
+* simple minimal layout
+* avoid making website feel academic or institutional
+
+This section should support trust, not dominate the website.

@@ -22,7 +22,7 @@ function Counter({ value, duration = 2 }: { value: number; duration?: number }) 
 }
 
 const testimonials = [
-  { id: 1, text: "After years of struggling with chronic sinusitis, Dr. Souvik's treatment gave me lasting relief. No more recurring infections. The personalised approach is unlike anything I've experienced before.", name: "Ananya Roy", location: "Uttarpara" },
+  { id: 1, text: "After years of struggling with chronic sinusitis, Dr. Souvik's treatment gave me lasting relief. No more recurring infections. The personalised approach is unlike anything I've experienced before.", name: "Ananya Roy", location: "Kolkata" },
   { id: 2, text: "Pampita di completely transformed my diet for diabetes. My HbA1c dropped from 9.2 to 6.8 in just four months. Remarkable results that no medication alone could achieve.", name: "Suresh Ghosh", location: "Serampore" },
   { id: 3, text: "My daughter had frequent ear infections and conventional medicine wasn't helping. After homeopathic treatment with Dr. Souvik, she's been infection-free for over a year.", name: "Priya Sharma", location: "Kolkata" },
   { id: 4, text: "The personalised diet plan from Pampita helped me lose 12 kg while managing my thyroid condition. I feel completely new. Every consultation feels thoughtful and caring.", name: "Rupa Chatterjee", location: "Hooghly" },
@@ -61,134 +61,103 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
 
       {/* ══ HERO ══════════════════════════════════════════════ */}
-      <section className="pt-28 pb-16 md:pt-40 md:pb-28 bg-[var(--bg-warm)] relative overflow-hidden">
-        <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-[0.06]" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="hero-leaves" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
-              <path d="M20 40 Q30 10 40 40 Q30 70 20 40Z" fill="none" stroke="#1B4332" strokeWidth="1"/>
-              <path d="M50 20 Q60 40 50 60 Q40 40 50 20Z" fill="none" stroke="#C9A84C" strokeWidth="0.8"/>
-              <circle cx="65" cy="65" r="2" fill="#0D4F4F" opacity="0.5"/>
-              <circle cx="15" cy="15" r="1.5" fill="#C9A84C" opacity="0.5"/>
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#hero-leaves)"/>
-        </svg>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_70%_at_65%_40%,rgba(245,240,232,0.7),transparent)] pointer-events-none"/>
+      <section className="pt-20 bg-[var(--bg-warm)] relative overflow-hidden min-h-[90vh] flex items-center">
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-warm)] via-[var(--bg-warm)]/95 to-transparent z-10 pointer-events-none lg:w-[62%] w-full"/>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left */}
-            <div className="lg:col-span-7 flex flex-col items-start gap-6">
-              <motion.span initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-                className="text-[var(--gold)] font-sans font-semibold tracking-[0.25em] text-xs uppercase border border-[var(--gold)]/30 px-4 py-1.5 rounded-full bg-[var(--gold)]/5">
-                Uttarpara, West Bengal · Holistic Health Clinic
-              </motion.span>
-              <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.15 }}
-                className="font-serif text-5xl md:text-6xl lg:text-[66px] leading-[1.1] text-[var(--text-dark)]">
-                Personalized Nutrition &amp;{" "}
-                <em className="text-[var(--green-deep)]">Holistic Healthcare</em>
-              </motion.h1>
-              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.35 }}
-                className="font-sans text-lg text-[var(--text-muted)] max-w-xl leading-relaxed">
-                Compassionate, research-informed care for lifestyle disorders, chronic conditions, nutrition, and overall wellness.
-              </motion.p>
-              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.55 }}
-                className="flex flex-wrap gap-4">
-                <button data-testid="button-hero-book"
-                  onClick={() => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })}
-                  className="bg-[var(--green-deep)] text-white px-8 py-4 rounded-full font-medium hover:bg-[var(--green-mid)] transition-all hover:scale-105 shadow-lg">
-                  Book Appointment
-                </button>
-                <a data-testid="link-hero-whatsapp" href="https://wa.me/918961661721" target="_blank" rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-white border border-[var(--border)] text-[var(--green-deep)] px-8 py-4 rounded-full font-medium hover:bg-gray-50 transition-all hover:scale-105 shadow-sm">
-                  <MessageCircle className="w-5 h-5 text-[var(--green-deep)]" />
-                  Chat With Clinic
-                </a>
-              </motion.div>
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.8 }}
-                className="flex items-center gap-6 pt-2">
-                <div className="flex -space-x-2">
-                  <img src={drSouvikImg} className="w-9 h-9 rounded-full object-cover ring-2 ring-white" alt="Dr. Souvik"/>
-                  <img src={pampitaImg} className="w-9 h-9 rounded-full object-cover ring-2 ring-white" alt="Pampita"/>
+        {/* Hero photo — right side, full height */}
+        <div className="absolute inset-0 overflow-hidden">
+          <img
+            src="/hero-image.png"
+            alt="Heal & Cure — Personalised Homoeopathy and Nutrition Care"
+            className="absolute right-0 top-0 h-full w-[55%] object-cover object-center hidden lg:block"
+          />
+          <div className="absolute right-0 top-0 h-full w-[55%] bg-gradient-to-l from-transparent via-transparent to-[var(--bg-warm)] hidden lg:block"/>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-20 py-20">
+          <div className="max-w-xl lg:max-w-[52%]">
+            {/* Location */}
+            <motion.div initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
+              className="flex items-center gap-2 mb-5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-[var(--gold)] shrink-0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span className="font-sans text-sm font-medium text-[var(--gold)] tracking-wide">Kolkata, West Bengal</span>
+            </motion.div>
+
+            {/* Heading */}
+            <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }}
+              className="font-serif text-4xl md:text-5xl lg:text-[52px] font-bold leading-[1.15] text-[var(--text-dark)] mb-4">
+              Personalised Nutrition &amp;<br/>Homeopathic Healthcare
+            </motion.h1>
+
+            {/* Gold rule */}
+            <motion.div initial={{ width: 0 }} animate={{ width: 56 }} transition={{ duration: 0.7, delay: 0.3 }}
+              className="h-0.5 bg-[var(--gold)] mb-5"/>
+
+            <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.35 }}
+              className="font-sans text-base text-[var(--text-muted)] leading-relaxed mb-7 max-w-md">
+              Integrated care that combines the science of nutrition with the healing power of homeopathy for lasting wellness.
+            </motion.p>
+
+            {/* CTAs */}
+            <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }}
+              className="flex flex-wrap gap-3 mb-9">
+              <button data-testid="button-hero-book"
+                onClick={() => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })}
+                className="flex items-center gap-2 bg-[var(--green-deep)] text-white px-7 py-3.5 rounded-full font-medium hover:bg-[var(--green-mid)] transition-all text-sm shadow-md">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Book Appointment
+              </button>
+              <a data-testid="link-hero-whatsapp" href="https://wa.me/918961661721" target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-white border border-[var(--border)] text-[var(--green-deep)] px-7 py-3.5 rounded-full font-medium hover:bg-[var(--bg-cream)] transition-all text-sm shadow-sm">
+                <MessageCircle className="w-4 h-4"/>
+                Chat With Clinic
+              </a>
+            </motion.div>
+
+            {/* Mini feature cards */}
+            <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.65 }}
+              className="grid grid-cols-2 gap-3">
+              {[
+                { icon: Apple, title: "Nutrition Care", sub: "Personalised diet & lifestyle guidance" },
+                { icon: Stethoscope, title: "Homeopathy", sub: "Safe, natural & holistic healing" },
+                { icon: Heart, title: "Whole-Person Wellness", sub: "Mind, body & lifestyle balance" },
+                { icon: Shield, title: "Evidence Based", sub: "Research-informed & patient-focused" },
+              ].map((f, i) => (
+                <div key={i} className="bg-white/80 border border-[var(--border)] rounded-2xl px-4 py-3.5 flex items-start gap-3 hover:bg-white transition-colors">
+                  <div className="w-8 h-8 rounded-lg bg-[var(--green-deep)]/8 flex items-center justify-center shrink-0 mt-0.5">
+                    <f.icon className="w-4 h-4 text-[var(--green-deep)]"/>
+                  </div>
+                  <div>
+                    <p className="font-sans text-xs font-semibold text-[var(--text-dark)]">{f.title}</p>
+                    <p className="font-sans text-[11px] text-[var(--text-muted)] leading-snug mt-0.5">{f.sub}</p>
+                  </div>
                 </div>
-                <p className="text-sm text-[var(--text-muted)]">
-                  <span className="font-semibold text-[var(--text-dark)]">500+</span> patients healed across Kolkata &amp; West Bengal
-                </p>
-              </motion.div>
-            </div>
-
-            {/* Right — wellness illustration (no logo) */}
-            <motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.3 }}
-              className="lg:col-span-5 relative h-[420px] lg:h-[500px] flex items-center justify-center">
-              {/* Main circle */}
-              <div className="absolute w-[340px] h-[340px] rounded-full bg-gradient-to-br from-[var(--bg-cream)] via-white to-[var(--bg-warm)] border border-[var(--gold)]/20 shadow-[0_20px_60px_rgba(27,67,50,0.12)]"/>
-              {/* Spinning ring */}
-              <div className="absolute w-[380px] h-[380px] rounded-full border border-[var(--gold)]/20 animate-[spin_40s_linear_infinite]" style={{ borderStyle: "dashed" }}/>
-
-              {/* Central SVG wellness illustration */}
-              <svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg" className="relative z-10">
-                {/* Heartbeat / ECG line */}
-                <path d="M20 110 L55 110 L65 70 L80 150 L95 90 L108 110 L200 110" stroke="#C9A84C" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.85"/>
-                {/* Stethoscope head */}
-                <circle cx="110" cy="62" r="18" stroke="#1B4332" strokeWidth="2" fill="none" opacity="0.7"/>
-                <circle cx="110" cy="62" r="10" fill="#1B4332" opacity="0.12"/>
-                <circle cx="110" cy="62" r="4" fill="#1B4332" opacity="0.5"/>
-                {/* Stethoscope tube */}
-                <path d="M92 62 Q60 62 60 90 Q60 118 80 118 Q100 118 100 138 L100 155" stroke="#1B4332" strokeWidth="2.5" strokeLinecap="round" fill="none" opacity="0.6"/>
-                <circle cx="100" cy="160" r="7" fill="#1B4332" opacity="0.35"/>
-                {/* Leaf left */}
-                <path d="M38 68 Q52 38 66 68 Q52 98 38 68Z" fill="#2D6A4F" opacity="0.18"/>
-                <path d="M38 68 L66 68" stroke="#2D6A4F" strokeWidth="1" opacity="0.3"/>
-                {/* Leaf right */}
-                <path d="M154 150 Q168 120 182 150 Q168 180 154 150Z" fill="#0D4F4F" opacity="0.15"/>
-                <path d="M154 150 L182 150" stroke="#0D4F4F" strokeWidth="1" opacity="0.25"/>
-                {/* Cross / medicine */}
-                <rect x="145" y="48" width="5" height="20" rx="2" fill="#C9A84C" opacity="0.6"/>
-                <rect x="138" y="55" width="20" height="5" rx="2" fill="#C9A84C" opacity="0.6"/>
-                {/* Small dots */}
-                <circle cx="55" cy="165" r="3" fill="#C9A84C" opacity="0.4"/>
-                <circle cx="170" cy="75" r="2.5" fill="#1B4332" opacity="0.3"/>
-                <circle cx="40" cy="140" r="2" fill="#0D4F4F" opacity="0.3"/>
-              </svg>
-
-              {/* Floating chips */}
-              <div className="absolute top-[55px] right-[20px] bg-white rounded-2xl shadow-lg px-4 py-3 border border-[var(--border)] flex flex-col items-center gap-1">
-                <Stethoscope className="w-5 h-5 text-[var(--green-deep)]"/>
-                <span className="font-sans text-[10px] text-[var(--text-muted)] tracking-wider uppercase font-medium">Homoeopathy</span>
-              </div>
-              <div className="absolute bottom-[90px] left-[5px] bg-[var(--green-deep)] rounded-2xl shadow-lg px-4 py-3 flex flex-col items-center gap-1">
-                <Apple className="w-5 h-5 text-[var(--gold-light)]"/>
-                <span className="font-sans text-[10px] text-white/80 tracking-wider uppercase font-medium">Nutrition</span>
-              </div>
-              <div className="absolute top-[185px] right-[-5px] bg-[var(--teal)] rounded-2xl shadow-lg px-3 py-3 flex flex-col items-center gap-1">
-                <FlaskConical className="w-5 h-5 text-white"/>
-                <span className="font-sans text-[10px] text-white/80 tracking-wider uppercase font-medium">CCRH</span>
-              </div>
-              <div className="absolute bottom-[50px] right-[55px] bg-white rounded-full shadow-md px-3 py-1.5 border border-[var(--border)] flex items-center gap-2">
-                <span className="text-[var(--gold)] text-sm leading-none">★★★★★</span>
-                <span className="font-sans text-[10px] text-[var(--text-muted)]">Google</span>
-              </div>
+              ))}
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* ══ TRUST BAR ═════════════════════════════════════════ */}
-      <section className="bg-[var(--bg-cream)] py-14 border-y border-[var(--border)]">
+      <section className="bg-white py-10 border-y border-[var(--border)]">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 max-w-5xl mx-auto">
             {[
-              { icon: Award, value: "10+", label: "Years of Clinical Experience", sub: null, highlight: false },
-              { icon: FlaskConical, value: "CCRH", label: "Research Fellow", sub: "Ministry of Ayush, Govt. of India", highlight: true },
-              { icon: Users, value: "500+", label: "Patients Treated", sub: null, highlight: false },
-              { icon: Leaf, value: "Holistic", label: "Dual-Expert Approach", sub: null, highlight: false },
+              { icon: Award, value: "10+", label: "Years Clinical Experience", sub: "Dr. Souvik Dutta" },
+              { icon: FlaskConical, value: "Govt. Research", label: "Ministry of AYUSH Affiliation", sub: "Govt. of India" },
+              { icon: Users, value: "500+", label: "Patients Supported", sub: "Across West Bengal" },
+              { icon: Heart, value: "Integrated", label: "Nutrition + Holistic Healthcare", sub: "Dual specialist care" },
             ].map((item, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
-                className={`flex flex-col items-center text-center gap-2 py-6 px-4 rounded-2xl transition-all ${item.highlight ? "border-2 border-[var(--gold)] bg-white shadow-md" : "border border-transparent hover:border-[var(--border)] hover:bg-white"}`}>
-                <item.icon className={`w-8 h-8 ${item.highlight ? "text-[var(--gold)]" : "text-[var(--green-mid)]"}`}/>
-                <div className="font-serif text-3xl md:text-4xl font-bold text-[var(--green-deep)]">{item.value}</div>
-                <div className="font-sans text-sm text-[var(--text-muted)] font-medium leading-snug">{item.label}</div>
-                {item.sub && <span className="text-[9px] font-sans uppercase tracking-widest text-[var(--gold)] font-semibold leading-tight">{item.sub}</span>}
+              <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: i * 0.08 }}
+                className="flex items-start gap-4 p-5 rounded-2xl border border-[var(--border)] bg-[var(--bg-warm)] hover:bg-white hover:shadow-sm transition-all">
+                <div className="w-10 h-10 rounded-xl bg-[var(--green-deep)]/8 flex items-center justify-center shrink-0">
+                  <item.icon className="w-5 h-5 text-[var(--green-deep)]"/>
+                </div>
+                <div className="min-w-0">
+                  <div className="font-serif text-xl font-bold text-[var(--green-deep)] leading-tight">{item.value}</div>
+                  <div className="font-sans text-xs font-semibold text-[var(--text-dark)] mt-0.5 leading-snug">{item.label}</div>
+                  <div className="font-sans text-[11px] text-[var(--text-muted)] mt-0.5">{item.sub}</div>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -243,7 +212,9 @@ export default function Home() {
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img src={drSouvikImg} alt="Dr. Souvik Dutta — Homoeopathy Specialist, Kolkata" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"/>
-                {/* Label on image — high visibility */}
+                <div className="absolute top-4 right-4 bg-[var(--gold)] text-white text-[10px] font-sans font-bold tracking-widest uppercase px-3 py-1.5 rounded-full shadow-lg border border-white/20">
+                  Phone Consult
+                </div>
                 <div className="absolute bottom-0 left-0 right-0 px-5 pb-4 pt-8">
                   <span className="inline-block bg-[var(--green-deep)] text-white text-xs font-sans font-bold tracking-[0.15em] uppercase px-4 py-1.5 rounded-full border border-white/20 shadow-lg">
                     Homoeopathy
@@ -257,7 +228,7 @@ export default function Home() {
                   Senior Research Fellow at CCRH, Ministry of Ayush. 10+ years of clinical experience with expertise in chronic, lifestyle, and paediatric conditions.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {["BHMS", "MD(Hom.)", "CCRH Fellow", "10+ Yrs"].map((b) => (
+                  {["BHMS", "MD(Hom.)", "CCRH Fellow", "10+ Yrs", "Phone Consult"].map((b) => (
                     <span key={b} className="text-xs bg-[var(--bg-cream)] text-[var(--green-deep)] border border-[var(--border)] px-3 py-1 rounded-full font-medium">{b}</span>
                   ))}
                 </div>
