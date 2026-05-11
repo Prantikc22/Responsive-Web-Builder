@@ -90,8 +90,7 @@ export default function Home() {
             {/* Heading */}
             <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }}
               className="font-serif text-[38px] md:text-[44px] lg:text-[48px] font-bold leading-[1.2] text-[var(--text-dark)] mb-4">
-              <span className="whitespace-nowrap">Personalised Nutrition &amp;</span>{" "}
-              <span className="whitespace-nowrap">Homeopathic Healthcare</span>
+              Personalised Nutrition &amp; Homeopathic Healthcare
             </motion.h1>
 
             {/* Gold rule */}
