@@ -1,0 +1,8 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "tqpQETig_H8ho6_xH4UWN"
+uri = "file://artifacts/heal-and-cure/public/nutrition-food.png"
+type = "image"
+title = "generated_image"

@@ -401,7 +401,7 @@ export default function Home() {
       <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
         className="bg-[var(--teal)] text-white py-20 overflow-hidden relative">
         <div className="absolute right-0 top-0 h-full w-[48%] hidden md:block pointer-events-none">
-          <img src={pampitaImg} alt="" className="w-full h-full object-cover object-top opacity-35"/>
+          <img src="/nutrition-food.png" alt="" className="w-full h-full object-cover object-center opacity-45"/>
           <div className="absolute inset-0 bg-gradient-to-r from-[var(--teal)] via-[var(--teal)]/60 to-[var(--teal)]/10"/>
           <div className="absolute inset-0 bg-gradient-to-b from-[var(--teal)]/25 via-transparent to-[var(--teal)]/25"/>
         </div>
