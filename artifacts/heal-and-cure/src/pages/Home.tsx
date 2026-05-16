@@ -232,45 +232,72 @@ export default function Home() {
       </motion.section>
 
       {/* ══ BENEFITS OF HOMOEOPATHY ═══════════════════════════ */}
-      <section className="py-24 bg-[var(--green-deep)] relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(white 1px, transparent 1px)", backgroundSize: "32px 32px" }}/>
-        <div className="absolute right-0 top-0 w-[40%] h-full opacity-[0.04] pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(45deg, white 0px, white 1px, transparent 1px, transparent 12px)" }}/>
-        <div className="container mx-auto px-4 max-w-5xl relative z-10">
-          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
-            className="mb-14">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="h-px w-8 bg-[var(--gold)]/60"/>
-              <span className="text-[var(--gold)] text-xs tracking-[0.25em] uppercase font-sans font-semibold">Why Homoeopathy</span>
-            </div>
-            <h2 className="font-serif text-4xl md:text-[2.8rem] text-white leading-snug">
-              Benefits of <span className="text-[var(--gold)]">Homoeopathy</span>
-            </h2>
-            <p className="font-sans text-white/55 text-base mt-3 max-w-xl">
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-16">
+            <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
+              className="text-[var(--gold)] text-xs tracking-[0.25em] uppercase font-sans font-semibold">
+              Why Homoeopathy
+            </motion.span>
+            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
+              className="font-serif text-4xl md:text-5xl text-[var(--text-dark)] mt-3 mb-3">
+              Benefits of <span className="text-[var(--green-deep)]">Homoeopathy</span>
+            </motion.h2>
+            <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
+              className="font-sans text-lg text-[var(--text-muted)] max-w-2xl mx-auto">
               A time-tested system of medicine that heals gently, deeply and permanently
-            </p>
-          </motion.div>
-
-          <div className="flex flex-col">
-            {homoeopathyBenefits.map((b, i) => (
-              <motion.div key={i}
-                initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="flex items-start gap-4 md:gap-8 py-6 border-b border-white/10 last:border-0 group hover:bg-white/[0.03] transition-colors rounded-xl px-3 -mx-3 cursor-default">
-                <div className="shrink-0 font-serif text-[var(--gold)]/18 leading-none select-none hidden sm:block w-16 text-right"
-                  style={{ fontSize: "64px" }}>
-                  {String(i + 1).padStart(2, "0")}
-                </div>
-                <div className="flex items-start gap-4 flex-1 mt-1">
-                  <div className="w-10 h-10 rounded-xl bg-white/8 border border-white/12 flex items-center justify-center shrink-0 group-hover:bg-[var(--gold)]/18 group-hover:border-[var(--gold)]/35 transition-all">
-                    <b.icon className="w-5 h-5 text-[var(--gold)]/70 group-hover:text-[var(--gold)] transition-colors"/>
-                  </div>
-                  <div>
-                    <h3 className="font-serif text-xl text-white mb-1">{b.title}</h3>
-                    <p className="font-sans text-white/58 text-sm leading-relaxed max-w-2xl">{b.body}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+            </motion.p>
           </div>
+
+          {(() => {
+            const colSpans  = ["md:col-span-2","md:col-span-1","md:col-span-1","md:col-span-2","md:col-span-2","md:col-span-1"];
+            const isDark    = [false, false, false, false, true, false];
+            const bgs       = ["bg-[var(--bg-cream)]","bg-white","bg-white","bg-[var(--bg-cream)]","bg-[var(--green-deep)]","bg-white"];
+            const nums      = ["01","02","03","04","05","06"];
+            const markSizes = [190, 130, 130, 190, 190, 130];
+            return (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {homoeopathyBenefits.map((b, i) => {
+                  const dark = isDark[i];
+                  const wide = colSpans[i].includes("2");
+                  return (
+                    <motion.div key={i}
+                      initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+                      transition={{ duration: 0.55, delay: i * 0.09 }}
+                      className={`${colSpans[i]} ${bgs[i]} relative overflow-hidden rounded-2xl border ${dark ? "border-white/8" : "border-[var(--border)]"} p-7 md:p-9 group hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 cursor-default`}>
+
+                      {/* Watermark icon — large, faint, bottom-right */}
+                      <div className={`absolute -bottom-5 -right-5 pointer-events-none transition-opacity duration-500 group-hover:opacity-[0.12] ${dark ? "text-white opacity-[0.07]" : "text-[var(--green-deep)] opacity-[0.06]"}`}>
+                        <b.icon style={{ width: markSizes[i], height: markSizes[i] }}/>
+                      </div>
+
+                      {/* Decorative number — top-right */}
+                      <div className={`absolute top-4 right-6 font-serif leading-none select-none pointer-events-none ${dark ? "text-white opacity-[0.12]" : "text-[var(--gold)] opacity-[0.18]"}`}
+                        style={{ fontSize: "76px" }}>
+                        {nums[i]}
+                      </div>
+
+                      {/* Content */}
+                      <div className="relative z-10">
+                        <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-5 transition-all duration-300 ${dark ? "bg-white/10 group-hover:bg-[var(--gold)]/22" : "bg-[var(--green-deep)]/8 group-hover:bg-[var(--gold)]/12"}`}>
+                          <b.icon className={`w-5 h-5 transition-colors duration-300 ${dark ? "text-[var(--gold-light)] group-hover:text-[var(--gold)]" : "text-[var(--green-deep)] group-hover:text-[var(--gold)]"}`}/>
+                        </div>
+                        <h3 className={`font-serif mb-2.5 leading-snug ${wide ? "text-2xl" : "text-xl"} ${dark ? "text-white" : "text-[var(--text-dark)]"}`}>
+                          {b.title}
+                        </h3>
+                        <p className={`font-sans text-sm leading-relaxed ${dark ? "text-white/62" : "text-[var(--text-muted)]"} ${wide ? "max-w-md" : ""}`}>
+                          {b.body}
+                        </p>
+                      </div>
+
+                      {/* Sliding bottom accent line */}
+                      <div className={`absolute bottom-0 left-0 h-[2px] w-0 group-hover:w-full transition-all duration-600 ${dark ? "bg-[var(--gold)]" : "bg-[var(--green-deep)]/40"}`}/>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            );
+          })()}
         </div>
       </section>
 
@@ -565,7 +592,7 @@ export default function Home() {
             <Link href="/health-tips" data-testid="link-all-tips" className="font-sans text-[var(--green-deep)] font-medium hover:text-[var(--gold)] transition-colors text-sm">Read All Tips →</Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {blogPosts.map((post, i) => (
+            {blogPosts.slice(0, 6).map((post, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }}
                 className="group bg-white rounded-2xl border border-[var(--border)] overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                 <div className={`${post.color} px-6 py-8 relative overflow-hidden`}>
