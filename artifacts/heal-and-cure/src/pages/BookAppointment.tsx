@@ -62,8 +62,8 @@ export default function BookAppointment() {
   };
 
   const doctors = [
-    { value: "souvik", label: "Dr. Souvik Dutta", sub: "Homoeopathy & Holistic Care", img: drSouvikImg },
-    { value: "pampita", label: "Pampita Banerjee", sub: "Nutrition & Diabetic Care", img: pampitaImg },
+    { value: "souvik", label: "Dr. Souvik Dutta", sub: "Consultant Homoeopathic Physician", img: drSouvikImg },
+    { value: "pampita", label: "Mrs. Pampita Banerjee", sub: "Consultant Therapeutic Dietician", img: pampitaImg },
   ];
 
   return (
@@ -108,11 +108,11 @@ export default function BookAppointment() {
                     <p className="font-serif text-base leading-tight">Dr. Souvik Dutta</p>
                     <p className="text-white/60 text-xs mt-0.5 font-sans">BHMS, MD(Hom.) · Homoeopathy</p>
                     <div className="mt-2.5 space-y-1">
-                      <a href="tel:+917980219737" className="flex items-center gap-2 text-[var(--gold-light)] text-xs hover:text-white transition-colors">
-                        <Phone className="w-3 h-3 shrink-0"/> +91 7980219737
+                      <a href="tel:+918961661727" className="flex items-center gap-2 text-[var(--gold-light)] text-xs hover:text-white transition-colors">
+                        <Phone className="w-3 h-3 shrink-0"/> +91 8961661727 <span className="text-white/50">(appointments)</span>
                       </a>
-                      <a href="tel:+918961661727" className="flex items-center gap-2 text-[var(--gold-light)]/70 text-xs hover:text-white transition-colors">
-                        <AlertCircle className="w-3 h-3 shrink-0"/> +91 8961661727 <span className="text-white/40">(emergency)</span>
+                      <a href="tel:+917980219737" className="flex items-center gap-2 text-[var(--gold-light)]/70 text-xs hover:text-white transition-colors">
+                        <AlertCircle className="w-3 h-3 shrink-0"/> +91 7980219737 <span className="text-white/40">(emergency)</span>
                       </a>
                     </div>
                   </div>
@@ -121,11 +121,11 @@ export default function BookAppointment() {
                 <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/8 border border-white/10">
                   <img src={pampitaImg} className="w-12 h-12 rounded-full object-cover object-top ring-2 ring-[var(--gold)]/40 shrink-0" alt="Pampita"/>
                   <div className="flex-1 min-w-0">
-                    <p className="font-serif text-base leading-tight">Pampita Banerjee</p>
+                    <p className="font-serif text-base leading-tight">Mrs. Pampita Banerjee</p>
                     <p className="text-white/60 text-xs mt-0.5 font-sans">MSc Nutrition · Diabetic Educator</p>
                     <div className="mt-2.5">
-                      <a href="tel:+918961661721" className="flex items-center gap-2 text-[var(--gold-light)] text-xs hover:text-white transition-colors">
-                        <Phone className="w-3 h-3 shrink-0"/> +91 8961661721
+                      <a href="tel:+918961661727" className="flex items-center gap-2 text-[var(--gold-light)] text-xs hover:text-white transition-colors">
+                        <Phone className="w-3 h-3 shrink-0"/> +91 8961661727
                       </a>
                     </div>
                   </div>
@@ -134,18 +134,26 @@ export default function BookAppointment() {
 
               {/* Clinic Hours */}
               <div>
-                <h3 className="font-sans text-xs tracking-[0.2em] uppercase text-[var(--gold-light)] font-semibold mb-4">Clinic Hours</h3>
+                <h3 className="font-sans text-xs tracking-[0.2em] uppercase text-[var(--gold-light)] font-semibold mb-4">Consultation Hours</h3>
                 <div className="bg-white/8 border border-white/10 rounded-2xl p-5 flex flex-col gap-3">
-                  <div className="flex items-center gap-3">
-                    <Clock className="w-4 h-4 text-[var(--gold-light)] shrink-0"/>
-                    <div>
-                      <p className="font-sans text-sm font-medium">Sunday to Saturday</p>
-                      <p className="font-sans text-white/60 text-xs mt-0.5">9:00 AM – 9:00 PM</p>
+                  <div className="flex items-start gap-3">
+                    <Clock className="w-4 h-4 text-[var(--gold-light)] shrink-0 mt-0.5"/>
+                    <div className="flex flex-col gap-2 w-full">
+                      <div>
+                        <p className="font-sans text-sm font-medium">Dr. Souvik Dutta</p>
+                        <p className="font-sans text-white/60 text-xs mt-0.5">Mon · Wed · Fri — 7:00 PM to 9:00 PM</p>
+                        <p className="font-sans text-white/40 text-[10px] mt-0.5">In-person · Panpara Lane, Uttarpara, Kolkata</p>
+                      </div>
+                      <div className="border-t border-white/10 pt-2">
+                        <p className="font-sans text-sm font-medium">Mrs. Pampita Banerjee</p>
+                        <p className="font-sans text-white/60 text-xs mt-0.5">Online Consultation — Flexible Hours</p>
+                        <p className="font-sans text-white/40 text-[10px] mt-0.5">Book at least 24 hours in advance</p>
+                      </div>
                     </div>
                   </div>
                   <div className="border-t border-white/10 pt-3">
                     <p className="font-sans text-white/50 text-xs leading-relaxed">
-                      We are open all 7 days of the week. Walk-ins welcome during clinic hours. For urgent queries, please call directly.
+                      Online consultations are available both days. Please book 24 hours prior to your preferred slot. For urgent queries, call directly.
                     </p>
                   </div>
                 </div>
@@ -153,12 +161,12 @@ export default function BookAppointment() {
 
               {/* WhatsApp */}
               <div>
-                <a href="https://wa.me/918961661721" target="_blank" rel="noopener noreferrer"
+                <a href="https://wa.me/918961661727" target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-3 bg-white/10 hover:bg-white/15 border border-white/20 rounded-2xl px-5 py-4 transition-colors">
                   <MessageCircle className="w-5 h-5 text-[var(--gold-light)] shrink-0"/>
                   <div>
                     <p className="font-sans text-sm font-medium">Chat With Clinic</p>
-                    <p className="font-sans text-white/50 text-xs">WhatsApp · +91 8961661721</p>
+                    <p className="font-sans text-white/50 text-xs">WhatsApp · +91 8961661727</p>
                   </div>
                 </a>
               </div>
@@ -180,7 +188,7 @@ export default function BookAppointment() {
                       </p>
                     </div>
                     <div className="flex flex-wrap gap-3 justify-center mt-2">
-                      <a href="https://wa.me/918961661721" target="_blank" rel="noopener noreferrer"
+                      <a href="https://wa.me/918961661727" target="_blank" rel="noopener noreferrer"
                         className="flex items-center gap-2 bg-[var(--green-deep)] text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-[var(--green-mid)] transition-colors">
                         <MessageCircle className="w-4 h-4"/> Chat on WhatsApp
                       </a>

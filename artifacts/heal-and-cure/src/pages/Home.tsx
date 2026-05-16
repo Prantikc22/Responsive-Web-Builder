@@ -4,7 +4,8 @@ import { Link } from "wouter";
 import {
   Award, Users, Leaf, Stethoscope, Heart, Baby, Apple,
   Activity, Zap, MessageCircle, ChevronLeft, ChevronRight,
-  FlaskConical, Target, Sparkles, BookOpen, Shield, Search, Phone
+  FlaskConical, Target, Sparkles, BookOpen, Shield, Search, Phone,
+  Scale, CheckCircle, Bone
 } from "lucide-react";
 import drSouvikImg from "@assets/Doc_Men_1778067737072.jpeg";
 import pampitaImg from "@assets/Doc_Women_1778067734674.jpeg";
@@ -25,18 +26,21 @@ function Counter({ value, duration = 2 }: { value: number; duration?: number }) 
 const testimonials = [
   { id: 1, text: "After years of struggling with chronic sinusitis, Dr. Souvik's treatment gave me lasting relief. No more recurring infections. The personalised approach is unlike anything I've experienced before.", name: "Ananya Roy", location: "Kolkata" },
   { id: 2, text: "Pampita di completely transformed my diet for diabetes. My HbA1c dropped from 9.2 to 6.8 in just four months. Remarkable results that no medication alone could achieve.", name: "Suresh Ghosh", location: "Serampore" },
-  { id: 3, text: "My daughter had frequent ear infections and conventional medicine wasn't helping. After homeopathic treatment with Dr. Souvik, she's been infection-free for over a year.", name: "Priya Sharma", location: "Kolkata" },
+  { id: 3, text: "My daughter had frequent ear infections and conventional medicine wasn't helping. After homoeopathic treatment with Dr. Souvik, she's been infection-free for over a year.", name: "Priya Sharma", location: "Kolkata" },
   { id: 4, text: "The personalised diet plan from Pampita helped me lose 12 kg while managing my thyroid condition. I feel completely new. Every consultation feels thoughtful and caring.", name: "Rupa Chatterjee", location: "Hooghly" },
   { id: 5, text: "Dr. Souvik is incredibly knowledgeable and patient. He listened to every symptom and the constitutional treatment worked wonders for my chronic migraines. Two years free now.", name: "Amit Bose", location: "Howrah" },
   { id: 6, text: "I came with PCOD and irregular cycles. Within three months of treatment, everything normalised. Truly grateful for this clinic and the care they showed throughout.", name: "Suchitra Das", location: "Dunlop" },
   { id: 7, text: "Pampita's nutrition guidance for my elderly mother's kidney disease has been life-changing. Her creatinine levels have stabilised and she feels so much better.", name: "Rajesh Mukherjee", location: "Barrackpore" },
-  { id: 8, text: "Brought my son here for eczema that no cream could control. Homeopathy healed it from within — completely clear skin now. Heal & Cure is a blessing for our family.", name: "Nilufar Begum", location: "Shyamnagar" },
+  { id: 8, text: "Brought my son here for eczema that no cream could control. Homoeopathy healed it from within — completely clear skin now. Heal & Cure is a blessing for our family.", name: "Nilufar Begum", location: "Shyamnagar" },
 ];
 
 const blogPosts = [
-  { category: "HOMEOPATHY", color: "bg-[var(--green-deep)]", title: "Can Homeopathy Help Manage Diabetes?", excerpt: "Explore how constitutional treatment addresses blood sugar imbalance at the root cause level.", slug: "/health-tips/homeopathy-for-diabetes" },
+  { category: "HOMOEOPATHY", color: "bg-[var(--green-deep)]", title: "Can Homoeopathy Help Manage Diabetes?", excerpt: "Explore how constitutional treatment addresses blood sugar imbalance at the root cause level.", slug: "/health-tips/homeopathy-for-diabetes" },
   { category: "NUTRITION", color: "bg-[var(--teal)]", title: "5 Diet Mistakes Diabetics Make Daily", excerpt: "Common pitfalls in diabetic diet planning that silently worsen blood sugar control over time.", slug: "/health-tips/diet-mistakes-for-diabetics" },
-  { category: "LIFESTYLE", color: "bg-[var(--green-mid)]", title: "What Is Constitutional Homeopathic Treatment?", excerpt: "Understanding individualized medicine — the cornerstone of classical homoeopathy practice.", slug: "/health-tips/constitutional-homeopathic-treatment" },
+  { category: "HOMOEOPATHY", color: "bg-[var(--green-mid)]", title: "What Is Constitutional Homoeopathic Treatment?", excerpt: "Understanding individualised medicine — the cornerstone of classical homoeopathy practice.", slug: "/health-tips/constitutional-homeopathic-treatment" },
+  { category: "RESEARCH", color: "bg-[var(--green-deep)]", title: "Homoeopathy for Hypothyroidism — What the Research Shows", excerpt: "A clinical trial co-authored by Dr. Souvik Dutta demonstrates significant TSH improvement with homoeopathic treatment.", slug: "/health-tips/homoeopathy-for-hypothyroidism" },
+  { category: "NUTRITION", color: "bg-[var(--teal)]", title: "Weight Loss Through Diet Alone — Is It Possible?", excerpt: "How therapeutic nutrition and metabolic balancing can achieve sustainable weight reduction without any exercise programme.", slug: "/health-tips/weight-loss-through-diet" },
+  { category: "RESEARCH", color: "bg-[var(--green-mid)]", title: "Blood Pressure & Homoeopathy — Evidence from Clinical Trials", excerpt: "A randomised controlled trial demonstrates measurable reduction in prehypertensive blood pressure using homoeopathic medicine.", slug: "/health-tips/homoeopathy-for-blood-pressure" },
 ];
 
 const philosophyPillars = [
@@ -46,12 +50,38 @@ const philosophyPillars = [
 ];
 
 const homeServices = [
-  { icon: Stethoscope, title: "Classical Homeopathy", sub: "Constitutional prescribing for deep, lasting healing of chronic conditions.", cat: "homeopathy" },
-  { icon: Heart, title: "Therapeutic Nutrition", sub: "Evidence-based, personalised meal plans designed for your specific diagnosis.", cat: "nutrition" },
-  { icon: Baby, title: "Children's Wellness", sub: "Gentle, safe homoeopathic remedies for paediatric ailments and immunity.", cat: "homeopathy" },
-  { icon: Activity, title: "Diabetes Management", sub: "Integrated diet and homoeopathic care for stable, sustainable blood glucose.", cat: "nutrition" },
-  { icon: Zap, title: "Lifestyle Disease Care", sub: "Root-cause treatment for hypertension, PCOD, thyroid and metabolic disorders.", cat: "homeopathy" },
-  { icon: BookOpen, title: "Preventive Health Plans", sub: "Seasonal immunity, family wellness programmes and nutrition education.", cat: "nutrition" },
+  { icon: Stethoscope, title: "Classical Homoeopathy", sub: "Constitutional prescribing for deep, lasting healing of chronic and acute conditions.", cat: "homeopathy" },
+  { icon: Baby, title: "Children's Wellness", sub: "Gentle, safe homoeopathic remedies for paediatric ailments, immunity and developmental concerns.", cat: "homeopathy" },
+  { icon: Shield, title: "Skin & Allergic Disorders", sub: "Effective homoeopathic care for eczema, psoriasis, tinea, urticaria, acne and skin allergies.", cat: "homeopathy" },
+  { icon: Zap, title: "Hormonal & Thyroid Care", sub: "Constitutional treatment for PCOD, hypothyroidism, menstrual irregularity and hormonal imbalances.", cat: "homeopathy" },
+  { icon: Leaf, title: "Respiratory Conditions", sub: "Root-cause homoeopathic treatment for chronic asthma, sinusitis, recurrent cough and allergic rhinitis.", cat: "homeopathy" },
+  { icon: Activity, title: "Pre-Hypertension Management", sub: "Evidence-based homoeopathic care for prehypertension and early-stage blood pressure disorders.", cat: "homeopathy" },
+  { icon: Heart, title: "Infertility Support", sub: "Homoeopathic support for primary and secondary infertility, reproductive health and PCOD.", cat: "homeopathy" },
+  { icon: Bone, title: "Joint, Arthritis & Pain", sub: "Deep-acting remedies for arthritis, back pain, migraine, neuralgia and musculoskeletal conditions.", cat: "homeopathy" },
+  { icon: Apple, title: "Therapeutic Nutrition", sub: "Evidence-based, personalised meal plans designed precisely for your diagnosis and metabolic needs.", cat: "nutrition" },
+  { icon: Target, title: "Diabetes Management", sub: "Integrated diet therapy for stable, sustainable blood glucose and long-term diabetic wellness.", cat: "nutrition" },
+  { icon: Scale, title: "Weight Management (Diet Only)", sub: "Sustainable weight loss through therapeutic nutrition alone — no exercise programmes required.", cat: "nutrition" },
+  { icon: Sparkles, title: "Kidney & Liver Disease Diet", sub: "Disease-specific nutrition for creatinine management, liver health and renal protection.", cat: "nutrition" },
+  { icon: Users, title: "PCOD/PCOS Hormonal Diet", sub: "Nutritional therapy for hormonal balance, weight management and cycle regulation in PCOD.", cat: "nutrition" },
+  { icon: BookOpen, title: "Preventive Health Plans", sub: "Family wellness programmes, seasonal immunity plans and evidence-based nutrition education.", cat: "nutrition" },
+];
+
+const homoeopathyBenefits = [
+  { icon: Leaf, title: "No Harsh Side Effects", body: "Homoeopathic medicines are ultra-diluted, gentle and non-toxic — safe for long-term use without dependency or adverse reactions." },
+  { icon: Search, title: "Treats Root Cause", body: "Unlike symptom suppression, homoeopathy identifies and addresses the underlying imbalance causing illness at its very source." },
+  { icon: Baby, title: "Safe for All Ages", body: "From newborns to the elderly, homoeopathic treatment is gentle and suitable for every life stage, including during pregnancy." },
+  { icon: Target, title: "Highly Individualised", body: "Each prescription is unique to you — your constitution, temperament, lifestyle and personal health history guide every remedy selection." },
+  { icon: Activity, title: "Effective for Chronic Conditions", body: "Thyroid disorders, skin diseases, PCOD, migraines and allergies respond exceptionally well to deep-acting constitutional homoeopathy." },
+  { icon: FlaskConical, title: "Research-Backed Approach", body: "Published randomised controlled trials support homoeopathy's efficacy in conditions like hypertension, thyroid disorders and skin disease." },
+];
+
+const weightFeatures = [
+  "Personalised food plans based on your metabolic type and medical conditions",
+  "No crash diets — sustainable, gradual reduction through balanced macronutrients",
+  "Targets root causes: insulin resistance, hormonal imbalance, inflammation",
+  "Specialised for obesity, PCOD, hypothyroidism and lifestyle disorders",
+  "100% diet-based — no exercise programmes required, ideal for chronic pain patients",
+  "Online consultation available — book at least 24 hours in advance",
 ];
 
 export default function Home() {
@@ -79,7 +109,7 @@ export default function Home() {
         <div className="absolute inset-0 overflow-hidden">
           <img
             src="/hero-image.png"
-            alt="Heal & Cure — Personalised Homoeopathy and Nutrition Care"
+            alt="Heal & Cure — Homoeopathy and Therapeutic Nutrition Care"
             className="absolute right-0 top-0 h-full w-[55%] object-cover object-center hidden lg:block"
           />
           <div className="absolute right-0 top-0 h-full w-[55%] bg-gradient-to-l from-transparent via-transparent to-[var(--bg-warm)] hidden lg:block"/>
@@ -87,22 +117,19 @@ export default function Home() {
 
         <div className="container mx-auto px-4 relative z-20 py-20">
           <div className="max-w-xl lg:max-w-[52%]">
-            {/* Heading */}
             <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }}
               className="font-serif text-[38px] md:text-[44px] lg:text-[48px] font-bold leading-[1.2] text-[var(--text-dark)] mb-4">
-              Personalised Nutrition &amp; Homeopathic Healthcare
+              Holistic Healing &amp; Therapeutic Nutrition
             </motion.h1>
 
-            {/* Gold rule */}
             <motion.div initial={{ width: 0 }} animate={{ width: 56 }} transition={{ duration: 0.7, delay: 0.3 }}
               className="h-0.5 bg-[var(--gold)] mb-5"/>
 
             <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.35 }}
               className="font-sans text-base text-[#374151] leading-relaxed mb-8 max-w-md">
-              Integrated care that combines the science of nutrition with the healing power of homeopathy for lasting wellness.
+              Integrated care combining the science of homoeopathy with the power of therapeutic nutrition — for sustainable, lasting wellness.
             </motion.p>
 
-            {/* CTAs */}
             <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }}
               className="flex flex-wrap gap-3 mb-8">
               <Link href="/book" data-testid="button-hero-book"
@@ -110,19 +137,18 @@ export default function Home() {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                 Book Appointment
               </Link>
-              <a data-testid="link-hero-whatsapp" href="https://wa.me/918961661721" target="_blank" rel="noopener noreferrer"
+              <a data-testid="link-hero-whatsapp" href="https://wa.me/918961661727" target="_blank" rel="noopener noreferrer"
                 className="btn-fill flex items-center gap-2 bg-white border border-[var(--border)] text-[var(--green-deep)] px-7 py-3.5 rounded-full font-medium hover:bg-[var(--bg-cream)] transition-all text-sm shadow-sm">
                 <MessageCircle className="w-4 h-4"/>
                 Chat With Clinic
               </a>
             </motion.div>
 
-            {/* Inline trust pills */}
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.7 }}
               className="flex flex-wrap items-center gap-x-5 gap-y-2">
               {[
                 { icon: Award, label: "10+ Years Clinical Experience" },
-                { icon: Shield, label: "AYUSH Govt. Affiliation" },
+                { icon: FlaskConical, label: "Peer-Reviewed Research" },
                 { icon: Users, label: "500+ Patients Supported" },
               ].map((t, i) => (
                 <div key={i} className="flex items-center gap-1.5">
@@ -164,13 +190,11 @@ export default function Home() {
       {/* ══ RESEARCH EXCELLENCE BANNER ═══════════════════════ */}
       <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
         className="bg-[var(--green-deep)] text-white py-20 overflow-hidden relative">
-        {/* Research image — full height, right side, fading left */}
         <div className="absolute right-0 top-0 h-full w-[48%] hidden md:block pointer-events-none">
           <img src={researchBgImg} alt="" className="w-full h-full object-cover object-left opacity-45"/>
           <div className="absolute inset-0 bg-gradient-to-r from-[var(--green-deep)] via-[var(--green-deep)]/55 to-[var(--green-deep)]/10"/>
           <div className="absolute inset-0 bg-gradient-to-b from-[var(--green-deep)]/30 via-transparent to-[var(--green-deep)]/30"/>
         </div>
-        {/* Subtle dot texture */}
         <div className="absolute inset-0 opacity-[0.025]" style={{ backgroundImage: "radial-gradient(white 1px, transparent 1px)", backgroundSize: "36px 36px" }}/>
         <div className="container mx-auto px-4 relative z-10 max-w-5xl">
           <div className="max-w-2xl flex flex-col gap-6">
@@ -179,19 +203,19 @@ export default function Home() {
               <span className="text-[var(--gold)] font-sans font-semibold tracking-[0.2em] text-[10px] uppercase">Research &amp; Clinical Credentials</span>
             </div>
             <h2 className="font-serif text-3xl md:text-[2.2rem] leading-[1.28]">
-              Clinical Experience Backed by Government Research
+              Clinical Experience Backed by Public Health Research
             </h2>
             <div className="space-y-3">
               <p className="font-sans text-white/82 text-base leading-relaxed">
-                Dr. Souvik Dutta currently serves as a <strong className="text-white font-semibold">Senior Research Fellow</strong> under CCRH, Ministry of AYUSH, Government of India. His experience across clinical research and hospital practice helps bring evidence-informed, patient-focused care to Heal &amp; Cure.
+                Dr. Souvik Dutta currently serves as a <strong className="text-white font-semibold">Senior Research Fellow</strong> at the <strong className="text-white font-semibold">Dr. Anjali Chatterji Regional Research Institute for Homoeopathy, Kolkata</strong> — affiliated to CCRH, Ministry of AYUSH, Government of India. His work across clinical trials and hospital practice brings evidence-informed, patient-focused homoeopathic care to Heal &amp; Cure.
               </p>
               <p className="font-sans text-white/55 text-sm leading-relaxed italic">
-                This experience supports a thoughtful and research-informed approach to holistic healthcare.
+                This research experience supports a thoughtful and evidence-driven approach to holistic healthcare.
               </p>
             </div>
             <div className="flex flex-wrap gap-5 mt-1">
               {[
-                { icon: Shield, label: "Govt. Research Affiliation" },
+                { icon: FlaskConical, label: "Published Research Fellow" },
                 { icon: Award, label: "10+ Years Clinical Experience" },
               ].map((t) => (
                 <div key={t.label} className="flex items-center gap-2">
@@ -203,6 +227,34 @@ export default function Home() {
           </div>
         </div>
       </motion.section>
+
+      {/* ══ BENEFITS OF HOMOEOPATHY ═══════════════════════════ */}
+      <section className="py-24 bg-[var(--bg-cream)]">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-14">
+            <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-[var(--gold)] text-xs tracking-[0.25em] uppercase font-sans font-semibold">Why Homoeopathy</motion.span>
+            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="font-serif text-4xl md:text-5xl text-[var(--text-dark)] mt-3 mb-3">
+              Benefits of <span className="text-[var(--green-deep)]">Homoeopathy</span>
+            </motion.h2>
+            <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="font-sans text-lg text-[var(--text-muted)] max-w-2xl mx-auto">
+              A time-tested system of medicine that heals gently, deeply and permanently
+            </motion.p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {homoeopathyBenefits.map((b, i) => (
+              <motion.div key={i} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="bg-white rounded-2xl p-7 border border-[var(--border)] hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+                <div className="w-12 h-12 rounded-xl bg-[var(--green-deep)]/8 flex items-center justify-center mb-5 group-hover:bg-[var(--gold)]/10 transition-colors">
+                  <b.icon className="w-6 h-6 text-[var(--green-deep)] group-hover:text-[var(--gold)] transition-colors"/>
+                </div>
+                <h3 className="font-serif text-xl text-[var(--text-dark)] mb-2">{b.title}</h3>
+                <p className="font-sans text-sm text-[var(--text-muted)] leading-relaxed">{b.body}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ══ MEET OUR EXPERTS ══════════════════════════════════ */}
       <section className="py-24 bg-white">
@@ -221,7 +273,7 @@ export default function Home() {
                 <img src={drSouvikImg} alt="Dr. Souvik Dutta — Homoeopathy Specialist, Kolkata" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"/>
                 <div className="absolute top-4 right-4 bg-[var(--gold)] text-white text-[10px] font-sans font-bold tracking-widest uppercase px-3 py-1.5 rounded-full shadow-lg border border-white/20">
-                  Phone Consult
+                  Online Consultation
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 px-5 pb-4 pt-8">
                   <span className="inline-block bg-[var(--green-deep)] text-white text-xs font-sans font-bold tracking-[0.15em] uppercase px-4 py-1.5 rounded-full border border-white/20 shadow-lg">
@@ -231,23 +283,23 @@ export default function Home() {
               </div>
               <div className="p-8 flex flex-col flex-1">
                 <h3 className="font-serif text-3xl text-[var(--green-deep)] mb-0.5">Dr. Souvik Dutta</h3>
-                <p className="font-serif text-base text-[var(--green-deep)]/75 font-normal italic mb-1">Homoeopathic &amp; Holistic Physician</p>
+                <p className="font-serif text-base text-[var(--green-deep)]/75 font-normal italic mb-1">Consultant Homoeopathic Physician</p>
                 <p className="text-[var(--gold)] font-sans text-xs font-medium mb-4 tracking-wide">BHMS, MD(Hom.), MBA (Healthcare)</p>
                 <p className="font-sans text-[var(--text-muted)] text-sm mb-5 leading-relaxed flex-1">
-                  Senior Research Fellow at CCRH, Ministry of Ayush. 10+ years of clinical experience with expertise in chronic, lifestyle, and paediatric conditions.
+                  SRF at Dr. Anjali Chatterji Regional Research Institute for Homoeopathy, Kolkata, affiliated to CCRH, Ministry of Ayush. 10+ years of clinical experience. Special expertise in chronic, lifestyle and paediatric conditions.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {["BHMS", "MD(Hom.)", "CCRH Fellow", "10+ Yrs", "Phone Consult"].map((b) => (
+                  {["BHMS", "MD(Hom.)", "10+ Yrs", "Online Consult"].map((b) => (
                     <span key={b} className="text-xs bg-[var(--bg-cream)] text-[var(--green-deep)] border border-[var(--border)] px-3 py-1 rounded-full font-medium">{b}</span>
                   ))}
                 </div>
                 <div className="flex flex-col gap-2">
                   <div className="flex flex-col items-center gap-0.5">
-                    <a href="tel:+917980219737" className="flex items-center gap-2 text-sm text-[var(--green-deep)] font-medium font-sans hover:underline">
-                      <Phone className="w-4 h-4"/> +91 7980219737
+                    <a href="tel:+918961661727" className="flex items-center gap-2 text-sm text-[var(--green-deep)] font-medium font-sans hover:underline">
+                      <Phone className="w-4 h-4"/> +91 8961661727 <span className="text-[10px] text-[var(--text-muted)] font-normal">(Appointments)</span>
                     </a>
-                    <a href="tel:+918961661721" className="flex items-center gap-1.5 text-xs text-[var(--text-muted)] font-sans hover:underline">
-                      <Phone className="w-3 h-3"/> +91 8961661721 <span className="text-[10px] text-[var(--gold)]">(For emergency only)</span>
+                    <a href="tel:+917980219737" className="flex items-center gap-1.5 text-xs text-[var(--text-muted)] font-sans hover:underline">
+                      <Phone className="w-3 h-3"/> +91 7980219737 <span className="text-[10px] text-[var(--gold)]">(Emergency only)</span>
                     </a>
                   </div>
                   <Link href="/book" data-testid="button-book-souvik"
@@ -258,17 +310,15 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Pampita */}
+            {/* Mrs. Pampita */}
             <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }}
               className="group bg-white rounded-3xl shadow-[0_8px_40px_rgba(27,67,50,0.10)] hover:shadow-[0_20px_60px_rgba(27,67,50,0.18)] transition-all duration-500 hover:-translate-y-2 border border-[var(--border)] overflow-hidden flex flex-col">
               <div className="relative aspect-[4/3] overflow-hidden">
-                <img src={pampitaImg} alt="Pampita Banerjee — Clinical Nutritionist & Diabetic Educator, Kolkata" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"/>
+                <img src={pampitaImg} alt="Mrs. Pampita Banerjee — Therapeutic Dietician & Diabetic Educator, Kolkata" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"/>
-                {/* Phone consult badge — visible top right */}
                 <div className="absolute top-4 right-4 bg-[var(--gold)] text-white text-[10px] font-sans font-bold tracking-widest uppercase px-3 py-1.5 rounded-full shadow-lg border border-white/20">
-                  Phone Consult
+                  Online Consultation
                 </div>
-                {/* Label on image — high visibility */}
                 <div className="absolute bottom-0 left-0 right-0 px-5 pb-4 pt-8">
                   <span className="inline-block bg-[var(--teal)] text-white text-xs font-sans font-bold tracking-[0.15em] uppercase px-4 py-1.5 rounded-full border border-white/20 shadow-lg">
                     Nutrition &amp; Dietetics
@@ -276,20 +326,20 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-8 flex flex-col flex-1">
-                <h3 className="font-serif text-3xl text-[var(--teal)] mb-0.5">Pampita Banerjee</h3>
-                <p className="font-serif text-base text-[var(--teal)]/75 font-normal italic mb-1">Clinical Nutritionist &amp; Dietician</p>
-                <p className="text-[var(--gold)] font-sans text-xs font-medium mb-4 tracking-wide">MSc Food &amp; Nutrition | Therapeutic Dietitian</p>
+                <h3 className="font-serif text-3xl text-[var(--teal)] mb-0.5">Mrs. Pampita Banerjee</h3>
+                <p className="font-serif text-base text-[var(--teal)]/75 font-normal italic mb-1">Consultant Therapeutic Dietician &amp; Diabetic Educator</p>
+                <p className="text-[var(--gold)] font-sans text-xs font-medium mb-4 tracking-wide">MSc Food &amp; Nutrition, Independent Researcher</p>
                 <p className="font-sans text-[var(--text-muted)] text-sm mb-5 leading-relaxed flex-1">
-                  Expert therapeutic dietitian and certified Diabetic Educator specialising in clinical nutrition for diabetes, PCOD, kidney disease, and metabolic conditions.
+                  Specialist in therapeutic nutrition for chronic disease, lifestyle disorders, pain management and obesity. Expert in sustainable weight management through dietary science alone. Certified Diabetic Educator with 9+ years of clinical experience.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {["MSc Nutrition", "Diabetic Educator", "Phone Consult"].map((b) => (
+                  {["MSc Nutrition", "Diabetic Educator", "Lifestyle Coach", "9+ Yrs Exp.", "Online Consult"].map((b) => (
                     <span key={b} className="text-xs bg-[var(--bg-cream)] text-[var(--teal)] border border-[var(--border)] px-3 py-1 rounded-full font-medium">{b}</span>
                   ))}
                 </div>
                 <div className="flex flex-col gap-2">
-                  <a href="tel:+918961661721" className="flex items-center justify-center gap-2 text-sm text-[var(--teal)] font-medium font-sans hover:underline">
-                    <Phone className="w-4 h-4"/> +91 8961661721
+                  <a href="tel:+918961661727" className="flex items-center justify-center gap-2 text-sm text-[var(--teal)] font-medium font-sans hover:underline">
+                    <Phone className="w-4 h-4"/> +91 8961661727
                   </a>
                   <Link href="/book" data-testid="button-book-pampita"
                     className="btn-fill w-full bg-[var(--teal)] text-white py-3.5 rounded-full font-medium hover:opacity-85 transition-all hover:scale-[1.02] text-center block">
@@ -302,20 +352,69 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══ SERVICES ═════════════════════════════════════════ */}
+      {/* ══ WEIGHT MANAGEMENT BY THERAPEUTIC DIET ════════════ */}
+      <section className="py-24 bg-[var(--bg-warm)] relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-[var(--gold)]/5 blur-3xl pointer-events-none"/>
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid lg:grid-cols-2 gap-14 items-center">
+            {/* Text side */}
+            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
+              <span className="text-[var(--gold)] text-xs tracking-[0.25em] uppercase font-sans font-semibold">Therapeutic Nutrition Speciality</span>
+              <h2 className="font-serif text-4xl md:text-[2.6rem] text-[var(--text-dark)] mt-3 mb-4 leading-snug">
+                Lose Weight Without Exercise — <span className="text-[var(--teal)]">The Science of Therapeutic Diet</span>
+              </h2>
+              <p className="font-sans text-[var(--text-muted)] text-base leading-relaxed mb-8">
+                Mrs. Pampita Banerjee's specialised approach to sustainable weight management relies entirely on dietary science and metabolic balancing — with no exercise programmes required.
+              </p>
+              <ul className="flex flex-col gap-3.5 mb-8">
+                {weightFeatures.map((f, i) => (
+                  <motion.li key={i} initial={{ opacity: 0, x: -16 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.07 }}
+                    className="flex items-start gap-3 font-sans text-sm text-[var(--text-dark)] leading-relaxed">
+                    <CheckCircle className="w-4.5 h-4.5 text-[var(--teal)] shrink-0 mt-0.5"/>
+                    {f}
+                  </motion.li>
+                ))}
+              </ul>
+              <Link href="/book" className="inline-flex items-center gap-2 bg-[var(--teal)] text-white px-8 py-3.5 rounded-full font-medium hover:opacity-85 transition-all hover:scale-[1.03] text-sm shadow-md">
+                Book a Nutrition Consultation
+              </Link>
+            </motion.div>
+
+            {/* Visual side */}
+            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.15 }}
+              className="relative">
+              <div className="rounded-3xl overflow-hidden shadow-[0_20px_60px_rgba(13,79,79,0.15)] aspect-[4/3]">
+                <img src={pampitaImg} alt="Mrs. Pampita Banerjee — Therapeutic Dietician" className="w-full h-full object-cover object-top"/>
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--teal)]/70 via-transparent to-transparent"/>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <p className="font-serif text-white text-2xl leading-snug mb-1">Mrs. Pampita Banerjee</p>
+                  <p className="font-sans text-white/75 text-xs tracking-wide uppercase">Consultant Therapeutic Dietician &amp; Diabetic Educator</p>
+                  <p className="font-sans text-[var(--gold-light)] text-xs mt-1">MSc Food &amp; Nutrition · 9+ Years Experience</p>
+                </div>
+              </div>
+              <div className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-lg border border-[var(--border)] px-5 py-3 flex flex-col items-center">
+                <Scale className="w-6 h-6 text-[var(--teal)] mb-1"/>
+                <p className="font-serif text-xl text-[var(--text-dark)]">Diet Only</p>
+                <p className="font-sans text-[10px] text-[var(--text-muted)] uppercase tracking-widest">No Exercise Required</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ ALL TREATMENTS ════════════════════════════════════ */}
       <section className="py-24 bg-[var(--bg-cream)]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
             <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-[var(--gold)] text-xs tracking-[0.25em] uppercase font-sans font-semibold">What We Treat</motion.span>
-            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="font-serif text-4xl md:text-5xl text-[var(--text-dark)] mt-3 mb-3">Specialised Care</motion.h2>
+            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="font-serif text-4xl md:text-5xl text-[var(--text-dark)] mt-3 mb-3">All Treatments</motion.h2>
             <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="font-sans text-lg text-[var(--text-muted)]">Comprehensive holistic treatments tailored for your needs</motion.p>
           </div>
 
-          {/* Filter tabs */}
           <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.25 }}
             className="flex justify-center gap-2 mb-10">
             {[
-              { key: "all", label: "All Services" },
+              { key: "all", label: "All Treatments" },
               { key: "homeopathy", label: "Homoeopathy" },
               { key: "nutrition", label: "Nutrition & Diet" },
             ].map((tab) => (
@@ -331,7 +430,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
             {homeServices.filter((s) => activeFilter === "all" || s.cat === activeFilter).map((s, i) => (
-              <motion.div key={s.title} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.07 }}
+              <motion.div key={s.title} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.06 }}
                 className="bg-white p-7 rounded-2xl border-l-4 border-transparent hover:border-l-[var(--gold)] hover:shadow-md transition-all duration-300 group cursor-default">
                 <div className={`w-12 h-12 rounded-xl mb-5 flex items-center justify-center transition-colors duration-300 ${s.cat === "homeopathy" ? "bg-[var(--green-deep)]/8 text-[var(--green-deep)] group-hover:bg-[var(--gold)]/10 group-hover:text-[var(--gold)]" : "bg-[var(--teal)]/8 text-[var(--teal)] group-hover:bg-[var(--gold)]/10 group-hover:text-[var(--gold)]"}`}>
                   <s.icon className="w-6 h-6"/>
@@ -346,7 +445,7 @@ export default function Home() {
           </div>
           <div className="text-center mt-12">
             <Link href="/services" data-testid="link-all-services" className="inline-flex items-center gap-2 text-[var(--green-deep)] font-medium font-sans hover:text-[var(--gold)] transition-colors">
-              Explore All Services →
+              Explore All Treatments →
             </Link>
           </div>
         </div>
@@ -354,9 +453,8 @@ export default function Home() {
 
       {/* ══ PHILOSOPHY OF GENTLE HEALING — full bg image ══════ */}
       <section className="relative overflow-hidden min-h-[560px] flex items-center">
-        {/* Background image */}
         <div className="absolute inset-0">
-          <img src="/philosophy-image.png" alt="Holistic healing — homeopathy remedies and herbs" className="w-full h-full object-cover object-center"/>
+          <img src="/philosophy-image.png" alt="Holistic healing — homoeopathy remedies and herbs" className="w-full h-full object-cover object-center"/>
           <div className="absolute inset-0 bg-[var(--green-deep)]/80"/>
         </div>
         <div className="container mx-auto px-4 relative z-10 py-24 max-w-5xl">
@@ -443,9 +541,9 @@ export default function Home() {
             </div>
             <Link href="/health-tips" data-testid="link-all-tips" className="font-sans text-[var(--green-deep)] font-medium hover:text-[var(--gold)] transition-colors text-sm">Read All Tips →</Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {blogPosts.map((post, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
+              <motion.div key={i} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }}
                 className="group bg-white rounded-2xl border border-[var(--border)] overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                 <div className={`${post.color} px-6 py-8 relative overflow-hidden`}>
                   <div className="absolute right-4 top-3 opacity-10"><BookOpen className="w-16 h-16 text-white"/></div>
@@ -488,15 +586,15 @@ export default function Home() {
               className="btn-fill bg-[var(--gold)] text-[var(--text-dark)] px-10 py-4 rounded-full font-medium hover:bg-[var(--gold-light)] transition-all hover:scale-105 shadow-lg">
               Book Appointment
             </Link>
-            <a href="https://wa.me/918961661721" target="_blank" rel="noopener noreferrer" data-testid="link-cta-whatsapp"
+            <a href="https://wa.me/918961661727" target="_blank" rel="noopener noreferrer" data-testid="link-cta-whatsapp"
               className="btn-fill flex items-center justify-center gap-2 bg-transparent border-2 border-white/60 text-white px-10 py-4 rounded-full font-medium hover:bg-white/10 transition-colors">
               <MessageCircle className="w-4 h-4"/>
               Chat With Clinic
             </a>
           </motion.div>
-          <p className="font-sans text-white/50 text-xs flex items-center justify-center gap-1.5">
+          <p className="font-sans text-white/50 text-xs flex items-center justify-center gap-1.5 flex-wrap">
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="shrink-0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            Appointment requests are confirmed personally by our clinic team.
+            Online consultations must be confirmed 24 hours in advance. · Appointment requests are confirmed personally by our clinic team.
           </p>
         </div>
       </section>
