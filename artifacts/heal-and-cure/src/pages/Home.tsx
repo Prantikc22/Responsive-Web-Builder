@@ -232,7 +232,7 @@ export default function Home() {
       </motion.section>
 
       {/* ══ BENEFITS OF HOMOEOPATHY ═══════════════════════════ */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-[var(--bg-warm)]">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
@@ -257,7 +257,7 @@ export default function Home() {
             const markSizes = [190, 130, 130, 190, 190, 130];
             return (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {homoeopathyBenefits.map((b, i) => {
+                {homoeopathyBenefits.slice(0, 4).map((b, i) => {
                   const dark = isDark[i];
                   const wide = colSpans[i].includes("2");
                   return (
