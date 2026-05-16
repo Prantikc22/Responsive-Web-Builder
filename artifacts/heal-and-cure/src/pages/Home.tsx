@@ -5,7 +5,8 @@ import {
   Award, Users, Leaf, Stethoscope, Heart, Baby, Apple,
   Activity, Zap, MessageCircle, ChevronLeft, ChevronRight,
   FlaskConical, Target, Sparkles, BookOpen, Shield, Search, Phone,
-  Scale, CheckCircle, Bone
+  Scale, CheckCircle, Bone,
+  Wind, Waves, Layers, HeartPulse, Droplets, Filter, Dna, CalendarCheck
 } from "lucide-react";
 import drSouvikImg from "@assets/Doc_Men_1778067737072.jpeg";
 import pampitaImg from "@assets/Doc_Women_1778067734674.jpeg";
@@ -55,18 +56,18 @@ const philosophyPillars = [
 const homeServices = [
   { icon: Stethoscope, title: "Classical Homoeopathy", sub: "Constitutional prescribing for deep, lasting healing of chronic and acute conditions.", cat: "homeopathy" },
   { icon: Baby, title: "Children's Wellness", sub: "Gentle, safe homoeopathic remedies for paediatric ailments, immunity and developmental concerns.", cat: "homeopathy" },
-  { icon: Shield, title: "Skin & Allergic Disorders", sub: "Effective homoeopathic care for eczema, psoriasis, tinea, urticaria, acne and skin allergies.", cat: "homeopathy" },
-  { icon: Zap, title: "Hormonal & Thyroid Care", sub: "Constitutional treatment for PCOD, hypothyroidism, menstrual irregularity and hormonal imbalances.", cat: "homeopathy" },
-  { icon: Leaf, title: "Respiratory Conditions", sub: "Root-cause homoeopathic treatment for chronic asthma, sinusitis, recurrent cough and allergic rhinitis.", cat: "homeopathy" },
+  { icon: Layers, title: "Skin & Allergic Disorders", sub: "Effective homoeopathic care for eczema, psoriasis, tinea, urticaria, acne and skin allergies.", cat: "homeopathy" },
+  { icon: Waves, title: "Hormonal & Thyroid Care", sub: "Constitutional treatment for PCOD, hypothyroidism, menstrual irregularity and hormonal imbalances.", cat: "homeopathy" },
+  { icon: Wind, title: "Respiratory Conditions", sub: "Root-cause homoeopathic treatment for chronic asthma, sinusitis, recurrent cough and allergic rhinitis.", cat: "homeopathy" },
   { icon: Activity, title: "Pre-Hypertension Management", sub: "Evidence-based homoeopathic care for prehypertension and early-stage blood pressure disorders.", cat: "homeopathy" },
-  { icon: Heart, title: "Infertility Support", sub: "Homoeopathic support for primary and secondary infertility, reproductive health and PCOD.", cat: "homeopathy" },
+  { icon: HeartPulse, title: "Infertility Support", sub: "Homoeopathic support for primary and secondary infertility, reproductive health and PCOD.", cat: "homeopathy" },
   { icon: Bone, title: "Joint, Arthritis & Pain", sub: "Deep-acting remedies for arthritis, back pain, migraine, neuralgia and musculoskeletal conditions.", cat: "homeopathy" },
   { icon: Apple, title: "Therapeutic Nutrition", sub: "Evidence-based, personalised meal plans designed precisely for your diagnosis and metabolic needs.", cat: "nutrition" },
-  { icon: Target, title: "Diabetes Management", sub: "Integrated diet therapy for stable, sustainable blood glucose and long-term diabetic wellness.", cat: "nutrition" },
+  { icon: Droplets, title: "Diabetes Management", sub: "Integrated diet therapy for stable, sustainable blood glucose and long-term diabetic wellness.", cat: "nutrition" },
   { icon: Scale, title: "Weight Management (Diet Only)", sub: "Sustainable weight loss through therapeutic nutrition alone — no exercise programmes required.", cat: "nutrition" },
-  { icon: Sparkles, title: "Kidney & Liver Disease Diet", sub: "Disease-specific nutrition for creatinine management, liver health and renal protection.", cat: "nutrition" },
-  { icon: Users, title: "PCOD/PCOS Hormonal Diet", sub: "Nutritional therapy for hormonal balance, weight management and cycle regulation in PCOD.", cat: "nutrition" },
-  { icon: BookOpen, title: "Preventive Health Plans", sub: "Family wellness programmes, seasonal immunity plans and evidence-based nutrition education.", cat: "nutrition" },
+  { icon: Filter, title: "Kidney & Liver Disease Diet", sub: "Disease-specific nutrition for creatinine management, liver health and renal protection.", cat: "nutrition" },
+  { icon: Dna, title: "PCOD/PCOS Hormonal Diet", sub: "Nutritional therapy for hormonal balance, weight management and cycle regulation in PCOD.", cat: "nutrition" },
+  { icon: CalendarCheck, title: "Preventive Health Plans", sub: "Family wellness programmes, seasonal immunity plans and evidence-based nutrition education.", cat: "nutrition" },
 ];
 
 const homoeopathyBenefits = [

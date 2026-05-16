@@ -179,7 +179,7 @@ export default function Services() {
               className="inline-flex items-center gap-2 bg-[var(--green-deep)] text-white px-8 py-4 rounded-full font-medium hover:bg-[var(--green-mid)] transition-all hover:scale-105 shadow-lg">
               Book Appointment <ArrowRight className="w-4 h-4"/>
             </Link>
-            <a href="https://wa.me/918961661721" target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/918961661727" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white border border-[var(--border)] text-[var(--green-deep)] px-8 py-4 rounded-full font-medium hover:bg-[var(--bg-cream)] transition-all hover:scale-105">
               Chat With Clinic
             </a>
