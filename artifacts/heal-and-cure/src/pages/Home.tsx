@@ -335,7 +335,7 @@ export default function Home() {
                   SRF at Dr. Anjali Chatterji Regional Research Institute for Homoeopathy, Kolkata, affiliated to CCRH, Ministry of Ayush. 10+ years of clinical experience. Special expertise in chronic, lifestyle and paediatric conditions.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {["BHMS", "MD(Hom.)", "10+ Yrs", "Online Consult"].map((b) => (
+                  {["10+ Yrs Experience", "Chronic Diseases", "Paediatric Care", "Skin & Allergies", "Hormonal Disorders", "Online Consult"].map((b) => (
                     <span key={b} className="text-xs bg-[var(--bg-cream)] text-[var(--green-deep)] border border-[var(--border)] px-3 py-1 rounded-full font-medium">{b}</span>
                   ))}
                 </div>
@@ -379,7 +379,7 @@ export default function Home() {
                   Specialist in therapeutic nutrition for chronic disease, lifestyle disorders, pain management and obesity. Expert in sustainable weight management through dietary science alone. Certified Diabetic Educator with 9+ years of clinical experience.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {["MSc Nutrition", "Diabetic Educator", "Lifestyle Coach", "9+ Yrs Exp.", "Online Consult"].map((b) => (
+                  {["5+ Yrs Experience", "Diabetic Educator", "Weight Management", "Lifestyle Coach", "Online Consult"].map((b) => (
                     <span key={b} className="text-xs bg-[var(--bg-cream)] text-[var(--teal)] border border-[var(--border)] px-3 py-1 rounded-full font-medium">{b}</span>
                   ))}
                 </div>
