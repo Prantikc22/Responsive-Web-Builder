@@ -49,20 +49,20 @@ export default function Contact() {
                       <div className="space-y-3">
                         <div className="bg-[var(--bg-cream)] rounded-xl p-3">
                           <p className="font-sans text-xs text-[var(--gold)] font-semibold uppercase tracking-wider mb-1">Dr. Souvik Dutta</p>
-                          <a href="tel:+917980219737" className="block text-sm text-[var(--green-deep)] font-medium hover:underline">+91 7980219737</a>
-                          <a href="tel:+918961661727" className="flex items-center gap-1.5 text-sm text-[var(--text-muted)] hover:text-[var(--green-deep)] transition-colors mt-1">
+                          <a href="tel:+918961661727" className="block text-sm text-[var(--green-deep)] font-medium hover:underline">+91 8961661727 <span className="text-xs text-[var(--text-muted)] font-normal">(appointments)</span></a>
+                          <a href="tel:+917980219737" className="flex items-center gap-1.5 text-sm text-[var(--text-muted)] hover:text-[var(--green-deep)] transition-colors mt-1">
                             <AlertCircle className="w-3.5 h-3.5 text-amber-500"/>
-                            +91 8961661727 <span className="text-xs">(emergency)</span>
+                            +91 7980219737 <span className="text-xs">(emergency)</span>
                           </a>
                         </div>
                         <div className="bg-[var(--bg-cream)] rounded-xl p-3">
-                          <p className="font-sans text-xs text-[var(--gold)] font-semibold uppercase tracking-wider mb-1">Pampita Banerjee</p>
-                          <a href="tel:+918961661721" className="block text-sm text-[var(--teal)] font-medium hover:underline">+91 8961661721</a>
+                          <p className="font-sans text-xs text-[var(--gold)] font-semibold uppercase tracking-wider mb-1">Mrs. Pampita Banerjee</p>
+                          <a href="tel:+918961661727" className="block text-sm text-[var(--teal)] font-medium hover:underline">+91 8961661727</a>
                         </div>
                         <div className="bg-[var(--bg-cream)] rounded-xl p-3">
                           <p className="font-sans text-xs text-[var(--gold)] font-semibold uppercase tracking-wider mb-1">WhatsApp</p>
-                          <a href="https://wa.me/918961661721" target="_blank" rel="noopener noreferrer"
-                            className="block text-sm text-[var(--green-deep)] font-medium hover:underline">+91 8961661721</a>
+                          <a href="https://wa.me/918961661727" target="_blank" rel="noopener noreferrer"
+                            className="block text-sm text-[var(--green-deep)] font-medium hover:underline">+91 8961661727</a>
                         </div>
                       </div>
                     </div>
@@ -82,23 +82,28 @@ export default function Contact() {
               </div>
 
               <div>
-                <h3 className="font-serif text-xl text-[var(--text-dark)] mb-4">Clinic Hours</h3>
-                <div className="bg-[var(--bg-cream)] rounded-2xl p-5 flex flex-col gap-3">
+                <h3 className="font-serif text-xl text-[var(--text-dark)] mb-4">Consultation Hours</h3>
+                <div className="bg-[var(--bg-cream)] rounded-2xl p-5">
                   <div className="flex items-start gap-3">
                     <Clock className="w-5 h-5 text-[var(--gold)] shrink-0 mt-0.5"/>
-                    <div>
-                      <div className="flex justify-between items-center">
-                        <span className="font-sans font-medium text-[var(--text-dark)] text-sm">Sunday – Saturday</span>
-                        <span className="font-sans text-sm text-[var(--green-deep)] font-semibold ml-6">9:00 AM – 9:00 PM</span>
+                    <div className="flex-1 space-y-3">
+                      <div>
+                        <span className="font-sans font-semibold text-[var(--green-deep)] text-sm">Dr. Souvik Dutta — In-Person &amp; Online</span>
+                        <p className="font-sans text-sm text-[var(--text-dark)] mt-0.5">Mon · Wed · Fri &nbsp; 7:00 PM – 9:00 PM</p>
+                        <p className="text-xs text-[var(--text-muted)] mt-0.5">In-person: Panpara Lane, Uttarpara, Kolkata<br/>Online available on all days — book 24 hours in advance</p>
                       </div>
-                      <p className="text-xs text-[var(--text-muted)] mt-1.5 font-sans">Open all 7 days. Walk-ins welcome.</p>
+                      <div className="border-t border-[var(--border)] pt-3">
+                        <span className="font-sans font-semibold text-[var(--teal)] text-sm">Mrs. Pampita Banerjee — Online Only</span>
+                        <p className="font-sans text-sm text-[var(--text-dark)] mt-0.5">All days · Flexible hours</p>
+                        <p className="text-xs text-[var(--text-muted)] mt-0.5">Online consultation by appointment — book at least 24 hours in advance</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="flex gap-3">
-                <a href="https://wa.me/918961661721" target="_blank" rel="noopener noreferrer"
+                <a href="https://wa.me/918961661727" target="_blank" rel="noopener noreferrer"
                   className="flex-1 flex justify-center items-center gap-2 bg-[var(--green-deep)] text-white py-3.5 rounded-full font-medium text-sm hover:bg-[var(--green-mid)] transition-colors">
                   <MessageCircle className="w-4 h-4"/> WhatsApp
                 </a>

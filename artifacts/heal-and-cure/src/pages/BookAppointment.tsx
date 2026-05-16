@@ -141,8 +141,9 @@ export default function BookAppointment() {
                     <div className="flex flex-col gap-2 w-full">
                       <div>
                         <p className="font-sans text-sm font-medium">Dr. Souvik Dutta</p>
-                        <p className="font-sans text-white/60 text-xs mt-0.5">Mon · Wed · Fri — 7:00 PM to 9:00 PM</p>
-                        <p className="font-sans text-white/40 text-[10px] mt-0.5">In-person · Panpara Lane, Uttarpara, Kolkata</p>
+                        <p className="font-sans text-white/60 text-xs mt-0.5">In-person: Mon · Wed · Fri, 7:00 PM – 9:00 PM</p>
+                        <p className="font-sans text-white/60 text-xs mt-0.5">Online: All days (book 24 hrs prior)</p>
+                        <p className="font-sans text-white/40 text-[10px] mt-0.5">Clinic: Panpara Lane, Uttarpara, Kolkata</p>
                       </div>
                       <div className="border-t border-white/10 pt-2">
                         <p className="font-sans text-sm font-medium">Mrs. Pampita Banerjee</p>
@@ -153,7 +154,7 @@ export default function BookAppointment() {
                   </div>
                   <div className="border-t border-white/10 pt-3">
                     <p className="font-sans text-white/50 text-xs leading-relaxed">
-                      Online consultations are available both days. Please book 24 hours prior to your preferred slot. For urgent queries, call directly.
+                      Online consultations are available on all days. Please book 24 hours prior to your preferred slot. For urgent queries, call directly.
                     </p>
                   </div>
                 </div>
@@ -283,7 +284,7 @@ export default function BookAppointment() {
                         </div>
                         {errors.date && <p className="text-red-500 text-xs mt-1 font-sans">{errors.date}</p>}
                         <p className="text-xs text-[var(--text-muted)] mt-1.5 font-sans flex items-center gap-1">
-                          <Clock className="w-3 h-3"/> Open Sun–Sat, 9 AM – 9 PM
+                          <Clock className="w-3 h-3"/> Dr. Souvik in-person: Mon·Wed·Fri 7–9 PM · All online bookings require 24 hrs advance notice
                         </p>
                       </div>
                     </div>

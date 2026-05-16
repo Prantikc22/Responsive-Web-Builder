@@ -41,6 +41,9 @@ const blogPosts = [
   { category: "RESEARCH", color: "bg-[var(--green-deep)]", title: "Homoeopathy for Hypothyroidism — What the Research Shows", excerpt: "A clinical trial co-authored by Dr. Souvik Dutta demonstrates significant TSH improvement with homoeopathic treatment.", slug: "/health-tips/homoeopathy-for-hypothyroidism" },
   { category: "NUTRITION", color: "bg-[var(--teal)]", title: "Weight Loss Through Diet Alone — Is It Possible?", excerpt: "How therapeutic nutrition and metabolic balancing can achieve sustainable weight reduction without any exercise programme.", slug: "/health-tips/weight-loss-through-diet" },
   { category: "RESEARCH", color: "bg-[var(--green-mid)]", title: "Blood Pressure & Homoeopathy — Evidence from Clinical Trials", excerpt: "A randomised controlled trial demonstrates measurable reduction in prehypertensive blood pressure using homoeopathic medicine.", slug: "/health-tips/homoeopathy-for-blood-pressure" },
+  { category: "HOMOEOPATHY", color: "bg-[var(--green-deep)]", title: "Ringworm & Skin Infections — Homoeopathic Treatment", excerpt: "A randomised controlled trial demonstrates homoeopathic medicines significantly reduce the duration and recurrence of tinea corporis (ringworm) infections.", slug: "/health-tips/homoeopathy-for-ringworm" },
+  { category: "HOMOEOPATHY", color: "bg-[var(--green-mid)]", title: "Homoeopathy for Primary Infertility — Case Evidence", excerpt: "Case study findings show constitutional homoeopathic treatment successfully addressed primary infertility when conventional options had limited success.", slug: "/health-tips/homoeopathy-for-infertility" },
+  { category: "NUTRITION", color: "bg-[var(--teal)]", title: "Diet & Thyroid Health — What to Eat and Avoid", excerpt: "How specific dietary choices around iodine, selenium and anti-inflammatory foods can actively support thyroid function and hormonal balance.", slug: "/health-tips/diet-for-thyroid-health" },
 ];
 
 const philosophyPillars = [
@@ -229,27 +232,42 @@ export default function Home() {
       </motion.section>
 
       {/* ══ BENEFITS OF HOMOEOPATHY ═══════════════════════════ */}
-      <section className="py-24 bg-[var(--bg-cream)]">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center mb-14">
-            <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-[var(--gold)] text-xs tracking-[0.25em] uppercase font-sans font-semibold">Why Homoeopathy</motion.span>
-            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="font-serif text-4xl md:text-5xl text-[var(--text-dark)] mt-3 mb-3">
-              Benefits of <span className="text-[var(--green-deep)]">Homoeopathy</span>
-            </motion.h2>
-            <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="font-sans text-lg text-[var(--text-muted)] max-w-2xl mx-auto">
+      <section className="py-24 bg-[var(--green-deep)] relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(white 1px, transparent 1px)", backgroundSize: "32px 32px" }}/>
+        <div className="absolute right-0 top-0 w-[40%] h-full opacity-[0.04] pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(45deg, white 0px, white 1px, transparent 1px, transparent 12px)" }}/>
+        <div className="container mx-auto px-4 max-w-5xl relative z-10">
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
+            className="mb-14">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="h-px w-8 bg-[var(--gold)]/60"/>
+              <span className="text-[var(--gold)] text-xs tracking-[0.25em] uppercase font-sans font-semibold">Why Homoeopathy</span>
+            </div>
+            <h2 className="font-serif text-4xl md:text-[2.8rem] text-white leading-snug">
+              Benefits of <span className="text-[var(--gold)]">Homoeopathy</span>
+            </h2>
+            <p className="font-sans text-white/55 text-base mt-3 max-w-xl">
               A time-tested system of medicine that heals gently, deeply and permanently
-            </motion.p>
-          </div>
+            </p>
+          </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="flex flex-col">
             {homoeopathyBenefits.map((b, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="bg-white rounded-2xl p-7 border border-[var(--border)] hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
-                <div className="w-12 h-12 rounded-xl bg-[var(--green-deep)]/8 flex items-center justify-center mb-5 group-hover:bg-[var(--gold)]/10 transition-colors">
-                  <b.icon className="w-6 h-6 text-[var(--green-deep)] group-hover:text-[var(--gold)] transition-colors"/>
+              <motion.div key={i}
+                initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="flex items-start gap-4 md:gap-8 py-6 border-b border-white/10 last:border-0 group hover:bg-white/[0.03] transition-colors rounded-xl px-3 -mx-3 cursor-default">
+                <div className="shrink-0 font-serif text-[var(--gold)]/18 leading-none select-none hidden sm:block w-16 text-right"
+                  style={{ fontSize: "64px" }}>
+                  {String(i + 1).padStart(2, "0")}
                 </div>
-                <h3 className="font-serif text-xl text-[var(--text-dark)] mb-2">{b.title}</h3>
-                <p className="font-sans text-sm text-[var(--text-muted)] leading-relaxed">{b.body}</p>
+                <div className="flex items-start gap-4 flex-1 mt-1">
+                  <div className="w-10 h-10 rounded-xl bg-white/8 border border-white/12 flex items-center justify-center shrink-0 group-hover:bg-[var(--gold)]/18 group-hover:border-[var(--gold)]/35 transition-all">
+                    <b.icon className="w-5 h-5 text-[var(--gold)]/70 group-hover:text-[var(--gold)] transition-colors"/>
+                  </div>
+                  <div>
+                    <h3 className="font-serif text-xl text-white mb-1">{b.title}</h3>
+                    <p className="font-sans text-white/58 text-sm leading-relaxed max-w-2xl">{b.body}</p>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -402,17 +420,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══ ALL TREATMENTS ════════════════════════════════════ */}
+      {/* ══ CONDITIONS WE TREAT ═══════════════════════════════ */}
       <section className="py-24 bg-[var(--bg-cream)]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
             <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-[var(--gold)] text-xs tracking-[0.25em] uppercase font-sans font-semibold">What We Treat</motion.span>
-            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="font-serif text-4xl md:text-5xl text-[var(--text-dark)] mt-3 mb-3">All Treatments</motion.h2>
+            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="font-serif text-4xl md:text-5xl text-[var(--text-dark)] mt-3 mb-3">Conditions &amp; Treatment Areas</motion.h2>
             <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="font-sans text-lg text-[var(--text-muted)]">Comprehensive holistic treatments tailored for your needs</motion.p>
           </div>
 
           <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.25 }}
-            className="flex justify-center gap-2 mb-10">
+            className="flex justify-center gap-2 mb-10 flex-wrap">
             {[
               { key: "all", label: "All Treatments" },
               { key: "homeopathy", label: "Homoeopathy" },
@@ -428,23 +446,28 @@ export default function Home() {
             ))}
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
-            {homeServices.filter((s) => activeFilter === "all" || s.cat === activeFilter).map((s, i) => (
-              <motion.div key={s.title} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.06 }}
-                className="bg-white p-7 rounded-2xl border-l-4 border-transparent hover:border-l-[var(--gold)] hover:shadow-md transition-all duration-300 group cursor-default">
-                <div className={`w-12 h-12 rounded-xl mb-5 flex items-center justify-center transition-colors duration-300 ${s.cat === "homeopathy" ? "bg-[var(--green-deep)]/8 text-[var(--green-deep)] group-hover:bg-[var(--gold)]/10 group-hover:text-[var(--gold)]" : "bg-[var(--teal)]/8 text-[var(--teal)] group-hover:bg-[var(--gold)]/10 group-hover:text-[var(--gold)]"}`}>
-                  <s.icon className="w-6 h-6"/>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 max-w-7xl mx-auto">
+            {homeServices
+              .filter((s) => activeFilter === "all" || s.cat === activeFilter)
+              .slice(0, activeFilter === "all" ? 10 : undefined)
+              .map((s, i) => (
+              <motion.div key={s.title} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35, delay: i * 0.04 }}
+                className="bg-white p-4 rounded-xl border-l-[3px] border-transparent hover:border-l-[var(--gold)] hover:shadow-md transition-all duration-300 group cursor-default">
+                <div className={`w-9 h-9 rounded-lg mb-3 flex items-center justify-center transition-colors duration-300 ${s.cat === "homeopathy" ? "bg-[var(--green-deep)]/8 text-[var(--green-deep)] group-hover:bg-[var(--gold)]/10 group-hover:text-[var(--gold)]" : "bg-[var(--teal)]/8 text-[var(--teal)] group-hover:bg-[var(--gold)]/10 group-hover:text-[var(--gold)]"}`}>
+                  <s.icon className="w-4 h-4"/>
                 </div>
-                <span className={`inline-block text-[10px] font-sans font-bold tracking-widest uppercase px-2.5 py-1 rounded-full mb-3 ${s.cat === "homeopathy" ? "bg-[var(--green-deep)]/8 text-[var(--green-deep)]" : "bg-[var(--teal)]/8 text-[var(--teal)]"}`}>
+                <span className={`inline-block text-[9px] font-sans font-bold tracking-widest uppercase px-2 py-0.5 rounded-full mb-2 ${s.cat === "homeopathy" ? "bg-[var(--green-deep)]/8 text-[var(--green-deep)]" : "bg-[var(--teal)]/8 text-[var(--teal)]"}`}>
                   {s.cat === "homeopathy" ? "Homoeopathy" : "Nutrition"}
                 </span>
-                <h3 className="font-serif text-xl text-[var(--text-dark)] mb-2">{s.title}</h3>
-                <p className="font-sans text-sm text-[var(--text-muted)] leading-relaxed">{s.sub}</p>
+                <h3 className="font-serif text-[15px] text-[var(--text-dark)] mb-1 leading-snug">{s.title}</h3>
+                <p className="font-sans text-[11px] text-[var(--text-muted)] leading-relaxed">{s.sub}</p>
               </motion.div>
             ))}
           </div>
+
           <div className="text-center mt-12">
-            <Link href="/services" data-testid="link-all-services" className="inline-flex items-center gap-2 text-[var(--green-deep)] font-medium font-sans hover:text-[var(--gold)] transition-colors">
+            <Link href="/services" data-testid="link-all-services"
+              className="animate-gold-glow inline-flex items-center gap-2 bg-[var(--green-deep)] text-white px-9 py-3.5 rounded-full font-medium font-sans hover:bg-[var(--green-mid)] transition-colors text-sm">
               Explore All Treatments →
             </Link>
           </div>

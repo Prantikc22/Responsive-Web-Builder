@@ -191,4 +191,12 @@
   .btn-fill:hover::after {
     transform: translateX(0);
   }
+
+  @keyframes gold-glow {
+    0%, 100% { box-shadow: 0 0 10px rgba(201,168,76,0.4), 0 0 22px rgba(201,168,76,0.15); }
+    50%       { box-shadow: 0 0 22px rgba(201,168,76,0.75), 0 0 44px rgba(201,168,76,0.35), 0 0 66px rgba(201,168,76,0.12); }
+  }
+  .animate-gold-glow {
+    animation: gold-glow 2.6s ease-in-out infinite;
+  }
 }
