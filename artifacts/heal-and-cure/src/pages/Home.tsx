@@ -206,7 +206,7 @@ export default function Home() {
               <span className="text-[var(--gold)] font-sans font-semibold tracking-[0.2em] text-[10px] uppercase">Research &amp; Clinical Credentials</span>
             </div>
             <h2 className="font-serif text-3xl md:text-[2.2rem] leading-[1.28]">
-              Clinical Experience Backed by Public Health Research
+              Where Clinical Practice Meets Public Health Research
             </h2>
             <div className="space-y-3">
               <p className="font-sans text-white/82 text-base leading-relaxed">
@@ -398,54 +398,56 @@ export default function Home() {
       </section>
 
       {/* ══ WEIGHT MANAGEMENT BY THERAPEUTIC DIET ════════════ */}
-      <section className="py-24 bg-[var(--bg-warm)] relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-[var(--gold)]/5 blur-3xl pointer-events-none"/>
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-14 items-center">
-            {/* Text side */}
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-              <span className="text-[var(--gold)] text-xs tracking-[0.25em] uppercase font-sans font-semibold">Therapeutic Nutrition Speciality</span>
-              <h2 className="font-serif text-4xl md:text-[2.6rem] text-[var(--text-dark)] mt-3 mb-4 leading-snug">
-                Lose Weight Without Exercise — <span className="text-[var(--teal)]">The Science of Therapeutic Diet</span>
-              </h2>
-              <p className="font-sans text-[var(--text-muted)] text-base leading-relaxed mb-8">
-                Mrs. Pampita Banerjee's specialised approach to sustainable weight management relies entirely on dietary science and metabolic balancing — with no exercise programmes required.
+      <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
+        className="bg-[var(--teal)] text-white py-20 overflow-hidden relative">
+        <div className="absolute right-0 top-0 h-full w-[48%] hidden md:block pointer-events-none">
+          <img src={pampitaImg} alt="" className="w-full h-full object-cover object-top opacity-35"/>
+          <div className="absolute inset-0 bg-gradient-to-r from-[var(--teal)] via-[var(--teal)]/60 to-[var(--teal)]/10"/>
+          <div className="absolute inset-0 bg-gradient-to-b from-[var(--teal)]/25 via-transparent to-[var(--teal)]/25"/>
+        </div>
+        <div className="absolute inset-0 opacity-[0.025]" style={{ backgroundImage: "radial-gradient(white 1px, transparent 1px)", backgroundSize: "36px 36px" }}/>
+        <div className="container mx-auto px-4 relative z-10 max-w-5xl">
+          <div className="max-w-2xl flex flex-col gap-6">
+            <div className="flex items-center gap-2">
+              <div className="h-px w-6 bg-[var(--gold)]/70"/>
+              <span className="text-[var(--gold)] font-sans font-semibold tracking-[0.2em] text-[10px] uppercase">Therapeutic Nutrition Speciality</span>
+            </div>
+            <h2 className="font-serif text-3xl md:text-[2.2rem] leading-[1.28]">
+              Lose Weight Without Exercise — <span className="text-[var(--gold-light)]">The Science of Therapeutic Diet</span>
+            </h2>
+            <div className="space-y-3">
+              <p className="font-sans text-white/82 text-base leading-relaxed">
+                Mrs. Pampita Banerjee's specialised approach to sustainable weight management relies entirely on <strong className="text-white font-semibold">dietary science and metabolic balancing</strong> — with no exercise programmes required. Personalised to your exact diagnosis, metabolic type, and lifestyle.
               </p>
-              <ul className="flex flex-col gap-3.5 mb-8">
-                {weightFeatures.map((f, i) => (
-                  <motion.li key={i} initial={{ opacity: 0, x: -16 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.07 }}
-                    className="flex items-start gap-3 font-sans text-sm text-[var(--text-dark)] leading-relaxed">
-                    <CheckCircle className="w-4.5 h-4.5 text-[var(--teal)] shrink-0 mt-0.5"/>
-                    {f}
-                  </motion.li>
-                ))}
-              </ul>
-              <Link href="/book" className="inline-flex items-center gap-2 bg-[var(--teal)] text-white px-8 py-3.5 rounded-full font-medium hover:opacity-85 transition-all hover:scale-[1.03] text-sm shadow-md">
+            </div>
+            <ul className="flex flex-col gap-2.5">
+              {weightFeatures.map((f, i) => (
+                <motion.li key={i} initial={{ opacity: 0, x: -14 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.07 }}
+                  className="flex items-start gap-3 font-sans text-sm text-white/80 leading-relaxed">
+                  <CheckCircle className="w-4 h-4 text-[var(--gold)] shrink-0 mt-0.5"/>
+                  {f}
+                </motion.li>
+              ))}
+            </ul>
+            <div className="flex flex-wrap gap-5 mt-1">
+              {[
+                { icon: Scale, label: "Diet Only — No Exercise" },
+                { icon: Award, label: "9+ Years Clinical Experience" },
+              ].map((t) => (
+                <div key={t.label} className="flex items-center gap-2">
+                  <t.icon className="w-4 h-4 text-[var(--gold)]/80 shrink-0"/>
+                  <span className="font-sans text-[12px] text-white/65 tracking-wide">{t.label}</span>
+                </div>
+              ))}
+            </div>
+            <div>
+              <Link href="/book" className="inline-flex items-center gap-2 bg-[var(--gold)] text-[var(--text-dark)] px-8 py-3.5 rounded-full font-medium hover:bg-[var(--gold-light)] transition-all hover:scale-[1.03] text-sm shadow-md font-semibold">
                 Book a Nutrition Consultation
               </Link>
-            </motion.div>
-
-            {/* Visual side */}
-            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.15 }}
-              className="relative">
-              <div className="rounded-3xl overflow-hidden shadow-[0_20px_60px_rgba(13,79,79,0.15)] aspect-[4/3]">
-                <img src={pampitaImg} alt="Mrs. Pampita Banerjee — Therapeutic Dietician" className="w-full h-full object-cover object-top"/>
-                <div className="absolute inset-0 bg-gradient-to-t from-[var(--teal)]/70 via-transparent to-transparent"/>
-                <div className="absolute bottom-6 left-6 right-6">
-                  <p className="font-serif text-white text-2xl leading-snug mb-1">Mrs. Pampita Banerjee</p>
-                  <p className="font-sans text-white/75 text-xs tracking-wide uppercase">Consultant Therapeutic Dietician &amp; Diabetic Educator</p>
-                  <p className="font-sans text-[var(--gold-light)] text-xs mt-1">MSc Food &amp; Nutrition · 9+ Years Experience</p>
-                </div>
-              </div>
-              <div className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-lg border border-[var(--border)] px-5 py-3 flex flex-col items-center">
-                <Scale className="w-6 h-6 text-[var(--teal)] mb-1"/>
-                <p className="font-serif text-xl text-[var(--text-dark)]">Diet Only</p>
-                <p className="font-sans text-[10px] text-[var(--text-muted)] uppercase tracking-widest">No Exercise Required</p>
-              </div>
-            </motion.div>
+            </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* ══ CONDITIONS WE TREAT ═══════════════════════════════ */}
       <section className="py-24 bg-[var(--bg-cream)]">
@@ -642,8 +644,7 @@ export default function Home() {
               Chat With Clinic
             </a>
           </motion.div>
-          <p className="font-sans text-white/50 text-xs flex items-center justify-center gap-1.5 flex-wrap">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="shrink-0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <p className="font-sans text-white/50 text-xs text-center leading-relaxed">
             Online consultations must be confirmed 24 hours in advance. · Appointment requests are confirmed personally by our clinic team.
           </p>
         </div>

@@ -107,7 +107,7 @@ export default function Footer() {
             <div className="mt-5 bg-white/5 rounded-xl p-4 border border-white/8">
               <p className="text-[10px] text-[var(--gold)]/60 uppercase tracking-wider font-sans font-semibold mb-2">Consultation Hours</p>
               <p className="text-sm text-gray-300">Dr. Souvik &nbsp;·&nbsp; Mon / Wed / Fri &nbsp;·&nbsp; 7–9 PM</p>
-              <p className="text-xs text-gray-500 mt-1">Pampita &nbsp;·&nbsp; Online, all days (24 hrs prior booking)</p>
+              <p className="text-sm text-gray-300 mt-1">Pampita &nbsp;·&nbsp; Online, all days (24 hrs prior)</p>
             </div>
           </div>
         </div>
