@@ -119,7 +119,7 @@ export default function Home() {
             </motion.p>
             <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }}
               className="font-serif text-[38px] md:text-[44px] lg:text-[48px] font-bold leading-[1.2] text-[var(--text-dark)] mb-4">
-              Holistic Healing &amp; Therapeutic Nutrition
+              Holistic Healing &amp; Therapeutic <span className="text-[var(--gold)]">Nutrition</span>
             </motion.h1>
 
             <motion.div initial={{ width: 0 }} animate={{ width: 56 }} transition={{ duration: 0.7, delay: 0.3 }}
