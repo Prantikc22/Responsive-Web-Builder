@@ -11,7 +11,7 @@ import {
 import drSouvikImg from "@assets/Doc_Men_1778067737072.jpeg";
 import pampitaImg from "@assets/Doc_Women_1778067734674.jpeg";
 import researchBgImg from "@assets/image_1778517790450.png";
-import heroBgImg from "@assets/ChatGPT_Image_May_17,_2026,_10_19_16_PM_1779036632324.png";
+import heroBgImg from "@assets/image_1779039874583.png";
 
 function Counter({ value, duration = 2 }: { value: number; duration?: number }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -99,16 +99,16 @@ export default function Home() {
 
       {/* ══ HERO ══════════════════════════════════════════════ */}
       <section className="pt-20 bg-[var(--bg-warm)] relative overflow-hidden min-h-[90vh] flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-warm)] via-[var(--bg-warm)]/95 to-transparent z-10 pointer-events-none lg:w-[62%] w-full"/>
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-warm)] via-[var(--bg-warm)]/90 to-transparent z-10 pointer-events-none lg:w-[55%] w-full"/>
 
         {/* Hero photo — right side, full height */}
         <div className="absolute inset-0 overflow-hidden">
           <img
             src={heroBgImg}
             alt="Heal & Cure — Homoeopathy and Therapeutic Nutrition Care"
-            className="absolute right-0 top-0 h-full w-[55%] object-cover object-center hidden lg:block"
+            className="absolute right-0 top-0 h-full w-[65%] object-cover object-left hidden lg:block"
           />
-          <div className="absolute right-0 top-0 h-full w-[55%] bg-gradient-to-l from-transparent via-transparent to-[var(--bg-warm)] hidden lg:block"/>
+          <div className="absolute right-0 top-0 h-full w-[65%] bg-gradient-to-l from-transparent via-transparent to-[var(--bg-warm)] hidden lg:block"/>
         </div>
 
         <div className="container mx-auto px-4 relative z-20 py-20">
@@ -144,17 +144,20 @@ export default function Home() {
               </a>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.7 }}
-              className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.7 }}
+              className="inline-flex items-stretch bg-white/90 backdrop-blur-sm border border-[var(--border)] rounded-2xl shadow-sm overflow-hidden">
               {[
-                { icon: Award, label: "10+ Years Clinical Experience" },
-                { icon: FlaskConical, label: "Public Health Research" },
-                { icon: Users, label: "500+ Patients Supported" },
+                { icon: Award,       line1: "10+ Years",        line2: "Clinical Experience" },
+                { icon: FlaskConical, line1: "Public Health",   line2: "Research" },
+                { icon: Users,       line1: "500+ Patients",    line2: "Supported" },
               ].map((t, i) => (
-                <div key={i} className="flex items-center gap-1.5">
-                  <t.icon className="w-3.5 h-3.5 text-[var(--gold)] shrink-0"/>
-                  <span className="font-sans text-xs text-[var(--text-muted)]">{t.label}</span>
-                  {i < 2 && <span className="hidden sm:block w-px h-3 bg-[var(--border)] ml-2"/>}
+                <div key={i} className="flex items-center gap-3 px-5 py-3.5 relative">
+                  <t.icon className="w-5 h-5 text-[var(--green-deep)] shrink-0"/>
+                  <div className="flex flex-col leading-tight">
+                    <span className="font-sans text-sm font-semibold text-[var(--text-dark)]">{t.line1}</span>
+                    <span className="font-sans text-[11px] text-[var(--text-muted)]">{t.line2}</span>
+                  </div>
+                  {i < 2 && <span className="absolute right-0 top-3 bottom-3 w-px bg-[var(--border)]"/>}
                 </div>
               ))}
             </motion.div>
