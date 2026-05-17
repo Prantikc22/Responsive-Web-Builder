@@ -100,15 +100,14 @@ export default function Home() {
       {/* ══ HERO ══════════════════════════════════════════════ */}
       <section className="pt-20 bg-[var(--bg-warm)] relative overflow-hidden min-h-[90vh] flex items-center">
         {/* Mobile: cream wash over full-bleed image; Desktop: left gradient panel */}
-        <div className="absolute inset-0 bg-[var(--bg-warm)]/78 z-10 pointer-events-none lg:hidden"/>
         <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-warm)] via-[var(--bg-warm)]/90 to-transparent z-10 pointer-events-none hidden lg:block lg:w-[48%]"/>
 
-        {/* Hero photo — full bg on mobile, right-side only on desktop */}
+        {/* Hero photo — desktop only */}
         <div className="absolute inset-0 overflow-hidden">
           <img
             src={heroBgImg}
             alt="Heal & Cure — Homoeopathy and Therapeutic Nutrition Care"
-            className="absolute inset-0 w-full h-full object-cover object-[62%_20%] lg:inset-auto lg:right-0 lg:top-20 lg:bottom-0 lg:w-[72%]"
+            className="absolute right-0 top-20 bottom-0 w-[72%] object-cover object-[62%_20%] hidden lg:block"
           />
           <div className="absolute right-0 top-20 bottom-0 w-[72%] bg-gradient-to-l from-transparent via-transparent to-[var(--bg-warm)] hidden lg:block"/>
         </div>
