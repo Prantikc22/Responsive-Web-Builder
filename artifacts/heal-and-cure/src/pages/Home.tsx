@@ -99,14 +99,16 @@ export default function Home() {
 
       {/* ══ HERO ══════════════════════════════════════════════ */}
       <section className="pt-20 bg-[var(--bg-warm)] relative overflow-hidden min-h-[90vh] flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-warm)] via-[var(--bg-warm)]/90 to-transparent z-10 pointer-events-none lg:w-[48%] w-full"/>
+        {/* Mobile: cream wash over full-bleed image; Desktop: left gradient panel */}
+        <div className="absolute inset-0 bg-[var(--bg-warm)]/78 z-10 pointer-events-none lg:hidden"/>
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-warm)] via-[var(--bg-warm)]/90 to-transparent z-10 pointer-events-none hidden lg:block lg:w-[48%]"/>
 
-        {/* Hero photo — right side, starts below navbar */}
+        {/* Hero photo — full bg on mobile, right-side only on desktop */}
         <div className="absolute inset-0 overflow-hidden">
           <img
             src={heroBgImg}
             alt="Heal & Cure — Homoeopathy and Therapeutic Nutrition Care"
-            className="absolute right-0 top-20 bottom-0 w-[72%] object-cover object-[62%_20%] hidden lg:block"
+            className="absolute inset-0 w-full h-full object-cover object-[62%_20%] lg:inset-auto lg:right-0 lg:top-20 lg:bottom-0 lg:w-[72%]"
           />
           <div className="absolute right-0 top-20 bottom-0 w-[72%] bg-gradient-to-l from-transparent via-transparent to-[var(--bg-warm)] hidden lg:block"/>
         </div>
@@ -119,7 +121,7 @@ export default function Home() {
             </motion.p>
             <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }}
               className="font-serif text-[38px] md:text-[44px] lg:text-[48px] font-bold leading-[1.2] text-[var(--text-dark)] mb-4">
-              Holistic Healing &amp; Therapeutic <span className="text-[var(--gold)]">Nutrition</span>
+              Holistic Healing &amp; <span className="text-[var(--gold)]">Therapeutic Nutrition</span>
             </motion.h1>
 
             <motion.div initial={{ width: 0 }} animate={{ width: 56 }} transition={{ duration: 0.7, delay: 0.3 }}
@@ -162,11 +164,6 @@ export default function Home() {
               ))}
             </motion.div>
 
-            {/* Mobile image peek */}
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.9 }}
-              className="block lg:hidden mt-8 -mx-4 overflow-hidden rounded-2xl shadow-lg max-h-52">
-              <img src={heroBgImg} alt="Heal & Cure clinic" className="w-full h-52 object-cover object-[62%_30%]"/>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -292,7 +289,7 @@ export default function Home() {
                   Senior Research Fellow (Homoeopathy) at the Dr. Anjali Chatterji Regional Research Institute for Homoeopathy, Kolkata under CCRH, Ministry of Ayush, Govt. of India. 10 years of clinical and research experience. Specialized in the management of acute and chronic diseases, lifestyle disorders, and personalized homoeopathic pain management — combining evidence-based research with an individualized, patient-centered approach.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="text-xs bg-[var(--green-deep)] text-white px-3 py-1 rounded-full font-semibold">10+ Years Experience</span>
+                  <span className="text-xs bg-[var(--bg-cream)] text-[var(--green-deep)] border border-[var(--border)] px-3 py-1 rounded-full font-medium">10+ Years Experience</span>
                   {["Acute Diseases", "Chronic Diseases", "Pain Management", "Hormonal Disorders", "Paediatric Care", "Skin & Allergies", "Online Consultation"].map((b) => (
                     <span key={b} className="text-xs bg-[var(--bg-cream)] text-[var(--green-deep)] border border-[var(--border)] px-3 py-1 rounded-full font-medium">{b}</span>
                   ))}
