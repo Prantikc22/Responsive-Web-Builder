@@ -99,16 +99,16 @@ export default function Home() {
 
       {/* ══ HERO ══════════════════════════════════════════════ */}
       <section className="pt-20 bg-[var(--bg-warm)] relative overflow-hidden min-h-[90vh] flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-warm)] via-[var(--bg-warm)]/90 to-transparent z-10 pointer-events-none lg:w-[55%] w-full"/>
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-warm)] via-[var(--bg-warm)]/90 to-transparent z-10 pointer-events-none lg:w-[48%] w-full"/>
 
         {/* Hero photo — right side, full height */}
         <div className="absolute inset-0 overflow-hidden">
           <img
             src={heroBgImg}
             alt="Heal & Cure — Homoeopathy and Therapeutic Nutrition Care"
-            className="absolute right-0 top-0 h-full w-[65%] object-cover object-left hidden lg:block"
+            className="absolute right-0 top-0 h-full w-[72%] object-cover object-[62%_50%] hidden lg:block"
           />
-          <div className="absolute right-0 top-0 h-full w-[65%] bg-gradient-to-l from-transparent via-transparent to-[var(--bg-warm)] hidden lg:block"/>
+          <div className="absolute right-0 top-0 h-full w-[72%] bg-gradient-to-l from-transparent via-transparent to-[var(--bg-warm)] hidden lg:block"/>
         </div>
 
         <div className="container mx-auto px-4 relative z-20 py-20">
