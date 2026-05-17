@@ -244,23 +244,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </motion.section>
-
-      {/* ══ HOMOEOPATHY CTA ═══════════════════════════════════ */}
-      <section className="py-20 bg-[var(--green-deep)] relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(white 1px, transparent 1px)", backgroundSize: "36px 36px" }}/>
-        <div className="container mx-auto px-4 max-w-3xl relative z-10 text-center">
-          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-            <span className="text-[var(--gold-light)] text-xs tracking-[0.25em] uppercase font-sans font-semibold mb-3 block">Classical Homoeopathy</span>
-            <h2 className="font-serif text-3xl md:text-4xl text-white mb-5 leading-snug">
-              Personalised Healing,<br className="hidden sm:block"/> Rooted in Science
-            </h2>
-            <p className="font-sans text-white/70 text-base leading-relaxed mb-10 max-w-xl mx-auto">
-              Experience homoeopathic care guided by over a decade of clinical practice and active public health research under CCRH, Ministry of AYUSH.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-4 mt-2">
               <Link href="/book"
                 className="inline-flex items-center gap-2 bg-[var(--gold)] text-[var(--text-dark)] px-7 py-3.5 rounded-full font-semibold font-sans text-sm hover:bg-[var(--gold-light)] transition-all hover:scale-105 shadow-md">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
@@ -271,9 +255,9 @@ export default function Home() {
                 Explore Benefits of Homoeopathy →
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* ══ MEET OUR EXPERTS ══════════════════════════════════ */}
       <section className="py-24 bg-white">
@@ -308,6 +292,7 @@ export default function Home() {
                   Senior Research Fellow (Homoeopathy) at the Dr. Anjali Chatterji Regional Research Institute for Homoeopathy, Kolkata under CCRH, Ministry of Ayush, Govt. of India. 10 years of clinical and research experience. Specialized in the management of acute and chronic diseases, lifestyle disorders, and personalized homoeopathic pain management — combining evidence-based research with an individualized, patient-centered approach.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
+                  <span className="text-xs bg-[var(--green-deep)] text-white px-3 py-1 rounded-full font-semibold">10+ Years Experience</span>
                   {["Acute Diseases", "Chronic Diseases", "Pain Management", "Hormonal Disorders", "Paediatric Care", "Skin & Allergies", "Online Consultation"].map((b) => (
                     <span key={b} className="text-xs bg-[var(--bg-cream)] text-[var(--green-deep)] border border-[var(--border)] px-3 py-1 rounded-full font-medium">{b}</span>
                   ))}
