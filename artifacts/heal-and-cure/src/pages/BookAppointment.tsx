@@ -163,7 +163,7 @@ export default function BookAppointment() {
               {/* WhatsApp */}
               <div>
                 <a href="https://wa.me/918961661727" target="_blank" rel="noopener noreferrer"
-                  className="flex items-center gap-3 bg-white/10 hover:bg-white/15 border border-white/20 rounded-2xl px-5 py-4 transition-colors">
+                  className="btn-fill flex items-center gap-3 bg-white/10 hover:bg-white/15 border border-white/20 rounded-2xl px-5 py-4 transition-colors">
                   <MessageCircle className="w-5 h-5 text-[var(--gold-light)] shrink-0"/>
                   <div>
                     <p className="font-sans text-sm font-medium">Chat With Clinic</p>
@@ -190,7 +190,7 @@ export default function BookAppointment() {
                     </div>
                     <div className="flex flex-wrap gap-3 justify-center mt-2">
                       <a href="https://wa.me/918961661727" target="_blank" rel="noopener noreferrer"
-                        className="flex items-center gap-2 bg-[var(--green-deep)] text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-[var(--green-mid)] transition-colors">
+                        className="btn-fill flex items-center gap-2 bg-[var(--green-deep)] text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-[var(--green-mid)] transition-colors">
                         <MessageCircle className="w-4 h-4"/> Chat on WhatsApp
                       </a>
                       <button onClick={() => { setSubmitted(false); setForm({ name:"",phone:"",email:"",date:"",doctor:"",concern:"" }); }}
@@ -302,7 +302,7 @@ export default function BookAppointment() {
 
                     {/* Submit */}
                     <button type="submit" disabled={loading}
-                      className="w-full bg-[var(--green-deep)] text-white py-4 rounded-2xl font-medium font-sans text-base hover:bg-[var(--green-mid)] transition-all hover:scale-[1.01] disabled:opacity-70 disabled:scale-100 flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(27,67,50,0.25)]">
+                      className="btn-fill w-full bg-[var(--green-deep)] text-white py-4 rounded-2xl font-medium font-sans text-base hover:bg-[var(--green-mid)] transition-all hover:scale-[1.01] disabled:opacity-70 disabled:scale-100 flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(27,67,50,0.25)]">
                       {loading ? (
                         <>
                           <svg className="animate-spin w-5 h-5" viewBox="0 0 24 24" fill="none">

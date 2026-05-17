@@ -205,11 +205,11 @@ export default function BenefitsOfHomeopathy() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/book"
-              className="inline-block bg-[var(--gold)] text-[var(--text-dark)] px-8 py-3.5 rounded-full font-semibold hover:bg-[var(--gold-light)] transition-all hover:scale-105">
+              className="btn-fill inline-block bg-[var(--gold)] text-[var(--text-dark)] px-8 py-3.5 rounded-full font-semibold hover:bg-[var(--gold-light)] transition-all hover:scale-105">
               Book a Consultation
             </Link>
             <a href="https://wa.me/918961661727" target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-transparent border-2 border-white/50 text-white px-8 py-3.5 rounded-full font-medium hover:bg-white/10 transition-colors">
+              className="btn-fill inline-flex items-center gap-2 bg-transparent border-2 border-white/50 text-white px-8 py-3.5 rounded-full font-medium hover:bg-white/10 transition-colors">
               Chat on WhatsApp
             </a>
           </div>

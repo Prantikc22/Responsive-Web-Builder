@@ -246,12 +246,12 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap gap-4 mt-2">
               <Link href="/book"
-                className="inline-flex items-center gap-2 bg-[var(--gold)] text-[var(--text-dark)] px-7 py-3.5 rounded-full font-semibold font-sans text-sm hover:bg-[var(--gold-light)] transition-all hover:scale-105 shadow-md">
+                className="btn-fill btn-border-glow inline-flex items-center gap-2 bg-[var(--gold)] text-[var(--text-dark)] px-7 py-3.5 rounded-full font-semibold font-sans text-sm hover:bg-[var(--gold-light)] transition-all hover:scale-105 shadow-md">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                 Book a Homoeopathy Consultation
               </Link>
               <Link href="/benefits-of-homeopathy"
-                className="inline-flex items-center gap-2 bg-transparent border-2 border-white/40 text-white px-7 py-3.5 rounded-full font-medium font-sans text-sm hover:bg-white/10 transition-all hover:scale-105">
+                className="btn-fill inline-flex items-center gap-2 bg-transparent border-2 border-white/40 text-white px-7 py-3.5 rounded-full font-medium font-sans text-sm hover:bg-white/10 transition-all hover:scale-105">
                 Explore Benefits of Homoeopathy →
               </Link>
             </div>
@@ -275,7 +275,7 @@ export default function Home() {
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img src={drSouvikImg} alt="Dr. Souvik Dutta — Homoeopathy Specialist, Kolkata" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"/>
-                <div className="absolute top-4 right-4 bg-[var(--gold)] text-white text-[10px] font-sans font-bold tracking-widest uppercase px-3 py-1.5 rounded-full shadow-lg border border-white/20">
+                <div className="absolute top-4 right-4 bg-[var(--gold)] text-white text-[10px] font-sans font-bold tracking-widest uppercase px-3 py-1.5 rounded-full shadow-lg border border-white/20 animate-badge-ring">
                   Online Consultation
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 px-5 pb-4 pt-8">
@@ -320,7 +320,7 @@ export default function Home() {
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img src={pampitaImg} alt="Mrs. Pampita Banerjee — Therapeutic Dietician & Diabetic Educator, Kolkata" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"/>
-                <div className="absolute top-4 right-4 bg-[var(--gold)] text-white text-[10px] font-sans font-bold tracking-widest uppercase px-3 py-1.5 rounded-full shadow-lg border border-white/20">
+                <div className="absolute top-4 right-4 bg-[var(--gold)] text-white text-[10px] font-sans font-bold tracking-widest uppercase px-3 py-1.5 rounded-full shadow-lg border border-white/20 animate-badge-ring">
                   Online Consultation
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 px-5 pb-4 pt-8">
@@ -400,7 +400,7 @@ export default function Home() {
               ))}
             </div>
             <div>
-              <Link href="/book" className="inline-flex items-center gap-2 bg-[var(--gold)] text-[var(--text-dark)] px-8 py-3.5 rounded-full font-medium hover:bg-[var(--gold-light)] transition-all hover:scale-[1.03] text-sm shadow-md font-semibold">
+              <Link href="/book" className="btn-fill btn-border-glow inline-flex items-center gap-2 bg-[var(--gold)] text-[var(--text-dark)] px-8 py-3.5 rounded-full font-medium hover:bg-[var(--gold-light)] transition-all hover:scale-[1.03] text-sm shadow-md font-semibold">
                 Book a Nutrition Consultation
               </Link>
             </div>

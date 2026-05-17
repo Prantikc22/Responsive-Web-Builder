@@ -103,11 +103,11 @@ export default function Contact() {
 
               <div className="flex gap-3">
                 <a href="https://wa.me/918961661727" target="_blank" rel="noopener noreferrer"
-                  className="flex-1 flex justify-center items-center gap-2 bg-[var(--green-deep)] text-white py-3.5 rounded-full font-medium text-sm hover:bg-[var(--green-mid)] transition-colors">
+                  className="btn-fill flex-1 flex justify-center items-center gap-2 bg-[var(--green-deep)] text-white py-3.5 rounded-full font-medium text-sm hover:bg-[var(--green-mid)] transition-colors">
                   <MessageCircle className="w-4 h-4"/> WhatsApp
                 </a>
                 <a href="https://www.facebook.com/thehchc.drsouvik" target="_blank" rel="noopener noreferrer"
-                  className="flex-1 flex justify-center items-center gap-2 bg-[#1877F2] text-white py-3.5 rounded-full font-medium text-sm hover:bg-[#166fe5] transition-colors">
+                  className="btn-fill flex-1 flex justify-center items-center gap-2 bg-[#1877F2] text-white py-3.5 rounded-full font-medium text-sm hover:bg-[#166fe5] transition-colors">
                   <Facebook className="w-4 h-4"/> Facebook
                 </a>
               </div>
