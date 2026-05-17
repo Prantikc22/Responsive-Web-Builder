@@ -101,14 +101,14 @@ export default function Home() {
       <section className="pt-20 bg-[var(--bg-warm)] relative overflow-hidden min-h-[90vh] flex items-center">
         <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-warm)] via-[var(--bg-warm)]/90 to-transparent z-10 pointer-events-none lg:w-[48%] w-full"/>
 
-        {/* Hero photo — right side, full height */}
+        {/* Hero photo — right side, starts below navbar */}
         <div className="absolute inset-0 overflow-hidden">
           <img
             src={heroBgImg}
             alt="Heal & Cure — Homoeopathy and Therapeutic Nutrition Care"
-            className="absolute right-0 top-0 h-full w-[72%] object-cover object-[62%_50%] hidden lg:block"
+            className="absolute right-0 top-20 bottom-0 w-[72%] object-cover object-[62%_20%] hidden lg:block"
           />
-          <div className="absolute right-0 top-0 h-full w-[72%] bg-gradient-to-l from-transparent via-transparent to-[var(--bg-warm)] hidden lg:block"/>
+          <div className="absolute right-0 top-20 bottom-0 w-[72%] bg-gradient-to-l from-transparent via-transparent to-[var(--bg-warm)] hidden lg:block"/>
         </div>
 
         <div className="container mx-auto px-4 relative z-20 py-20">
@@ -145,21 +145,27 @@ export default function Home() {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.7 }}
-              className="inline-flex items-stretch bg-white/90 backdrop-blur-sm border border-[var(--border)] rounded-2xl shadow-sm overflow-hidden">
+              className="inline-flex flex-wrap items-stretch bg-white/30 backdrop-blur-lg border border-white/50 rounded-2xl shadow-[0_4px_24px_rgba(27,67,50,0.12)] overflow-hidden">
               {[
                 { icon: Award,       line1: "10+ Years",        line2: "Clinical Experience" },
                 { icon: FlaskConical, line1: "Public Health",   line2: "Research" },
                 { icon: Users,       line1: "500+ Patients",    line2: "Supported" },
               ].map((t, i) => (
-                <div key={i} className="flex items-center gap-3 px-5 py-3.5 relative">
+                <div key={i} className="flex items-center gap-3 px-4 sm:px-5 py-3 sm:py-3.5 relative">
                   <t.icon className="w-5 h-5 text-[var(--green-deep)] shrink-0"/>
                   <div className="flex flex-col leading-tight">
                     <span className="font-sans text-sm font-semibold text-[var(--text-dark)]">{t.line1}</span>
                     <span className="font-sans text-[11px] text-[var(--text-muted)]">{t.line2}</span>
                   </div>
-                  {i < 2 && <span className="absolute right-0 top-3 bottom-3 w-px bg-[var(--border)]"/>}
+                  {i < 2 && <span className="absolute right-0 top-3 bottom-3 w-px bg-[var(--green-deep)]/15"/>}
                 </div>
               ))}
+            </motion.div>
+
+            {/* Mobile image peek */}
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.9 }}
+              className="block lg:hidden mt-8 -mx-4 overflow-hidden rounded-2xl shadow-lg max-h-52">
+              <img src={heroBgImg} alt="Heal & Cure clinic" className="w-full h-52 object-cover object-[62%_30%]"/>
             </motion.div>
           </div>
         </div>
@@ -242,24 +248,29 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* ══ DR. SOUVIK QUOTE ══════════════════════════════════ */}
+      {/* ══ HOMOEOPATHY CTA ═══════════════════════════════════ */}
       <section className="py-20 bg-[var(--green-deep)] relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(white 1px, transparent 1px)", backgroundSize: "36px 36px" }}/>
-        <div className="container mx-auto px-4 max-w-4xl relative z-10 text-center">
+        <div className="container mx-auto px-4 max-w-3xl relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-            <div className="mb-6">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor" className="mx-auto text-[var(--gold)]/50">
-                <path d="M14.017 21v-7.391c0-5.704 3.748-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h3.983v10h-9.966z"/>
-              </svg>
+            <span className="text-[var(--gold-light)] text-xs tracking-[0.25em] uppercase font-sans font-semibold mb-3 block">Classical Homoeopathy</span>
+            <h2 className="font-serif text-3xl md:text-4xl text-white mb-5 leading-snug">
+              Personalised Healing,<br className="hidden sm:block"/> Rooted in Science
+            </h2>
+            <p className="font-sans text-white/70 text-base leading-relaxed mb-10 max-w-xl mx-auto">
+              Experience homoeopathic care guided by over a decade of clinical practice and active public health research under CCRH, Ministry of AYUSH.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link href="/book"
+                className="inline-flex items-center gap-2 bg-[var(--gold)] text-[var(--text-dark)] px-7 py-3.5 rounded-full font-semibold font-sans text-sm hover:bg-[var(--gold-light)] transition-all hover:scale-105 shadow-md">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Book a Homoeopathy Consultation
+              </Link>
+              <Link href="/benefits-of-homeopathy"
+                className="inline-flex items-center gap-2 bg-transparent border-2 border-white/40 text-white px-7 py-3.5 rounded-full font-medium font-sans text-sm hover:bg-white/10 transition-all hover:scale-105">
+                Explore Benefits of Homoeopathy →
+              </Link>
             </div>
-            <blockquote className="font-serif text-2xl md:text-3xl text-white/90 italic leading-relaxed mb-6 max-w-3xl mx-auto">
-              "Homoeopathy doesn't just treat the disease — it treats the person. Every remedy is chosen not for a label, but for the individual carrying that condition. That is its greatest strength."
-            </blockquote>
-            <p className="font-sans text-[var(--gold-light)] text-sm mb-10">— Dr. Souvik Dutta, MD (Hom.) · Senior Research Fellow, CCRH, Ministry of AYUSH</p>
-            <Link href="/benefits-of-homeopathy"
-              className="inline-flex items-center gap-2 bg-[var(--gold)] text-[var(--text-dark)] px-8 py-3.5 rounded-full font-semibold font-sans text-sm hover:bg-[var(--gold-light)] transition-all hover:scale-105 shadow-md">
-              Explore Benefits of Homoeopathy →
-            </Link>
           </motion.div>
         </div>
       </section>

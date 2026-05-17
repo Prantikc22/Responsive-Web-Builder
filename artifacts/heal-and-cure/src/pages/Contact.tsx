@@ -36,7 +36,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-sans font-semibold text-[var(--text-dark)] text-sm mb-0.5">Clinic Address</h4>
-                      <p className="text-[var(--text-muted)] text-sm leading-relaxed">Panpara Lane, Uttarpara<br/>Kolkata 712232, West Bengal</p>
+                      <p className="text-[var(--text-muted)] text-sm leading-relaxed">Panpara Lane, Uttarpara<br/>Hooghly, West Bengal 712232</p>
                     </div>
                   </div>
 
@@ -74,8 +74,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-sans font-semibold text-[var(--text-dark)] text-sm mb-1">Email</h4>
-                      <a href="mailto:appointments.healandcure@gmail.com" className="block text-[var(--text-muted)] text-sm hover:text-[var(--green-deep)] transition-colors">appointments.healandcure@gmail.com</a>
-                      <a href="mailto:drsouvikdutta@gmail.com" className="block text-[var(--text-muted)] text-sm hover:text-[var(--green-deep)] transition-colors">drsouvikdutta@gmail.com</a>
+                      <a href="mailto:healandcure@gmail.com" className="block text-[var(--text-muted)] text-sm hover:text-[var(--green-deep)] transition-colors">healandcure@gmail.com</a>
                     </div>
                   </div>
                 </div>
@@ -90,11 +89,11 @@ export default function Contact() {
                       <div>
                         <span className="font-sans font-semibold text-[var(--green-deep)] text-sm">Dr. Souvik Dutta — In-Person &amp; Online</span>
                         <p className="font-sans text-sm text-[var(--text-dark)] mt-0.5">Mon · Wed · Fri &nbsp; 7:00 PM – 9:00 PM</p>
-                        <p className="text-xs text-[var(--text-muted)] mt-0.5">In-person: Panpara Lane, Uttarpara, Kolkata<br/>Online available on all days — book 24 hours in advance</p>
+                        <p className="text-xs text-[var(--text-muted)] mt-0.5">In-person: Panpara Lane, Uttarpara, Hooghly<br/>Online available on all days — book 24 hours in advance</p>
                       </div>
                       <div className="border-t border-[var(--border)] pt-3">
                         <span className="font-sans font-semibold text-[var(--teal)] text-sm">Mrs. Pampita Banerjee — Online Only</span>
-                        <p className="font-sans text-sm text-[var(--text-dark)] mt-0.5">All days · Flexible hours</p>
+                        <p className="font-sans text-sm text-[var(--text-dark)] mt-0.5">Tue · Thu · Sat · Flexible hours</p>
                         <p className="text-xs text-[var(--text-muted)] mt-0.5">Online consultation by appointment — book at least 24 hours in advance</p>
                       </div>
                     </div>

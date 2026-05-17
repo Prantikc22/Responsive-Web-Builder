@@ -76,7 +76,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-4 text-sm text-gray-400">
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[var(--gold)] shrink-0 mt-0.5"/>
-                <span>Panpara Lane, Uttarpara<br/>Kolkata, West Bengal 712232</span>
+                <span>Panpara Lane, Uttarpara<br/>Hooghly, West Bengal 712232</span>
               </li>
 
               <li>
@@ -100,20 +100,20 @@ export default function Footer() {
 
               <li className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-[var(--gold)] shrink-0 mt-0.5"/>
-                <a href="mailto:appointments.healandcure@gmail.com" className="hover:text-white transition-colors">appointments.healandcure@gmail.com</a>
+                <a href="mailto:healandcure@gmail.com" className="hover:text-white transition-colors">healandcure@gmail.com</a>
               </li>
             </ul>
 
             <div className="mt-5 bg-white/5 rounded-xl p-4 border border-white/8">
               <p className="text-[10px] text-[var(--gold)]/60 uppercase tracking-wider font-sans font-semibold mb-2">Consultation Hours</p>
               <p className="text-sm text-gray-300">Dr. Souvik &nbsp;·&nbsp; Mon / Wed / Fri &nbsp;·&nbsp; 7–9 PM</p>
-              <p className="text-sm text-gray-300 mt-1">Pampita &nbsp;·&nbsp; Online, all days (24 hrs prior)</p>
+              <p className="text-sm text-gray-300 mt-1">Pampita &nbsp;·&nbsp; Tue · Thu · Sat (Online, 24 hrs prior)</p>
             </div>
           </div>
         </div>
 
         <div className="pt-8 border-t border-white/10 text-center text-sm text-gray-500">
-          <p>© {new Date().getFullYear()} Heal &amp; Cure Health Clinic · Kolkata, West Bengal</p>
+          <p>© {new Date().getFullYear()} Heal &amp; Cure Health Clinic · West Bengal</p>
         </div>
       </div>
     </footer>

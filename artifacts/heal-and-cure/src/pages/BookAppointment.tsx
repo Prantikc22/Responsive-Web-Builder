@@ -95,7 +95,7 @@ export default function BookAppointment() {
 
               <div>
                 <h2 className="font-serif text-2xl mb-1">Heal & Cure</h2>
-                <p className="font-sans text-white/60 text-sm">Health Clinic · Kolkata, West Bengal</p>
+                <p className="font-sans text-white/60 text-sm">Health Clinic · Hooghly, West Bengal</p>
               </div>
 
               {/* Doctors */}
@@ -143,11 +143,11 @@ export default function BookAppointment() {
                         <p className="font-sans text-sm font-medium">Dr. Souvik Dutta</p>
                         <p className="font-sans text-white/60 text-xs mt-0.5">In-person: Mon · Wed · Fri, 7:00 PM – 9:00 PM</p>
                         <p className="font-sans text-white/60 text-xs mt-0.5">Online: All days (book 24 hrs prior)</p>
-                        <p className="font-sans text-white/40 text-[10px] mt-0.5">Clinic: Panpara Lane, Uttarpara, Kolkata</p>
+                        <p className="font-sans text-white/40 text-[10px] mt-0.5">Clinic: Panpara Lane, Uttarpara, Hooghly</p>
                       </div>
                       <div className="border-t border-white/10 pt-2">
                         <p className="font-sans text-sm font-medium">Mrs. Pampita Banerjee</p>
-                        <p className="font-sans text-white/60 text-xs mt-0.5">Online Consultation — Flexible Hours</p>
+                        <p className="font-sans text-white/60 text-xs mt-0.5">Online — Tue · Thu · Sat</p>
                         <p className="font-sans text-white/40 text-[10px] mt-0.5">Book at least 24 hours in advance</p>
                       </div>
                     </div>
