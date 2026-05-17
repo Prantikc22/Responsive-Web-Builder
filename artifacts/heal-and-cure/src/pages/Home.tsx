@@ -144,18 +144,18 @@ export default function Home() {
               </a>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.7 }}
-              className="inline-flex flex-wrap items-stretch bg-white/30 backdrop-blur-lg border border-white/50 rounded-2xl shadow-[0_4px_24px_rgba(27,67,50,0.12)] overflow-hidden">
+            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.4 }}
+              className="grid grid-cols-3 w-full max-w-xs sm:max-w-sm lg:max-w-none lg:w-auto bg-white/30 backdrop-blur-lg border border-white/50 rounded-2xl shadow-[0_4px_24px_rgba(27,67,50,0.12)] overflow-hidden">
               {[
-                { icon: Award,       line1: "10+ Years",        line2: "Clinical Experience" },
-                { icon: FlaskConical, line1: "Public Health",   line2: "Research" },
-                { icon: Users,       line1: "500+ Patients",    line2: "Supported" },
+                { icon: Award,        line1: "10+ Years",     line2: "Clinical Exp." },
+                { icon: FlaskConical, line1: "Public Health", line2: "Research" },
+                { icon: Users,        line1: "500+ Patients", line2: "Supported" },
               ].map((t, i) => (
-                <div key={i} className="flex items-center gap-3 px-4 sm:px-5 py-3 sm:py-3.5 relative">
-                  <t.icon className="w-5 h-5 text-[var(--green-deep)] shrink-0"/>
-                  <div className="flex flex-col leading-tight">
-                    <span className="font-sans text-sm font-semibold text-[var(--text-dark)]">{t.line1}</span>
-                    <span className="font-sans text-[11px] text-[var(--text-muted)]">{t.line2}</span>
+                <div key={i} className="flex flex-col sm:flex-row items-center sm:items-center gap-1 sm:gap-3 px-3 sm:px-5 py-3 sm:py-3.5 relative">
+                  <t.icon className="w-4 h-4 sm:w-5 sm:h-5 text-[var(--green-deep)] shrink-0"/>
+                  <div className="flex flex-col leading-tight text-center sm:text-left">
+                    <span className="font-sans text-[11px] sm:text-sm font-semibold text-[var(--text-dark)]">{t.line1}</span>
+                    <span className="font-sans text-[9px] sm:text-[11px] text-[var(--text-muted)] leading-tight">{t.line2}</span>
                   </div>
                   {i < 2 && <span className="absolute right-0 top-3 bottom-3 w-px bg-[var(--green-deep)]/15"/>}
                 </div>
