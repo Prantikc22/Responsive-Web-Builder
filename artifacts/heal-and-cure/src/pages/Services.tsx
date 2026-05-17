@@ -3,36 +3,48 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 import {
   Stethoscope, Heart, Wind, Brain, Smile, Ear, Leaf,
-  Apple, Activity, Scale, Zap, ScrollText, ArrowRight
+  Apple, Activity, Scale, Zap, ScrollText, ArrowRight,
+  Baby, Layers, Waves, HeartPulse, Bone, Droplets,
+  Filter, Dna, CalendarCheck, FlaskConical, Salad
 } from "lucide-react";
 
 type Category = "all" | "nutrition" | "homoeopathy";
 
 const nutritionServices = [
-  { icon: Apple, title: "Therapeutic Diet Counseling", desc: "Personalised dietary plans designed around your medical profile, lifestyle, and goals — sustainable, science-backed, and culturally relevant.", cat: "nutrition" as const },
-  { icon: Activity, title: "Diabetes Nutrition Management", desc: "Specialized care for Type 1, Type 2, gestational diabetes, and pre-diabetes through targeted meal planning and carb-management strategies.", cat: "nutrition" as const },
-  { icon: Scale, title: "Weight Management", desc: "Structured, evidence-based programmes that address the root causes of weight imbalance — without crash dieting or extreme restriction.", cat: "nutrition" as const },
+  { icon: Apple, title: "Therapeutic Diet Counselling", desc: "Personalised dietary plans designed around your medical profile, lifestyle, and goals — sustainable, science-backed, and providing dietary management for a wide range of acute and chronic health conditions.", cat: "nutrition" as const },
+  { icon: Droplets, title: "Diabetes Nutrition Management", desc: "Specialized care for Type 1, Type 2, gestational diabetes, and pre-diabetes through targeted meal planning and carbohydrate-management strategies.", cat: "nutrition" as const },
+  { icon: Scale, title: "Weight Management (Diet Only)", desc: "Structured, evidence-based programmes that address the root causes of weight imbalance through therapeutic dietary science alone — no exercise required.", cat: "nutrition" as const },
+  { icon: Dna, title: "PCOD/PCOS Hormonal Diet", desc: "Nutritional therapy for hormonal balance, weight management and cycle regulation in PCOD — tailored to your hormonal profile.", cat: "nutrition" as const },
+  { icon: Filter, title: "Kidney & Liver Disease Diet", desc: "Disease-specific nutrition for creatinine management, liver health and renal protection — including dietary guidance for UTI, AKI, and CKD.", cat: "nutrition" as const },
+  { icon: Salad, title: "Malnutrition Treatment", desc: "Clinically designed dietary rehabilitation for malnourished patients, including therapeutic nutritional support for recovery and sustainable weight gain.", cat: "nutrition" as const },
+  { icon: FlaskConical, title: "Kidney Diseases — UTI, AKI, CKD", desc: "Specialised renal diet management for urinary tract infections, acute kidney injury and chronic kidney disease — focused on creatinine control and renal health.", cat: "nutrition" as const },
   { icon: Zap, title: "PCOS & Thyroid Nutrition", desc: "Hormone-supportive nutrition therapy for PCOS, hypothyroidism, and other endocrine conditions, guided by therapeutic dietetics.", cat: "nutrition" as const },
   { icon: Leaf, title: "Digestive Health Nutrition", desc: "Gut-healing dietary protocols for IBS, GERD, bloating, constipation, and other functional digestive disorders.", cat: "nutrition" as const },
-  { icon: ScrollText, title: "Personalized Meal Planning", desc: "Customised weekly meal plans that align with your health goals, taste preferences, and household routine.", cat: "nutrition" as const },
+  { icon: ScrollText, title: "Personalised Meal Planning", desc: "Customised weekly meal plans that align with your health goals, taste preferences, household routine — using affordable, locally available ingredients.", cat: "nutrition" as const },
 ];
 
 const homeopathyServices = [
+  { icon: Baby, title: "Children's Wellness", desc: "Gentle, safe homoeopathic remedies for paediatric ailments, immunity building, recurrent infections and developmental concerns.", cat: "homoeopathy" as const },
+  { icon: Layers, title: "Skin & Allergic Disorders", desc: "Effective homoeopathic care for eczema, psoriasis, tinea, urticaria, acne and chronic skin allergies — treating the cause, not the surface.", cat: "homoeopathy" as const },
+  { icon: Waves, title: "Hormonal & Thyroid Care", desc: "Constitutional treatment for PCOD, hypothyroidism, menstrual irregularity and hormonal imbalances — addressing the endocrine system holistically.", cat: "homoeopathy" as const },
+  { icon: Wind, title: "Respiratory Conditions", desc: "Root-cause homoeopathic treatment for chronic asthma, sinusitis, recurrent cough, allergic rhinitis and other respiratory disorders.", cat: "homoeopathy" as const },
+  { icon: Activity, title: "Pre-Hypertension Management", desc: "Evidence-based homoeopathic care for prehypertension and early-stage blood pressure disorders, with published RCT evidence supporting treatment efficacy.", cat: "homoeopathy" as const },
+  { icon: HeartPulse, title: "Infertility Support", desc: "Homoeopathic support for primary and secondary infertility, reproductive health and PCOD — with case-study evidence of successful outcomes.", cat: "homoeopathy" as const },
+  { icon: Bone, title: "Joint, Arthritis & Pain", desc: "Deep-acting remedies for arthritis, back pain, migraine, neuralgia and musculoskeletal conditions — personalised homoeopathic pain management.", cat: "homoeopathy" as const },
   { icon: Heart, title: "Chronic Disease Management", desc: "Long-term holistic treatment for persistent conditions — migraines, arthritis, psoriasis, and other chronic ailments using classical constitutional prescribing.", cat: "homoeopathy" as const },
-  { icon: Wind, title: "Allergy & Respiratory Care", desc: "Gentle, effective remedies for seasonal allergies, sinusitis, asthma, and recurrent respiratory infections — building lasting immunity from within.", cat: "homoeopathy" as const },
-  { icon: Stethoscope, title: "Digestive Disorders", desc: "Holistic management of IBS, acidity, gastritis, constipation, and other gastrointestinal conditions with personalised homoeopathic care.", cat: "homoeopathy" as const },
   { icon: Brain, title: "Stress & Anxiety Support", desc: "Constitutional remedies addressing the mind-body connection — helping with anxiety, burnout, sleep disorders, and emotional well-being.", cat: "homoeopathy" as const },
   { icon: Smile, title: "Skin & Hair Concerns", desc: "From eczema, acne, and psoriasis to hair loss and scalp conditions — deep-acting remedies that treat the cause, not just the symptom.", cat: "homoeopathy" as const },
   { icon: Ear, title: "ENT Related Conditions", desc: "Effective homoeopathic care for recurrent ear infections, tonsillitis, sinusitis, nasal polyps, and other ENT disorders.", cat: "homoeopathy" as const },
-  { icon: Leaf, title: "Holistic Wellness Consultation", desc: "A comprehensive assessment of your physical, mental, and lifestyle health — creating an integrated wellness plan for long-term vitality.", cat: "homoeopathy" as const },
+  { icon: Stethoscope, title: "Digestive Disorders", desc: "Holistic management of IBS, acidity, gastritis, constipation, and other gastrointestinal conditions with personalised homoeopathic care.", cat: "homoeopathy" as const },
+  { icon: CalendarCheck, title: "Preventive Health Plans", desc: "Family wellness programmes, seasonal immunity plans and evidence-based nutrition education for long-term health management.", cat: "homoeopathy" as const },
 ];
 
-const allServices = [...nutritionServices, ...homeopathyServices];
+const allServices = [...homeopathyServices, ...nutritionServices];
 
-const filters: { key: Category; label: string; accent: string; activeClass: string }[] = [
-  { key: "all", label: "All Services", accent: "border-[var(--gold)]", activeClass: "bg-[var(--green-deep)] text-white border-[var(--green-deep)]" },
-  { key: "homoeopathy", label: "Homoeopathy", accent: "border-[var(--green-deep)]", activeClass: "bg-[var(--green-deep)] text-white border-[var(--green-deep)]" },
-  { key: "nutrition", label: "Nutrition & Diet", accent: "border-[var(--teal)]", activeClass: "bg-[var(--teal)] text-white border-[var(--teal)]" },
+const filters: { key: Category; label: string; activeClass: string }[] = [
+  { key: "all", label: "All Treatments", activeClass: "bg-[var(--green-deep)] text-white border-[var(--green-deep)]" },
+  { key: "homoeopathy", label: "Homoeopathy", activeClass: "bg-[var(--green-deep)] text-white border-[var(--green-deep)]" },
+  { key: "nutrition", label: "Nutrition & Diet", activeClass: "bg-[var(--teal)] text-white border-[var(--teal)]" },
 ];
 
 function ServiceCard({ icon: Icon, title, desc, cat }: { icon: any; title: string; desc: string; cat: "nutrition" | "homoeopathy" }) {
@@ -82,17 +94,17 @@ export default function Services() {
           </motion.span>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
             className="font-serif text-5xl md:text-6xl mt-4 mb-5">
-            Our Services
+            Our Treatments
           </motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}
             className="font-sans text-lg text-white/75 leading-relaxed max-w-2xl mx-auto">
-            We offer two complementary streams of care — expert clinical nutrition and classical homoeopathy — tailored to your unique health profile.
+            Two complementary streams of care — expert clinical nutrition and classical homoeopathy — tailored to your unique health profile and condition.
           </motion.p>
         </div>
       </section>
 
       {/* Filter Tabs */}
-      <section className="py-10 bg-white border-b border-[var(--border)] sticky top-[72px] z-40">
+      <section className="py-8 bg-white border-b border-[var(--border)] sticky top-[72px] z-40">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="flex flex-wrap items-center gap-3 justify-center">
             {filters.map((f) => (
@@ -112,8 +124,6 @@ export default function Services() {
               </button>
             ))}
           </div>
-
-          {/* Specialist info strip */}
           <AnimatePresence mode="wait">
             {active !== "all" && (
               <motion.div
@@ -122,7 +132,7 @@ export default function Services() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.25 }}
-                className="mt-6 flex flex-wrap items-center justify-center gap-6"
+                className="mt-5 flex flex-wrap items-center justify-center gap-6"
               >
                 {active === "homoeopathy" ? (
                   <div className="flex items-center gap-3 text-sm font-sans text-[var(--text-muted)]">
@@ -133,8 +143,8 @@ export default function Services() {
                 ) : (
                   <div className="flex items-center gap-3 text-sm font-sans text-[var(--text-muted)]">
                     <span className="w-2 h-2 rounded-full bg-[var(--teal)] inline-block"/>
-                    Led by <strong className="text-[var(--teal)] font-medium mx-1">Pampita Banerjee</strong> · MSc Nutrition, Diabetic Educator ·
-                    <a href="tel:+918961661721" className="ml-1 text-[var(--teal)] font-medium hover:underline">+91 8961661721</a>
+                    Led by <strong className="text-[var(--teal)] font-medium mx-1">Mrs. Pampita Banerjee</strong> · MSc Nutrition, Diabetic Educator ·
+                    <a href="tel:+918961661727" className="ml-1 text-[var(--teal)] font-medium hover:underline">+91 8961661727</a>
                   </div>
                 )}
               </motion.div>

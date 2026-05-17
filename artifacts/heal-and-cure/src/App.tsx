@@ -11,6 +11,11 @@ import HealthTips from "@/pages/HealthTips";
 import ArticlePage from "@/pages/ArticlePage";
 import BookAppointment from "@/pages/BookAppointment";
 import Contact from "@/pages/Contact";
+import BenefitsOfHomeopathy from "@/pages/BenefitsOfHomeopathy";
+import Disclaimer from "@/pages/Disclaimer";
+import SideEffectsOfHomeopathy from "@/pages/SideEffectsOfHomeopathy";
+import ScientificBasisOfHomeopathy from "@/pages/ScientificBasisOfHomeopathy";
+import CriticismOfHomeopathy from "@/pages/CriticismOfHomeopathy";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -39,6 +44,11 @@ function Router() {
           <Route path="/health-tips/:slug" component={ArticlePage} />
           <Route path="/book" component={BookAppointment} />
           <Route path="/contact" component={Contact} />
+          <Route path="/benefits-of-homeopathy" component={BenefitsOfHomeopathy} />
+          <Route path="/disclaimer" component={Disclaimer} />
+          <Route path="/side-effects-of-homeopathy" component={SideEffectsOfHomeopathy} />
+          <Route path="/scientific-basis-of-homeopathy" component={ScientificBasisOfHomeopathy} />
+          <Route path="/criticism-of-homeopathy" component={CriticismOfHomeopathy} />
           <Route component={NotFound} />
         </Switch>
       </main>
