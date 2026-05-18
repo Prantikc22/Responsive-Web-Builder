@@ -32,7 +32,6 @@ export default function Navbar() {
     { href: "/services", label: "Treatments" },
     { href: "/health-tips", label: "Health Tips" },
     { href: "/patient-results", label: "Patient Results" },
-    { href: "/contact", label: "Contact" },
   ];
 
   const isDisclaimerActive = disclaimerItems.some((d) => location === d.href);
@@ -107,6 +106,14 @@ export default function Navbar() {
                 )}
               </AnimatePresence>
             </div>
+
+            <Link href="/contact" data-testid="link-nav-contact"
+              className={`text-sm font-medium transition-colors relative group ${
+                location === "/contact" ? "text-[var(--gold)]" : "text-[var(--text-dark)] hover:text-[var(--green-deep)]"
+              }`}>
+              Contact
+              <span className={`absolute -bottom-1 left-0 h-[2px] bg-[var(--gold)] transition-all duration-300 origin-left ${location === "/contact" ? "w-full" : "w-0 group-hover:w-full"}`}/>
+            </Link>
 
             <Link href="/book" data-testid="link-nav-book"
               className="btn-fill bg-[var(--green-deep)] text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-[var(--green-mid)] transition-all hover:scale-105 shadow-sm">
@@ -185,6 +192,13 @@ export default function Navbar() {
                     </motion.div>
                   )}
                 </AnimatePresence>
+              </motion.div>
+
+              <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.46 }}>
+                <Link href="/contact" onClick={() => setMobileMenuOpen(false)}
+                  className={`block py-4 font-serif text-3xl border-b border-[var(--border)] ${location === "/contact" ? "text-[var(--gold)]" : "text-[var(--green-deep)]"}`}>
+                  Contact
+                </Link>
               </motion.div>
 
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="mt-8">
