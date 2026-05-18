@@ -120,9 +120,9 @@ export default function HealthTips() {
       <section className="py-20 bg-[var(--bg-cream)] border-b border-[var(--border)]">
         <div className="container mx-auto px-4 text-center max-w-3xl">
           <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-[var(--gold)] text-xs tracking-[0.25em] uppercase font-sans font-semibold">From Our Doctors</motion.span>
-          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="font-serif text-5xl md:text-6xl text-[var(--green-deep)] mt-3 mb-4">Health Journal</motion.h1>
+          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="font-serif text-5xl md:text-6xl text-[var(--green-deep)] mt-3 mb-4">Health Tips</motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="font-sans text-lg text-[var(--text-muted)] leading-relaxed">
-            Expert insights on homoeopathy, clinical nutrition and holistic living — written by the doctors of Heal &amp; Cure Health Clinic, Kolkata, and grounded in peer-reviewed clinical research.
+            Expert insights on homoeopathy, clinical nutrition and holistic living — written by the doctors of Heal &amp; Cure Health Clinic, Uttarpara, and grounded in peer-reviewed clinical research.
           </motion.p>
         </div>
       </section>
@@ -173,7 +173,7 @@ export default function HealthTips() {
       <section className="bg-[var(--green-deep)] py-16">
         <div className="container mx-auto px-4 text-center max-w-2xl">
           <h2 className="font-serif text-3xl md:text-4xl text-white mb-4">Have a Health Question?</h2>
-          <p className="font-sans text-white/70 mb-8">Book a consultation with our specialists at Heal &amp; Cure Health Clinic, Kolkata.</p>
+          <p className="font-sans text-white/70 mb-8">Book a consultation with our specialists at Heal &amp; Cure Health Clinic, Uttarpara.</p>
           <Link href="/book" className="inline-block bg-[var(--gold)] text-[var(--text-dark)] px-8 py-3.5 rounded-full font-medium hover:bg-[var(--gold-light)] transition-all hover:scale-105">
             Book a Consultation
           </Link>

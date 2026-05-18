@@ -74,7 +74,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-sans font-semibold text-[var(--text-dark)] text-sm mb-1">Email</h4>
-                      <a href="mailto:healandcure@gmail.com" className="block text-[var(--text-muted)] text-sm hover:text-[var(--green-deep)] transition-colors">healandcure@gmail.com</a>
+                      <a href="mailto:healandcurehealthclinic@gmail.com" className="block text-[var(--text-muted)] text-sm hover:text-[var(--green-deep)] transition-colors">healandcurehealthclinic@gmail.com</a>
                     </div>
                   </div>
                 </div>

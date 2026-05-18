@@ -1,8 +1,8 @@
 import { Resend } from "resend";
 
 const FROM_ADDRESS = "appointment@healandcureclinic.com";
-const CLINIC_EMAIL = "prantikchatterjee22@gmail.com";
-const REPLY_TO     = "prantikchatterjee22@gmail.com";
+const CLINIC_EMAIL = "healandcurehealthclinic@gmail.com";
+const REPLY_TO     = "healandcurehealthclinic@gmail.com";
 
 const doctorLabel: Record<string, { name: string; title: string; specialty: string }> = {
   souvik:  { name: "Dr. Souvik Dutta",     title: "Consultant Homoeopathic Physician",  specialty: "Homoeopathy"           },

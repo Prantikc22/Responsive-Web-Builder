@@ -17,7 +17,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Your trusted wellness partner in Kolkata — combining classical homoeopathy with expert clinical nutrition for lasting, personalised care.
+              Your trusted wellness partner — combining classical homoeopathy with expert clinical nutrition for lasting, personalised care.
             </p>
             <div className="flex items-center gap-4">
               <a href="https://www.facebook.com/thehchc.drsouvik" target="_blank" rel="noopener noreferrer"
@@ -100,7 +100,7 @@ export default function Footer() {
 
               <li className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-[var(--gold)] shrink-0 mt-0.5"/>
-                <a href="mailto:healandcure@gmail.com" className="hover:text-white transition-colors">healandcure@gmail.com</a>
+                <a href="mailto:healandcurehealthclinic@gmail.com" className="hover:text-white transition-colors">healandcurehealthclinic@gmail.com</a>
               </li>
             </ul>
 

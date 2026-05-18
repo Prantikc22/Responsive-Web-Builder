@@ -17,8 +17,9 @@ const souvikCredentials = [
   "MD (Hom.)",
   "MBA (Healthcare)",
   "Senior Research Fellow, CCRH — Dr. Anjali Chatterji Regional Research Institute for Homoeopathy, Kolkata (Ministry of Ayush, Govt. of India)",
-  "Formerly M.R. Bangur College & Hospital, 10+ years",
+  "Ex House Physician Surgery and ENT at Mahesh Bhattacharya Homoeopathic Medical College and Hospital",
   "Formerly attached to M.R. Bangur Hospital",
+  "Formerly attached to D.N.De Homoeopathic Medical College and Hospital",
 ];
 
 const pampitaCredentials = [
@@ -26,7 +27,8 @@ const pampitaCredentials = [
   "Therapeutic Dietitian",
   "Certified Diabetic Educator",
   "Independent Researcher",
-  "Attached with The Care Nursing Home, Uttarpara and Fortis Hospital & Kidney Institute",
+  "Currently attached to the Care Nursing Home, Uttarpara",
+  "Formerly attached to Fortis Hospital & Kidney Institute",
 ];
 
 export default function About() {

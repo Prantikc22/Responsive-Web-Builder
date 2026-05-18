@@ -65,7 +65,7 @@ const homeServices = [
   { icon: Droplets, title: "Diabetes Management", sub: "Integrated diet therapy for stable, sustainable blood glucose and long-term diabetic wellness.", cat: "nutrition" },
   { icon: Scale, title: "Weight Management", sub: "Sustainable weight management through therapeutic dietary science — personalised to your diagnosis and metabolic type.", cat: "nutrition" },
   { icon: Filter, title: "Kidney & Liver Disease Diet", sub: "Disease-specific nutrition for creatinine management, liver health and renal protection.", cat: "nutrition" },
-  { icon: Activity, title: "Pre-Hypertension Management", sub: "Evidence-based homoeopathic care for prehypertension and early-stage blood pressure disorders.", cat: "homeopathy" },
+  { icon: Activity, title: "Hypertension Management", sub: "Evidence-based homoeopathic care for hypertension and blood pressure disorders.", cat: "homeopathy" },
   { icon: Dna, title: "PCOD/PCOS Hormonal Diet", sub: "Nutritional therapy for hormonal balance, weight management and cycle regulation in PCOD.", cat: "nutrition" },
   { icon: CalendarCheck, title: "Preventive Health Plans", sub: "Family wellness programmes, seasonal immunity plans and evidence-based nutrition education.", cat: "nutrition" },
 ];
@@ -214,6 +214,9 @@ export default function Home() {
               <p className="font-sans text-white/82 text-base leading-relaxed">
                 Dr. Souvik Dutta currently serves as a <strong className="text-white font-semibold">Senior Research Fellow</strong> at the <strong className="text-white font-semibold">Dr. Anjali Chatterji Regional Research Institute for Homoeopathy, Kolkata</strong> — affiliated to CCRH, Ministry of AYUSH, Government of India. His work across clinical trials and hospital practice brings evidence based personalised homoeopathic care.
               </p>
+              <p className="font-sans text-white/82 text-base leading-relaxed">
+                Homoeopathy at Heal &amp; Cure has helped patients avoid surgery for conditions including <strong className="text-white font-semibold">piles, fistula, fissure, ovarian cysts, kidney stones, gall bladder stones, tumours, breast lumps, thyroglossal cysts</strong>, and other surgical disease conditions — through deep-acting constitutional treatment.
+              </p>
             </div>
             <ul className="flex flex-col gap-2 mt-1">
               {[
@@ -305,7 +308,7 @@ export default function Home() {
                   </div>
                   <Link href="/book" data-testid="button-book-souvik"
                     className="btn-fill w-full bg-[var(--green-deep)] text-white py-3.5 rounded-full font-medium hover:bg-[var(--green-mid)] transition-all hover:scale-[1.02] text-center block">
-                    Book with Dr. Souvik
+                    Book with Doctor
                   </Link>
                 </div>
               </div>
@@ -344,7 +347,7 @@ export default function Home() {
                   </a>
                   <Link href="/book" data-testid="button-book-pampita"
                     className="btn-fill w-full bg-[var(--teal)] text-white py-3.5 rounded-full font-medium hover:opacity-85 transition-all hover:scale-[1.02] text-center block">
-                    Book with Pampita
+                    Book with Dietician
                   </Link>
                 </div>
               </div>
