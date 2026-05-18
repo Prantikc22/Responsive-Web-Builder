@@ -162,22 +162,22 @@ export default async function handler(req: any, res: any) {
   try {
     const sends: Promise<unknown>[] = [
       resend.emails.send({
-        from:     `Heal & Cure Clinic <${FROM_ADDRESS}>`,
-        to:       [CLINIC_EMAIL],
-        reply_to: REPLY_TO,
-        subject:  `New Appointment — ${doc.name} · ${dateStr} · ${fullName}`,
-        html:     clinicHtml,
+        from:    `Heal & Cure Clinic <${FROM_ADDRESS}>`,
+        to:      [CLINIC_EMAIL],
+        replyTo: REPLY_TO,
+        subject: `New Appointment — ${doc.name} · ${dateStr} · ${fullName}`,
+        html:    clinicHtml,
       }),
     ];
 
     if (email) {
       sends.push(
         resend.emails.send({
-          from:     `Heal & Cure Clinic <${FROM_ADDRESS}>`,
-          to:       [email],
-          reply_to: REPLY_TO,
-          subject:  `Appointment Request Received — Heal & Cure Health Clinic`,
-          html:     patientHtml,
+          from:    `Heal & Cure Clinic <${FROM_ADDRESS}>`,
+          to:      [email],
+          replyTo: REPLY_TO,
+          subject: `Appointment Request Received — Heal & Cure Health Clinic`,
+          html:    patientHtml,
         }),
       );
     }
