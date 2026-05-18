@@ -76,7 +76,7 @@ const weightFeatures = [
   "No crash diets — sustainable, gradual reduction through balanced dietary approach",
   "Targets root causes: improper food habits, insulin resistance, hormonal imbalance, inflammation",
   "Specialised for handling all types of acute and chronic diseases along with lifestyle disorders",
-  <><strong className="text-white">Affordable home-cooked meal plans</strong> using locally available, everyday ingredients</>,
+  <span><strong className="text-white">Affordable home-cooked meal plans</strong> using locally available, everyday ingredients</span>,
   "Online consultation available — book at least 24 hours in advance",
 ];
 
@@ -146,7 +146,7 @@ export default function Home() {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.4 }}
-              className="grid grid-cols-3 w-full max-w-xs sm:max-w-sm lg:max-w-none lg:w-auto bg-white/30 backdrop-blur-lg border border-white/50 rounded-2xl shadow-[0_4px_24px_rgba(27,67,50,0.12)] overflow-hidden">
+              className="grid grid-cols-3 w-full sm:max-w-sm lg:max-w-none lg:w-auto bg-white/30 backdrop-blur-lg border border-white/50 rounded-2xl shadow-[0_4px_24px_rgba(27,67,50,0.12)] overflow-hidden">
               {[
                 { icon: Award,        line1: "10+ Years",     line2: "Clinical Exp." },
                 { icon: FlaskConical, line1: "Public Health", line2: "Research" },
