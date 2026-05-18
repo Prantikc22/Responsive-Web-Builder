@@ -31,6 +31,7 @@ export default function Navbar() {
     { href: "/about", label: "About" },
     { href: "/services", label: "Treatments" },
     { href: "/health-tips", label: "Health Tips" },
+    { href: "/patient-results", label: "Results" },
     { href: "/contact", label: "Contact" },
   ];
 

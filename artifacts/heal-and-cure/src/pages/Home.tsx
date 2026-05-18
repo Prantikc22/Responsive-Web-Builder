@@ -289,7 +289,7 @@ export default function Home() {
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   <span className="text-xs bg-[var(--bg-cream)] text-[var(--green-deep)] border border-[var(--border)] px-3 py-1 rounded-full font-medium">10+ Years Experience</span>
-                  {["Acute Diseases", "Chronic Diseases", "Pain Management", "Hormonal Disorders", "Paediatric Care", "Skin & Allergies", "Online Consultation"].map((b) => (
+                  {["Acute Diseases", "Chronic Diseases", "Pain Management", "Hormonal Disorders", "Paediatric Care", "Skin & Allergies", "Independent Researcher", "Online Consultation"].map((b) => (
                     <span key={b} className="text-xs bg-[var(--bg-cream)] text-[var(--green-deep)] border border-[var(--border)] px-3 py-1 rounded-full font-medium">{b}</span>
                   ))}
                 </div>
