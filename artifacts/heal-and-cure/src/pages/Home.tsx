@@ -195,7 +195,7 @@ export default function Home() {
       {/* ══ RESEARCH EXCELLENCE BANNER ═══════════════════════ */}
       <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
         className="bg-[var(--green-deep)] text-white py-20 overflow-hidden relative">
-        <div className="absolute right-0 top-0 h-full w-[48%] hidden md:block pointer-events-none">
+        <div className="absolute right-0 top-0 h-full w-[58%] hidden md:block pointer-events-none">
           <img src={researchBgImg} alt="" className="w-full h-full object-cover object-left opacity-45"/>
           <div className="absolute inset-0 bg-gradient-to-r from-[var(--green-deep)] via-[var(--green-deep)]/55 to-[var(--green-deep)]/10"/>
           <div className="absolute inset-0 bg-gradient-to-b from-[var(--green-deep)]/30 via-transparent to-[var(--green-deep)]/30"/>
@@ -214,19 +214,18 @@ export default function Home() {
               <p className="font-sans text-white/82 text-base leading-relaxed">
                 Dr. Souvik Dutta currently serves as a <strong className="text-white font-semibold">Senior Research Fellow</strong> at the <strong className="text-white font-semibold">Dr. Anjali Chatterji Regional Research Institute for Homoeopathy, Kolkata</strong> — affiliated to CCRH, Ministry of AYUSH, Government of India. His work across clinical trials and hospital practice brings evidence based personalised homoeopathic care.
               </p>
-              <p className="font-sans text-white/82 text-base leading-relaxed">
-                Homoeopathy at Heal &amp; Cure has helped patients avoid surgery for conditions including <strong className="text-white font-semibold">piles, fistula, fissure, ovarian cysts, kidney stones, gall bladder stones, tumours, breast lumps, thyroglossal cysts</strong>, and other surgical disease conditions — through deep-acting constitutional treatment.
-              </p>
             </div>
             <ul className="flex flex-col gap-2 mt-1">
-              {[
+              {([
                 "Personalized treatment based on your individual health needs",
                 "Treats the root cause, not just the symptoms",
                 "Safe and gentle for all age groups",
                 "Helpful for both short-term and long-term health problems",
                 "Supports better overall health and well-being",
                 "Online Consultation Available — please book appointment 24 hrs prior",
-              ].map((pt, i) => (
+              ] as (string | React.ReactNode)[]).concat([
+                <span key="surgical">Proven results in surgical conditions — <strong className="text-white font-semibold">piles, fistula, fissure, ovarian cysts, kidney stones, gall bladder stones, tumours, breast lumps, thyroglossal cysts</strong> — avoiding surgery through constitutional treatment</span>
+              ]).map((pt, i) => (
                 <li key={i} className="flex items-start gap-2.5 font-sans text-sm text-white/80 leading-relaxed">
                   <CheckCircle className="w-4 h-4 text-[var(--gold)] shrink-0 mt-0.5"/>
                   {pt}
