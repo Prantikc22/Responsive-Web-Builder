@@ -23,8 +23,7 @@ export default function BookAppointment() {
     const e: Record<string, string> = {};
     if (!form.name.trim()) e.name = "Please enter your full name";
     if (!form.phone.trim()) e.phone = "Please enter your phone number";
-    if (!form.email.trim()) e.email = "Please enter your email";
-    else if (!/\S+@\S+\.\S+/.test(form.email)) e.email = "Please enter a valid email";
+    if (form.email.trim() && !/\S+@\S+\.\S+/.test(form.email)) e.email = "Please enter a valid email";
     if (!form.date) e.date = "Please select a preferred date";
     if (!form.doctor) e.doctor = "Please select a preferred doctor";
     if (!form.concern.trim()) e.concern = "Please briefly describe your health concern";
@@ -264,7 +263,7 @@ export default function BookAppointment() {
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block font-sans text-sm font-medium text-[var(--text-dark)] mb-2">
-                          Email Address <span className="text-red-500">*</span>
+                          Email Address <span className="text-[var(--text-muted)] font-normal text-xs">(optional — for confirmation)</span>
                         </label>
                         <div className="relative">
                           <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--text-muted)]"/>
