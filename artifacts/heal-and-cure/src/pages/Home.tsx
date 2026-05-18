@@ -222,6 +222,7 @@ export default function Home() {
                 "Safe and gentle for all age groups",
                 "Helpful for both short-term and long-term health problems",
                 "Supports better overall health and well-being",
+                "Online Consultation Available — please book appointment 24 hrs prior",
               ].map((pt, i) => (
                 <li key={i} className="flex items-start gap-2.5 font-sans text-sm text-white/80 leading-relaxed">
                   <CheckCircle className="w-4 h-4 text-[var(--gold)] shrink-0 mt-0.5"/>
@@ -231,7 +232,7 @@ export default function Home() {
             </ul>
             <div className="flex flex-wrap gap-5 mt-1">
               {[
-                { icon: FlaskConical, label: "Published Health Research" },
+                { icon: FlaskConical, label: "Public Health Research" },
                 { icon: Award, label: "10+ Years Clinical Experience" },
               ].map((t) => (
                 <div key={t.label} className="flex items-center gap-2">
