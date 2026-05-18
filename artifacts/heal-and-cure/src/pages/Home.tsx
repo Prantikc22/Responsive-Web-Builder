@@ -6,7 +6,7 @@ import {
   Activity, Zap, MessageCircle, ChevronLeft, ChevronRight,
   FlaskConical, Target, Sparkles, BookOpen, Shield, Search, Phone,
   Scale, CheckCircle, Bone,
-  Wind, Waves, Layers, HeartPulse, Droplets, Filter, Dna, CalendarCheck
+  Wind, Waves, Layers, HeartPulse, Droplets, Filter, Dna, CalendarCheck, ArrowRight
 } from "lucide-react";
 import drSouvikImg from "@assets/Doc_Men_1778067737072.jpeg";
 import pampitaImg from "@assets/Doc_Women_1778067734674.jpeg";
@@ -528,11 +528,30 @@ export default function Home() {
                   className={`h-2 rounded-full transition-all duration-300 ${i === activeTestimonial ? "w-8 bg-[var(--gold)]" : "w-2 bg-[var(--border)]"}`}/>
               ))}
             </div>
-            <div className="text-center mt-8">
+            <div className="text-center mt-8 flex flex-col items-center gap-5">
               <a data-testid="link-google-reviews" href="https://share.google/LEq7WsRQdaZfluGZF" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-[var(--green-deep)] font-medium font-sans hover:text-[var(--gold)] transition-colors">
                 Read All Reviews on Google →
               </a>
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.15 }}
+              >
+                <Link href="/patient-results"
+                  className="group relative inline-flex items-center gap-2.5 bg-[var(--green-deep)] text-white px-7 py-3.5 rounded-full font-medium font-sans text-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 overflow-hidden">
+                  <span className="absolute inset-0 bg-[var(--gold)] translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-400 ease-in-out rounded-full"/>
+                  <span className="relative z-10 flex items-center gap-2.5 group-hover:text-[var(--text-dark)] transition-colors duration-300">
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--gold-light)] opacity-75"/>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--gold-light)]"/>
+                    </span>
+                    See Our Clinical Results
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"/>
+                  </span>
+                </Link>
+              </motion.div>
             </div>
           </div>
         </div>

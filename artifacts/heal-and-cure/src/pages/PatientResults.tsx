@@ -224,25 +224,13 @@ export default function PatientResults() {
           {/* Patient Testimonial Screenshots */}
           <div className="grid sm:grid-cols-2 gap-6">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-              className="bg-white rounded-2xl border border-[var(--border)] overflow-hidden shadow-sm">
-              <img src={diet2} alt="Patient testimonial — Mampi Roy" className="w-full object-contain" />
-              <div className="p-5 border-t border-[var(--border)]">
-                <h3 className="font-serif text-lg text-[var(--teal)] mb-1">Patient Testimonial — Mampi Roy</h3>
-                <p className="font-sans text-sm text-[var(--text-muted)] leading-relaxed">
-                  "Before 71 kg, now 63 kg." — achieved through dedicated dietary guidance by Pampita Banerjee.
-                </p>
-              </div>
+              className="rounded-2xl border border-[var(--border)] overflow-hidden shadow-sm">
+              <img src={diet2} alt="Patient testimonial — Mampi Roy" className="w-full block" />
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-              className="bg-white rounded-2xl border border-[var(--border)] overflow-hidden shadow-sm">
-              <img src={diet3} alt="Patient testimonial — weight loss" className="w-full object-contain" />
-              <div className="p-5 border-t border-[var(--border)]">
-                <h3 className="font-serif text-lg text-[var(--teal)] mb-1">Patient Testimonial</h3>
-                <p className="font-sans text-sm text-[var(--text-muted)] leading-relaxed">
-                  Patient reduced from 71 kg to 60 kg in 4 months, crediting Pampita Banerjee's structured therapeutic diet plan.
-                </p>
-              </div>
+              className="rounded-2xl border border-[var(--border)] overflow-hidden shadow-sm">
+              <img src={diet3} alt="Patient testimonial — weight loss" className="w-full block" />
             </motion.div>
           </div>
         </div>
