@@ -10,6 +10,7 @@ const disclaimerItems = [
   { href: "/side-effects-of-homeopathy", label: "Side Effects of Homoeopathy" },
   { href: "/scientific-basis-of-homeopathy", label: "Scientific Basis of Homoeopathy" },
   { href: "/criticism-of-homeopathy", label: "Criticism of Homoeopathy" },
+  { href: "/myths-and-facts-about-diet", label: "Myths & Facts About Diet" },
 ];
 
 export default function Navbar() {

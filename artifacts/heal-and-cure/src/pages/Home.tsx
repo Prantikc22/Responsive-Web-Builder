@@ -6,7 +6,7 @@ import {
   Activity, Zap, MessageCircle, ChevronLeft, ChevronRight,
   FlaskConical, Target, Sparkles, BookOpen, Shield, Search, Phone,
   Scale, CheckCircle, Bone,
-  Wind, Waves, Layers, HeartPulse, Droplets, Filter, Dna, CalendarCheck, ArrowRight
+  Wind, Waves, Layers, HeartPulse, Droplets, Filter, Dna, CalendarCheck, ArrowRight, Scissors
 } from "lucide-react";
 import drSouvikImg from "@assets/Doc_Men_1778067737072.jpeg";
 import pampitaImg from "@assets/Doc_Women_1778067734674.jpeg";
@@ -67,7 +67,7 @@ const homeServices = [
   { icon: Filter, title: "Kidney & Liver Disease Diet", sub: "Disease-specific nutrition for creatinine management, liver health and renal protection.", cat: "nutrition" },
   { icon: Activity, title: "Hypertension Management", sub: "Evidence-based homoeopathic care for hypertension and blood pressure disorders.", cat: "homeopathy" },
   { icon: Dna, title: "PCOD/PCOS Hormonal Diet", sub: "Nutritional therapy for hormonal balance, weight management and cycle regulation in PCOD.", cat: "nutrition" },
-  { icon: CalendarCheck, title: "Preventive Health Plans", sub: "Family wellness programmes, seasonal immunity plans and evidence-based nutrition education.", cat: "nutrition" },
+  { icon: Scissors, title: "Surgical Conditions", sub: "Constitutional homoeopathic treatment for piles, fistula, fissure, ovarian cysts, kidney stones, gall bladder stones, tumours, breast lumps and thyroglossal cysts.", cat: "homeopathy" },
 ];
 
 
@@ -224,7 +224,7 @@ export default function Home() {
                 "Supports better overall health and well-being",
                 "Online Consultation Available — please book appointment 24 hrs prior",
               ] as (string | React.ReactNode)[]).concat([
-                <span key="surgical">Proven results in surgical conditions — <strong className="text-white font-semibold">piles, fistula, fissure, ovarian cysts, kidney stones, gall bladder stones, tumours, breast lumps, thyroglossal cysts</strong> — avoiding surgery through constitutional treatment</span>
+                <span key="surgical">Results in surgical conditions — <strong className="text-white font-semibold">piles, fistula, fissure, ovarian cysts, kidney stones, gall bladder stones, tumours, breast lumps, thyroglossal cysts</strong> — avoiding surgery through constitutional treatment</span>
               ]).map((pt, i) => (
                 <li key={i} className="flex items-start gap-2.5 font-sans text-sm text-white/80 leading-relaxed">
                   <CheckCircle className="w-4 h-4 text-[var(--gold)] shrink-0 mt-0.5"/>

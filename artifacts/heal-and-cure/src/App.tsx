@@ -17,6 +17,7 @@ import SideEffectsOfHomeopathy from "@/pages/SideEffectsOfHomeopathy";
 import ScientificBasisOfHomeopathy from "@/pages/ScientificBasisOfHomeopathy";
 import CriticismOfHomeopathy from "@/pages/CriticismOfHomeopathy";
 import PatientResults from "@/pages/PatientResults";
+import MythsAndFactsDiet from "@/pages/MythsAndFactsDiet";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -51,6 +52,7 @@ function Router() {
           <Route path="/scientific-basis-of-homeopathy" component={ScientificBasisOfHomeopathy} />
           <Route path="/criticism-of-homeopathy" component={CriticismOfHomeopathy} />
           <Route path="/patient-results" component={PatientResults} />
+          <Route path="/myths-and-facts-about-diet" component={MythsAndFactsDiet} />
           <Route component={NotFound} />
         </Switch>
       </main>
