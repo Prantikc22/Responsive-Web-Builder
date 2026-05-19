@@ -59,15 +59,15 @@ const homeServices = [
   { icon: Layers, title: "Skin & Allergic Disorders", sub: "Effective homoeopathic care for eczema, psoriasis, tinea, urticaria, acne and skin allergies.", cat: "homeopathy" },
   { icon: Waves, title: "Hormonal & Thyroid Care", sub: "Constitutional treatment for PCOD, hypothyroidism, menstrual irregularity and hormonal imbalances.", cat: "homeopathy" },
   { icon: Wind, title: "Respiratory Conditions", sub: "Root-cause homoeopathic treatment for chronic asthma, sinusitis, recurrent cough and allergic rhinitis.", cat: "homeopathy" },
-  { icon: HeartPulse, title: "Infertility Support", sub: "Homoeopathic support for primary and secondary infertility, reproductive health and PCOD.", cat: "homeopathy" },
+  { icon: Scissors, title: "Surgical Conditions", sub: "Constitutional homoeopathic treatment for piles, fistula, fissure, ovarian cysts, kidney stones, gall bladder stones, tumours, breast lumps and thyroglossal cysts.", cat: "homeopathy" },
   { icon: Bone, title: "Joint, Arthritis & Pain", sub: "Deep-acting remedies for arthritis, back pain, migraine, neuralgia and musculoskeletal conditions.", cat: "homeopathy" },
   { icon: Apple, title: "Therapeutic Nutrition", sub: "Evidence-based, personalised meal plans designed precisely for your diagnosis and metabolic needs.", cat: "nutrition" },
   { icon: Droplets, title: "Diabetes Management", sub: "Integrated diet therapy for stable, sustainable blood glucose and long-term diabetic wellness.", cat: "nutrition" },
   { icon: Scale, title: "Weight Management", sub: "Sustainable weight management through therapeutic dietary science — personalised to your diagnosis and metabolic type.", cat: "nutrition" },
   { icon: Filter, title: "Kidney & Liver Disease Diet", sub: "Disease-specific nutrition for creatinine management, liver health and renal protection.", cat: "nutrition" },
+  { icon: HeartPulse, title: "Infertility Support", sub: "Homoeopathic support for primary and secondary infertility, reproductive health and PCOD.", cat: "homeopathy" },
   { icon: Activity, title: "Hypertension Management", sub: "Evidence-based homoeopathic care for hypertension and blood pressure disorders.", cat: "homeopathy" },
   { icon: Dna, title: "PCOD/PCOS Hormonal Diet", sub: "Nutritional therapy for hormonal balance, weight management and cycle regulation in PCOD.", cat: "nutrition" },
-  { icon: Scissors, title: "Surgical Conditions", sub: "Constitutional homoeopathic treatment for piles, fistula, fissure, ovarian cysts, kidney stones, gall bladder stones, tumours, breast lumps and thyroglossal cysts.", cat: "homeopathy" },
 ];
 
 
@@ -224,7 +224,7 @@ export default function Home() {
                 "Supports better overall health and well-being",
                 "Online Consultation Available — please book appointment 24 hrs prior",
               ] as (string | React.ReactNode)[]).concat([
-                <span key="surgical">Results in surgical conditions — <strong className="text-white font-semibold">piles, fistula, fissure, ovarian cysts, kidney stones, gall bladder stones, tumours, breast lumps, thyroglossal cysts</strong> — avoiding surgery through constitutional treatment</span>
+                <span key="surgical">Avoids surgery through constitutional treatment for — <strong className="text-white font-semibold">piles, fistula, fissure, ovarian cysts, kidney stones, gall bladder stones, tumours, breast lumps, thyroglossal cysts</strong></span>
               ]).map((pt, i) => (
                 <li key={i} className="flex items-start gap-2.5 font-sans text-sm text-white/80 leading-relaxed">
                   <CheckCircle className="w-4 h-4 text-[var(--gold)] shrink-0 mt-0.5"/>
