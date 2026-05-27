@@ -26,14 +26,14 @@ function Counter({ value, duration = 2 }: { value: number; duration?: number }) 
 }
 
 const testimonials = [
-  { id: 1, text: "After years of struggling with chronic sinusitis, Dr. Souvik's treatment gave me lasting relief. No more recurring infections. The personalised approach is unlike anything I've experienced before.", name: "Ananya Roy", location: "Kolkata" },
-  { id: 2, text: "Pampita di completely transformed my diet for diabetes. My HbA1c dropped from 9.2 to 6.8 in just four months. Remarkable results that no medication alone could achieve.", name: "Suresh Ghosh", location: "Serampore" },
-  { id: 3, text: "My daughter had frequent ear infections and conventional medicine wasn't helping. After homoeopathic treatment with Dr. Souvik, she's been infection-free for over a year.", name: "Priya Sharma", location: "Kolkata" },
-  { id: 4, text: "The personalised diet plan from Pampita helped me lose 12 kg while managing my thyroid condition. I feel completely new. Every consultation feels thoughtful and caring.", name: "Rupa Chatterjee", location: "Hooghly" },
-  { id: 5, text: "Dr. Souvik is incredibly knowledgeable and patient. He listened to every symptom and the constitutional treatment worked wonders for my chronic migraines. Two years free now.", name: "Amit Bose", location: "Howrah" },
-  { id: 6, text: "I came with PCOD and irregular cycles. Within three months of treatment, everything normalised. Truly grateful for this clinic and the care they showed throughout.", name: "Suchitra Das", location: "Dunlop" },
-  { id: 7, text: "Pampita's nutrition guidance for my elderly mother's kidney disease has been life-changing. Her creatinine levels have stabilised and she feels so much better.", name: "Rajesh Mukherjee", location: "Barrackpore" },
-  { id: 8, text: "Brought my son here for eczema that no cream could control. Homoeopathy healed it from within — completely clear skin now. Heal & Cure is a blessing for our family.", name: "Nilufar Begum", location: "Shyamnagar" },
+  { id: 1, text: "Dr Souvik Dutta is not only an excellent doctor, he is also a superb human being. He diagnosed the disease in no time. His clinical diagnosis is very sharp. He is very sober and friendly in behaviour. He gives sufficient time to hear patients views. He even helps to change the lifestyle habits of a patient. Highly recommended.", name: "Irin Afroz", location: "Google Review" },
+  { id: 2, text: "Pampita is very good dietitian. They actually listened to my goals and gave me a plan that fit my lifestyle — no crash diets or boring food. The advice was super practical, and they were always supportive, never judgmental. If you want real, sustainable results, I highly recommend dietitian Pampita Banerjee.", name: "Rinku Roy", location: "Google Review" },
+  { id: 3, text: "Great experience with Dr. Souvik Dutta. Very professional, takes time to listen and understand the problem, and the homeopathic treatment worked well for me. I also consulted Dr. Souvik Dutta for the treatment of my mother as well. Highly recommended.", name: "Nirmalendu Das", location: "Google Review" },
+  { id: 4, text: "Pampita is a very good dietitian. Highly professional and very approachable! The diet plans are practical, easy to follow, and actually show results. Definitely recommend for anyone looking to improve their lifestyle and health.", name: "Neha Bhattacharya", location: "Google Review" },
+  { id: 5, text: "My daughter had been suffering from chronic dust allergy. She totally recovered after taking medication prescribed by Dr. Souvik Dutta.", name: "Ram Banerjee", location: "Google Review" },
+  { id: 6, text: "I am very much happy and satisfied to visit Dr Souvik Dutta. He is very good not only as a doctor but also as a human being. He listens to his patients very carefully. Dietitian mam is also very good and humble. Her recommended diet suits me very well.", name: "Pramita Dasgupta", location: "Google Review" },
+  { id: 7, text: "Dr. Souvik Dutta is fantastic. He is not only a good doctor but also very polite, responsible and helpful. We visited him for checkup many times. Clinic is spacious and clean also.", name: "Ananya Bhandary", location: "Google Review" },
+  { id: 8, text: "Diagnosis and treatment procedure is very much up to date of Dr. Dutta and advices of Pampita (Dietician) is very helpful for balancing food habits.", name: "Somen Mukherjee", location: "Google Review · Local Guide" },
 ];
 
 const blogPosts = [
@@ -180,9 +180,9 @@ export default function Home() {
             <div className="flex gap-1">
               {[...Array(5)].map((_, i) => <svg key={i} width="17" height="17" viewBox="0 0 20 20" fill="#F9AB00"><path d="M10 1l2.39 6.26H19l-5.31 3.86 2.02 6.26L10 13.27l-5.71 4.11 2.02-6.26L1 7.26h6.61z"/></svg>)}
             </div>
-            <span className="font-sans text-sm font-bold text-[var(--text-dark)]">5.0</span>
+            <span className="font-sans text-sm font-bold text-[var(--text-dark)]">4.8</span>
             <span className="w-px h-4 bg-[var(--border)]"/>
-            <span className="font-sans text-sm text-[#374151]">Rated 5 stars by our patients on Google</span>
+            <span className="font-sans text-sm text-[#374151]">Rated 4.8 stars by 24 patients on Google</span>
             <span className="w-px h-4 bg-[var(--border)] hidden sm:block"/>
             <a href="https://share.google/LEq7WsRQdaZfluGZF" target="_blank" rel="noopener noreferrer"
               className="font-sans text-sm text-[var(--green-deep)] hover:text-[var(--gold)] font-semibold transition-colors hidden sm:inline">
